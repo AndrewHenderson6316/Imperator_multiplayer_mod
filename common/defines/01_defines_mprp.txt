@@ -1,0 +1,78 @@
+NDiplomacy = {
+	AUTO_TIME_OUT_MONTHS	= 2
+
+	PEACE_AUTO_ENFORCE_BASE_DAYS = 365
+	PEACE_AUTO_ENFORCE_RANK_DAY = 180
+	
+	MIN_WARSCORE_TO_DEMAND = 10
+	
+	PEACE_SEPERATE_BLOCK_MONTHS = 36
+	PEACE_CLAIM_AE_REDUCTION = -0.5 # AE reduction if the taker has a claim
+	PEACE_SUBJECT_AE_REDUCTION = -0.5 # AE reduction if it is taken for a subject
+	PEACE_AE_INCREASE_FOR_NON_TARGET = 0.33 # AE increase for countries that are not main targets of the war
+
+	PEACE_COST_MODIFIER_FOR_REVOLT_WAR = -0.95 # Applied against a revolt war opponent
+
+	PEACE_COST_MODIFIER_FOR_NON_TARGET = 0.33 # Applied for countries that are not the main targets of the war
+	PEACE_COST_MODIFIER_FOR_CLAIM = -0.33 # Applied if the taker has a claim
+	PEACE_COST_MODIFIER_FOR_SAME_CULTURE = 0.10 # Applied if dominant culture in province is the same as taker's primary culture
+	PEACE_COST_MODIFIER_FOR_SAME_RELIGION = 0.10 # Applied if dominant religion in province is the same as taker's religion
+
+	INTERVENE_OPINION_THRESHOLD = 100
+
+	
+	DIPLOMATIC_RANGE = 400
+
+	OPINION_MIN = -200
+	OPINION_MAX = 200
+	
+	SUBJECT_AE_FACTOR = 0.5
+	
+	TRAVEL_DAYS = 30
+	
+
+	TRIBUTE_MIN_RELATION = 100
+	TRANSFER_VASSAL_MIN_RELATION = 80
+	MAX_TRIBUTE_TREASURY_DEFICIT = -100.0
+	ANNEX_MIN_RELATION = 190
+	ANNEX_MIN_YEARS_WITH_TRIBUTE = 10
+	
+	MONTHS_BEFORE_TOTAL_OCCUPATION = 60			# Before this many months have passed in the war, you cannot gain 100% warscore by just occupying the warleader
+	
+	
+	
+	DEFAULT_WARGOAL_TICKINGWARSCORE_BONUS = 1		# Amount of warscore per month since attacker/defender started getting the bonus for completing war goal
+	WARGOAL_MAX_BONUS = 25
+	DEFAULT_WARGOAL_BATTLESCORE_BONUS = 5		# Battle score bonus from winning battles
+	SUPERIORITY_WARGOAL_WARSCORE_THRESHOLD	= 10	# Needed battle score for getting ticking war score for war goal superiority
+	WARSCORE_MAX_FROM_BATTLES = 40					# maximum amount to get from a battles .
+
+	
+	WAR_JOIN_DEADLINE_MONTHS = 24
+	TRUCE_YEARS = 3
+	SCALED_TRUCE_YEARS = 5
+	REVANCHISM_MONTHLY_DECAY = 0.833
+	
+	CASUS_BELLI_MONTHS = 60
+	
+	AE_IMPACT_ON_OPINION = -4
+	
+	PEACE_RELEASE_NATION_FACTOR = 0.5
+	PEACE_CANCEL_SUBJECT_FACTOR = 0.5
+	
+	OPINION_GOOD_RELATIONS = 50 #Threshold for good relations -1 stab hit.
+	#OPINION_GREAT_RELATIONS = 100 #Threshold for great relations -2 stab hit.
+	OPINION_NO_WAR = 100 #Threshold for being unable to declare war because one's own opinion of enemy is too high.
+	
+	IMPROVE_RELATION_SUBJECT_FACTOR = 2 #Subjects have a maximum this times higher.
+	MAX_WARSCORE_REDUCTION = -0.95 # Warscore reduction cannot go below -95%
+}
+
+NCountry ={
+	RANK_MIGRANT_HORDE = 0
+	RANK_CITY_STATE = 10   # 1
+	RANK_LOCAL_POWER = 50  # 25
+	RANK_REGIONAL_POWER = 200  #100
+	RANK_MAJOR_POWER = 600  #500 
+}
+	

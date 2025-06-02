@@ -1,0 +1,40 @@
+demand_conversion = {
+	scope = country
+
+	saved_scopes = {
+		target
+	}
+
+	ai_is_valid = {
+		always = no
+	}
+
+	is_valid = {
+		in_diplomatic_range = scope:target
+		NOT = {
+			has_variable = sent_province_offer
+		}
+		NOT = {
+			scope:target = root
+		}
+	}
+
+	# is_shown = {
+	#
+	# }
+
+	effect = {
+		clear_variable_list = regions_list_to_sell
+		clear_variable_list = sell_province_to
+
+		#set_variable = {
+		#	name = conversion_price_offer
+		#	value = 0
+		#}
+
+		add_to_variable_list = { #what country we're selling to
+			name = conversion_target
+			target = scope:target
+		}
+	}
+}

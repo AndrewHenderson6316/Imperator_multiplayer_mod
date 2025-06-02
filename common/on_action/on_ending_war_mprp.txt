@@ -1,0 +1,17 @@
+on_ending_war = {
+	effect = {
+		if = {
+		    limit = {
+				is_ai = no
+		    }
+		}
+		root = {
+			trigger_event = {
+					id = dhe_dde_pyrrhus.3 # event to give mil exp 
+					}
+		}
+		events = {
+		#
+		}
+	}
+}

@@ -1,0 +1,32 @@
+﻿namespace = demand_conversion
+
+demand_conversion.1 = {
+    type = country_event
+    title = demand_conversion_1.t
+    desc = demand_conversion_1.desc
+    right_portrait = current_ruler
+    left_portrait = scope:sender.current_ruler
+    picture = greek_religious_rite
+    immediate = {
+    }
+
+    option = {      
+        name = demand_conversion_1.a
+        if = {
+            limit = {
+                not = {
+                    religion = scope:sender.religion 
+
+                }
+            }
+            change_religion_effect = {
+                RELIGION = scope:sender.religion
+            }
+        }    
+    }
+
+    option = {      
+        name = demand_conversion_1.b
+        ai_chance = { factor = 100 }
+    }
+}

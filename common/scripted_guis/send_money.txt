@@ -1,0 +1,116 @@
+﻿dip_send_money = {
+	scope = country
+
+	saved_scopes = {
+		target
+	}
+	ai_is_valid = {
+		always = no
+	}
+	is_valid = {
+		in_diplomatic_range = scope:target
+		NOT = {
+			scope:target = root
+		}
+	}
+	effect = {
+		set_variable = {
+			name = dip_money_amount
+			value = 0
+		}
+		set_variable = {
+		  name = pay_to
+		  value = scope:target
+		}
+	}
+}
+dip_change_money = {
+	scope = country
+
+	ai_is_valid = {
+		always = no
+	}
+
+	is_shown = {
+		any_in_list = {
+			variable = dip_money_amount
+			is_ai = no
+		}
+	}
+
+	is_valid = {
+
+	}
+}
+dip_confirm_send_money = {
+	scope = country
+
+	ai_is_valid = {
+		always = no
+	}
+
+	is_valid = {
+		treasury > var:dip_money_amount
+	}
+
+	effect = {
+	save_scope_as = sender
+		var:pay_to = {
+			add_treasury =  scope:sender.var:dip_money_amount
+		}
+	add_treasury = {subtract = var:dip_money_amount}	
+	}
+}
+
+dip_cancel_send_money = {
+	scope = country
+
+	ai_is_valid = {
+		always = no
+	}
+
+	is_valid = {
+		var:dip_money_amount > 0 
+	}
+
+	effect = {
+		set_variable = {
+			name = dip_money_amount
+			value = 0
+		}
+	}
+}
+
+dip_increase_money = {
+	scope = country
+
+	ai_is_valid = {
+		always = no
+	}
+	is_valid = {
+	}
+
+	effect = {
+		
+		change_variable = {
+			name = dip_money_amount
+			add = 100
+		}
+	}
+}
+dip_decrease_money = {
+	scope = country
+
+	ai_is_valid = {
+		always = no
+	}
+	is_valid = {
+		var:dip_money_amount > 0
+	}
+	effect = {
+		change_variable = {
+			name = dip_money_amount
+			add = -100
+		}
+	}
+}

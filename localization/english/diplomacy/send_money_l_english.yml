@@ -1,0 +1,10 @@
+﻿l_english: 
+ send_money: "Send Money"
+ send_money_msg: "How Much money should we send  "
+ RESET: "Reset"
+ send_money_title: "[sender.GetName] Sends an Offer"
+ send_money_desc: "[sender.GetName] offers to send [sender.MakeScope.Var('send_amount').GetValue|0] @gold!\n"
+ send_money.agree: "Agree [sender.MakeScope.Var('send_amount').GetValue|0] @gold!"
+ send_money.refuse: "Refuse"
+
+

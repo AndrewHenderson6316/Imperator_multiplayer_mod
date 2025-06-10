@@ -57,7 +57,14 @@ dip_confirm_send_money = {
 	save_scope_as = sender
 		var:pay_to = {
 			add_treasury =  scope:sender.var:dip_money_amount
+
+			add_opinion = { 
+				modifier = send_large_gift 
+				#multiply = var:dip_money_amount/100
+				target = scope:sender  
+			}
 		}
+		#debug_log = "send lots of money"
 	add_treasury = {subtract = var:dip_money_amount}	
 	}
 }
@@ -68,11 +75,9 @@ dip_cancel_send_money = {
 	ai_is_valid = {
 		always = no
 	}
-
 	is_valid = {
 		var:dip_money_amount > 0 
 	}
-
 	effect = {
 		set_variable = {
 			name = dip_money_amount
@@ -89,7 +94,6 @@ dip_increase_money = {
 	}
 	is_valid = {
 	}
-
 	effect = {
 		
 		change_variable = {

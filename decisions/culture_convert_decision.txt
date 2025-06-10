@@ -1,0 +1,35 @@
+﻿country_decisions = {
+	
+	convert_to_ruler_culture = {
+		
+		potential = {
+			num_of_cities >= 1
+			NOT = {
+				
+				culture = current_ruler.culture
+			}
+			
+		}
+
+		allow = {
+			NOT = {
+				culture = current_ruler.culture
+				#is_ai = no 
+			}
+
+			#every_integrated_culture = { current_ruler.culture }
+		}
+		
+		effect = {
+			set_primary_culture_cleanup_effect = {
+				NEW_PRIMARY_CULTURE = current_ruler.culture
+				MAKE_OLD_CULTURE_INTEGRATED = yes
+			}
+		}
+		
+		ai_will_do = {
+			factor = 0
+			
+			}
+		}
+	}

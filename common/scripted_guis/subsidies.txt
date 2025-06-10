@@ -1,0 +1,120 @@
+﻿dip_subsidies = {
+	scope = country
+
+	saved_scopes = {
+		target
+	}
+	ai_is_valid = {
+		always = no
+	}
+	is_valid = {
+		in_diplomatic_range = scope:target
+		NOT = {
+			scope:target = root
+		}
+	}
+	effect = {
+		
+		set_variable = {
+			name = dip_subsidies_amount
+			value = 0
+			
+		}
+		set_variable = {
+		  name = send_to
+		  value = scope:target
+		}
+	}
+}
+dip_change_subsidies = {
+	scope = country
+
+	ai_is_valid = {
+		always = no
+	}
+
+	is_shown = {
+		has_variable = dip_subsidies_amount
+		is_ai = no
+		
+	}
+
+	is_valid = {
+
+	}
+}
+dip_confirm_subsidies = {
+	scope = country
+
+	ai_is_valid = {
+		always = no
+	}
+
+	is_valid = {
+		#treasury > var:dip_subsidies_amount
+	}
+
+	effect = {
+	save_scope_as = sender
+		if = {
+			limit = {
+				has_variable = dip_subsidies_amount
+			}
+			#debug_log = " send subsidies start
+			set_variable = {
+				name = paying_subsidies
+				days = 1825
+				value = var:send_to
+			}
+		}
+	}
+}
+dip_cancel_subsidies = {
+	scope = country
+
+	ai_is_valid = {
+		always = no
+	}
+
+	is_valid = {
+		has_variable = paying_subsidies
+	}
+
+	effect = {
+		#var:dip_subsidies_amount = 0 
+		clear_local_variable_list = dip_subsidies_amount
+		clear_local_variable_list = paying_subsidies
+	}
+}
+dip_increase_subsidies = {
+	scope = country
+
+	ai_is_valid = {
+		always = no
+	}
+	is_valid = {
+	}
+
+	effect = {
+		change_variable = {
+			name = dip_subsidies_amount
+			add = 5 
+		}
+	}
+}
+dip_decrease_subsidies = {
+	scope = country
+
+	ai_is_valid = {
+		always = no
+	}
+	is_valid = {
+		var:dip_subsidies_amount > 0
+	}
+	effect = {
+		change_variable = {
+			name = dip_subsidies_amount
+			add = -5 
+		}	
+	}
+}

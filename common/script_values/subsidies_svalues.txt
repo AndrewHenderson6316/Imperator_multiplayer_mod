@@ -1,0 +1,26 @@
+﻿subtract_10_percent_monthly_income = {
+	value = scope:rep_country.has_monthly_income
+	multiply = 1
+	multiply = 0.1
+	multiply = -1
+}
+add_10_percent_monthly_income = {
+	value = scope:rep_country.has_monthly_income
+	multiply = 1
+	multiply = 0.1
+
+}
+#bad_guys_gold_adding_svalue = {
+#	value = var:bad_guys_var.has_monthly_income	#root is war scope
+#	multiply = 6
+#}
+
+#bad_guys_gold_actual_add_svalue = {
+#	add = bad_guys_gold_adding_svalue
+#	max = bad_guys_gold_max_svalue
+#}
+
+#bad_guys_gold_max_svalue = {
+#	value = var:bad_guys_var.has_monthly_income	#root is war scope
+#	multiply = 24 #Can take up to 24 months of income in a single war.
+#}

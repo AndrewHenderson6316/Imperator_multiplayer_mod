@@ -1,0 +1,30 @@
+﻿make_player_subject = {
+	scope = country
+
+	saved_scopes = {
+		target
+	}
+
+	confirm_title = "make_player_subject"
+	confirm_text = "make_player_confirm" 
+
+	ai_is_valid = {
+		always = no
+	}
+	is_valid = {
+		in_diplomatic_range = scope:target
+		NOT = {
+			scope:target = root
+		}
+		is_subject = no 
+	}
+	effect = {
+		save_scope_as = sender
+		scope:target = {
+			trigger_event = {
+				id = player_subject_events.1
+			}
+		}
+
+	}
+}

@@ -1,0 +1,12 @@
+﻿l_english:
+  demand_conversion:0 "Demand Conversion"
+  demand_conversion_t:0 "Demand Religious Conversion"
+  demand_conversion_confirm: "Demand That [SCOPE.sC('target').GetName] converts to our religion?"
+
+  demand_conversion_1.t:0 "Demand Conversion"
+  demand_conversion_1.desc:0 "Convert to [SCOPE.sC('sender').GetReligion.GetName] at the request of [SCOPE.sC('sender').GetName] "
+  demand_conversion_1.a:0 "Demand Religious Conversion"
+  demand_conversion_1.a_tt:0 " testing this is awful"
+  demand_conversion_1.b:0 "cancel"
+  religion_conversion_window: "Convert Religion Proposal"
+  propose_religion_conversion: "Propose Conversion"

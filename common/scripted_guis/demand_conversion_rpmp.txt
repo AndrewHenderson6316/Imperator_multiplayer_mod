@@ -1,0 +1,45 @@
+﻿dip_demand_conversion = {
+	scope = country
+
+	confirm_title = "demand_conversion"
+	confirm_text = "demand_conversion_confirm"
+
+	saved_scopes = {
+		target
+	}
+
+	is_shown = {
+		num_of_cities >= 1
+		not = {
+			#religion = scope:target.religion
+		}
+		#always = yes
+	}
+	ai_is_valid = {
+		always = no
+	}
+
+	is_valid = {
+		in_diplomatic_range = scope:target
+		NOT = {
+			scope:target = root
+			religion = scope:target.religion
+		}
+	}
+
+	effect = {
+		#debug_log = "demanded conversion"
+		clear_variable_list = convert_to 
+		#add_stability = 100
+
+		set_variable = {
+			name = convert_to
+			value = root.religion
+		}
+		save_scope_as = sender
+		scope:target = {
+			#add_stability = -100
+			trigger_event = {id = demand_conversion.1}
+		}
+	}
+}

@@ -2,14 +2,16 @@
 	scope = country
 
 	confirm_title = "demand_conversion"
-	confirm_text = "demand_conversion_confirm"
+	confirm_text = "propose_religion_conversion"
 
 	saved_scopes = {
 		target
 	}
+
 	is_shown = {
+		num_of_cities >= 1
 		not = {
-			religion = scope:target.religion
+			#religion = scope:target.religion
 		}
 		#always = yes
 	}
@@ -26,7 +28,7 @@
 	}
 
 	effect = {
-
+		#debug_log = "demanded conversion"
 		clear_variable_list = convert_to 
 		#add_stability = 100
 

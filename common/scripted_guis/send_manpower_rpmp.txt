@@ -1,4 +1,4 @@
-﻿dip_send_money = {
+﻿dip_send_manpower = {
 	scope = country
 
 	saved_scopes = {
@@ -15,7 +15,7 @@
 	}
 	effect = {
 		set_variable = {
-			name = dip_money_amount
+			name = dip_manpower_amount
 			value = 0
 		}
 		set_variable = {
@@ -24,7 +24,7 @@
 		}
 	}
 }
-dip_change_money = {
+dip_change_manpower = {
 	scope = country
 
 	ai_is_valid = {
@@ -33,16 +33,16 @@ dip_change_money = {
 
 	is_shown = {
 		any_in_list = {
-			variable = dip_money_amount
+			variable = dip_manpower_amount
+			is_ai = no
 		}
-		is_ai = no
 	}
 
 	is_valid = {
 
 	}
 }
-dip_confirm_send_money = {
+dip_confirm_send_manpower = {
 	scope = country
 
 	ai_is_valid = {
@@ -50,71 +50,72 @@ dip_confirm_send_money = {
 	}
 
 	is_valid = {
-		treasury > var:dip_money_amount
+		manpower >= var:dip_manpower_amount
 	}
 
 	effect = {
 	save_scope_as = sender
 		var:pay_to = {
-			add_treasury =  scope:sender.var:dip_money_amount
+			add_manpower =  scope:sender.var:dip_manpower_amount
 
 			add_opinion = { 
 				modifier = send_large_gift 
-				#multiply = var:dip_money_amount/100
+				#multiply = var:dip_manpower_amount/100
 				target = scope:sender  
 			}
 		}
 		#debug_log = "send lots of money"
-	add_treasury = {subtract = var:dip_money_amount}	
+	add_manpower = {subtract = var:dip_manpower_amount}	
 	}
 }
 
-dip_cancel_send_money = {
+dip_cancel_send_manpower = {
 	scope = country
 
 	ai_is_valid = {
 		always = no
 	}
 	is_valid = {
-		var:dip_money_amount > 0 
+		var:dip_manpower_amount > 0 
 	}
 	effect = {
 		set_variable = {
-			name = dip_money_amount
+			name = dip_manpower_amount
 			value = 0
 		}
 	}
 }
 
-dip_increase_money = {
+dip_increase_manpower = {
 	scope = country
 
 	ai_is_valid = {
 		always = no
 	}
 	is_valid = {
+		manpower > var:dip_manpower_amount
 	}
 	effect = {
 		
 		change_variable = {
-			name = dip_money_amount
-			add = 100
+			name = dip_manpower_amount
+			add = 1
 		}
 	}
 }
-dip_decrease_money = {
+dip_decrease_manpower = {
 	scope = country
 
 	ai_is_valid = {
 		always = no
 	}
 	is_valid = {
-		var:dip_money_amount > 0
+		var:dip_manpower_amount > 0
 	}
 	effect = {
 		change_variable = {
-			name = dip_money_amount
-			add = -100
+			name = dip_manpower_amount
+			add = -1
 		}
 	}
 }

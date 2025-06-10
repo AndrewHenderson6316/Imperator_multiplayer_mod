@@ -1,0 +1,167 @@
+﻿base_sub_window = {
+	name = "send_manpower_window"
+	size = { 430 225 }
+	position = { 400 145 }
+	movable = yes
+
+	blockoverride "Title_text" { text = "send_manpower" }
+
+	blockoverride "White_buttons"
+	{
+		button_close = {
+			tooltip = "CLOSE"
+			onclick = "[ExecuteConsoleCommand('gui.ClearWidgets send_manpower_window')]"
+			#onclick = "[GetVariableSystem.Clear('sell_provinces_open')]"
+		}
+	}
+
+	margin_widget = {
+		size = { 100% 100% }
+
+		vbox = {
+			#direction = vertical
+			parentanchor = hcenter
+			margin_top = 0
+			margin_bottom = 15
+			layoutpolicy_vertical = expanding
+			widget = {
+				size = { 0 2 }
+			}
+
+			vbox = {
+				#size = { 0 80 }
+				layoutpolicy_horizontal = expanding
+
+				datacontext = "[GetScriptedGui('dip_change_manpower')]"
+				enabled = "[ScriptedGui.IsValid(GuiScope.SetRoot( Player.MakeScope ).End)]"
+				using = NoninteractableBG
+				blockoverride "Margins" { margin = { -5 0 }  margin_bottom = 6 }
+
+				margin_widget = {
+					size = { 0 100 }
+					#position = { 5 0 }
+					layoutpolicy_horizontal = expanding
+
+					datacontext = "[GetScriptedGui('dip_confirm_send_manpower')]"
+
+					textbox = {
+						visible = "[Not(ScriptedGui.IsValid(GuiScope.SetRoot( Player.MakeScope ).End))]"
+						parentanchor = hcenter
+						position = { 0 10 }
+						using = BaseFontS
+						using = Black_FontColor
+						text = "send_manpower"
+						autoresize = yes
+					}
+					textbox = {
+						visible = "[ScriptedGui.IsValid(GuiScope.SetRoot( Player.MakeScope ).End)]"
+						parentanchor = hcenter
+						position = { 0 10 }
+						using = BaseFontS
+						using = Black_FontColor
+						text = "send_manpower_msg"
+						autoresize = yes
+					}
+				}
+
+				margin_widget = {
+
+					size = { 0 28 }
+					layoutpolicy_horizontal = expanding
+
+					hbox = {
+						margin = { 10 0 }
+						text_button_square_highlighted = {
+							size = { 0 0 }
+							layoutpolicy_horizontal = expanding
+
+							datacontext = "[GetScriptedGui('dip_decrease_manpower')]"
+							enabled = "[ScriptedGui.IsValid(GuiScope.SetRoot( Player.MakeScope ).End)]"
+							blockoverride "On_click"
+							{
+								onclick = "[ScriptedGui.Execute(GuiScope.SetRoot( Player.MakeScope ).End)]"
+							}
+							blockoverride "Center_text" {
+								text = "-500"
+							}
+						}
+
+						widget = {
+							size = { 150 0 }
+							layoutpolicy_vertical = expanding
+
+							tag = {
+								parentanchor = center
+								text = "send_manpower_desc"
+							}
+						}
+
+						text_button_square_highlighted = {
+							size = { 0 0 }
+							layoutpolicy_horizontal = expanding
+
+							datacontext = "[GetScriptedGui('dip_increase_manpower')]"
+							blockoverride "On_click"
+							{
+								onclick = "[ScriptedGui.Execute(GuiScope.SetRoot( Player.MakeScope ).End)]"
+							}
+							blockoverride "Center_text" {
+								text = "+500"
+							}
+						}
+
+					}
+				}
+			}
+
+			widget = {
+				size = { 100% 28 }
+				position = { 0 0 }
+				layoutpolicy_horizontal = expanding
+				hbox = {
+					margin = { 10 0 }
+					
+					layoutpolicy_vertical = expanding
+					layoutpolicy_horizontal = expanding
+					text_button_square = {
+						layoutpolicy_vertical = expanding
+						layoutpolicy_horizontal = expanding
+						name = "decline_button"
+						size = { 0 0 }
+						blockoverride "Center_text" { text = "RESET" }
+						datacontext = "[GetScriptedGui('dip_cancel_send_manpower')]"
+						enabled = "[ScriptedGui.IsValid(GuiScope.SetRoot( Player.MakeScope ).End)]"
+						blockoverride "On_click"
+						{
+							
+							onclick = "[ScriptedGui.Execute(GuiScope.SetRoot( Player.MakeScope ).End)]"
+							#onclick = "[ExecuteConsoleCommand('gui.ClearWidgets send_manpower_window')]"
+						}
+					}
+
+					widget = {
+						size = { 5 0 }
+					}
+
+					text_button_square = {
+						layoutpolicy_vertical = expanding
+						layoutpolicy_horizontal = expanding
+						name = "accept_button"
+						size = { 0 0 }
+						blockoverride "Center_text" { text = "OK_BUTTON" }
+						datacontext = "[GetScriptedGui('dip_confirm_send_manpower')]"
+						enabled = "[ScriptedGui.IsValid(GuiScope.SetRoot( Player.MakeScope ).End)]"
+
+						blockoverride "On_click"
+						{
+							enabled = "[ScriptedGui.IsValid(GuiScope.SetRoot( Player.MakeScope ).End)]"
+							onclick = "[ScriptedGui.Execute(GuiScope.SetRoot( Player.MakeScope ).End)]"
+							onclick = "[ExecuteConsoleCommand('gui.ClearWidgets send_manpower_window')]"
+							#onclick = "[GetVariableSystem.Clear('sell_provinces_open')]"
+						}
+					}
+				}
+			}
+		}
+	}
+}

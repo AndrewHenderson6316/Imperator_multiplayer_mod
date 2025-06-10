@@ -1,6 +1,8 @@
-#TODO 
-#	MERC state button for other subjects
-#	ask to convert religion/ culture of other nations 
-#	buff bad playstyles 
-#
-#
+This is a mod made for the Paradox interactive Roleplay server imperator games 
+Version 0.1
+
+TODO 
+	Non aggression pacts
+	subsidies 
+	player subjects get event to join war on either side or break free on wars of independence 
+	allow resuply in land diplomatic demand 

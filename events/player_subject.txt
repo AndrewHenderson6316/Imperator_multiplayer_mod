@@ -1,0 +1,33 @@
+﻿namespace = player_subject_events
+
+player_subject_events.1 = {
+    type = country_event
+    title = player_subject_events.t
+    desc = player_subject_events.desc
+    right_portrait = current_ruler
+    left_portrait = scope:sender.current_ruler
+    picture = diadochi_coronation
+    immediate = {
+    }
+
+    option = {      
+        ai_chance = { factor = 0 }
+        name = player_subject_events.a
+        if = {
+            limit = {
+                is_subject = no
+            }
+            scope:sender = {
+                make_subject = {
+                    target = root
+                    type = player_client_state
+                }
+            }
+        }    
+    }
+
+    option = {      
+        name = player_subject_events.b
+        ai_chance = { factor = 100 }
+    }
+}

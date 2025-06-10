@@ -1,0 +1,52 @@
+﻿country_decisions = {
+	
+	convert_to_ruler_culture = {
+		
+		potential = {
+			num_of_cities >= 1
+			NOT = {
+				
+				culture = current_ruler.culture
+			}
+			
+		}
+
+		allow = {
+			NOT = {
+				culture = current_ruler.culture
+				#is_ai = no 
+			}
+			#every_integrated_culture = { current_ruler.culture }
+		}
+		
+		effect = {
+			current_ruler.culture = {
+				save_scope_as = ruler_culture
+			}
+			
+			set_primary_culture_cleanup_effect = {
+				NEW_PRIMARY_CULTURE = scope:ruler_culture
+				MAKE_OLD_CULTURE_INTEGRATED = yes
+			}
+			capital_scope = {
+				while = {
+					count = { 5 8 }
+					random_pops_in_province = {
+						set_pop_culture = scope:ruler_culture
+					}
+				}
+			}
+		}
+		
+		ai_will_do = {
+			factor = 0
+			ruler ={
+				has_trait = {
+					name = lunatic 
+					factor 100
+				}
+			}
+		}
+	}
+}
+

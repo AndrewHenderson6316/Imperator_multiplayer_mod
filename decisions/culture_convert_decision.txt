@@ -21,15 +21,46 @@
 		}
 		
 		effect = {
+<<<<<<< Updated upstream
 			set_primary_culture_cleanup_effect = {
 				NEW_PRIMARY_CULTURE = current_ruler.culture
 				MAKE_OLD_CULTURE_INTEGRATED = yes
 			}
+=======
+			current_ruler.culture = {
+				save_scope_as = ruler_culture
+			}
+			
+			set_primary_culture_cleanup_effect = {
+				NEW_PRIMARY_CULTURE = scope:ruler_culture
+				MAKE_OLD_CULTURE_INTEGRATED = yes
+			}
+			capital_scope = {
+				while = {
+					count = { 5 8 }
+					random_pops_in_province = {
+						set_pop_culture = scope:ruler_culture
+					}
+				}
+			}
+>>>>>>> Stashed changes
 		}
 		
 		ai_will_do = {
 			factor = 0
+<<<<<<< Updated upstream
 			
 			}
 		}
 	}
+=======
+			ruler ={
+				has_trait = {
+					name = lunatic 
+					factor 100
+				}
+			}
+		}
+	}
+}
+>>>>>>> Stashed changes

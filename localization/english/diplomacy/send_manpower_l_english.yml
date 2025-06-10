@@ -1,0 +1,9 @@
+﻿l_english: 
+ send_manpower: "Send Manpower"
+ send_manpower_msg: "How Much manpower should we send  "
+ #RESET: "Reset"
+ #send_manpower_title: "[sender.GetName] Sends an Offer"
+ send_manpower_desc: "[Player.MakeScope.Var('dip_manpower_amount').GetValue|0] x 500 @manpower! "
+
+
+

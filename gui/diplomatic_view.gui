@@ -1188,7 +1188,7 @@ base_window = {
 									size = { 100% 28 }
 									layoutpolicy_horizontal = expanding
 									datacontext = "[GetScriptedGui('dip_send_money')]"
-									enabled = "[And(ScriptedGui.IsValid(GuiScope.SetRoot( Player.MakeScope ).AddScope('target', DiplomaticView.GetTargetCountry.MakeScope ).End), Not(GetVariableSystem.Exists('sell_provinces_open')))]"
+									enabled = "[And(ScriptedGui.IsValid(GuiScope.SetRoot( Player.MakeScope ).AddScope('target', DiplomaticView.GetTargetCountry.MakeScope ).End), Not(GetVariableSystem.Exists('send_money_window')))]"
 									visible = "[And(Not(DiplomaticView.GetTargetCountry.IsBarbarian), Not(EqualTo_int32( DiplomaticView.GetTargetCountry.GetId, Player.GetId )))]"
 									blockoverride "On_click" {
 										onclick = "[ScriptedGui.Execute(GuiScope.SetRoot( Player.MakeScope ).AddScope('target', DiplomaticView.GetTargetCountry.MakeScope ).End)]"
@@ -1197,7 +1197,30 @@ base_window = {
 									}
 									blockoverride "Center_text"
 									{
-										text = "SEND MONEY"
+										text = "send_money"
+									}
+								}
+							}
+							margin_widget = {
+								size = { 0 28 }
+								layoutpolicy_horizontal = expanding
+								margin = { 14 0 }
+								margin_right = 7
+
+								text_button_square = {
+									size = { 100% 28 }
+									layoutpolicy_horizontal = expanding
+									datacontext = "[GetScriptedGui('dip_send_manpower')]"
+									enabled = "[And(ScriptedGui.IsValid(GuiScope.SetRoot( Player.MakeScope ).AddScope('target', DiplomaticView.GetTargetCountry.MakeScope ).End), Not(GetVariableSystem.Exists('sell_provinces_open')))]"
+									visible = "[And(Not(DiplomaticView.GetTargetCountry.IsBarbarian), Not(EqualTo_int32( DiplomaticView.GetTargetCountry.GetId, Player.GetId )))]"
+									blockoverride "On_click" {
+										onclick = "[ScriptedGui.Execute(GuiScope.SetRoot( Player.MakeScope ).AddScope('target', DiplomaticView.GetTargetCountry.MakeScope ).End)]"
+										#onclick = "[GetVariableSystem.Toggle('sell_provinces_open')]"
+										onclick = "[ExecuteConsoleCommand('gui.createwidget gui/send_manpower.gui send_manpower_window')]"
+									}
+									blockoverride "Center_text"
+									{
+										text = "send_manpower"
 									}
 								}
 							}

@@ -1,0 +1,121 @@
+﻿dip_send_manpower = {
+	scope = country
+
+	saved_scopes = {
+		target
+	}
+	ai_is_valid = {
+		always = no
+	}
+	is_valid = {
+		in_diplomatic_range = scope:target
+		NOT = {
+			scope:target = root
+		}
+	}
+	effect = {
+		set_variable = {
+			name = dip_manpower_amount
+			value = 0
+		}
+		set_variable = {
+		  name = pay_to
+		  value = scope:target
+		}
+	}
+}
+dip_change_manpower = {
+	scope = country
+
+	ai_is_valid = {
+		always = no
+	}
+
+	is_shown = {
+		any_in_list = {
+			variable = dip_manpower_amount
+			is_ai = no
+		}
+	}
+
+	is_valid = {
+
+	}
+}
+dip_confirm_send_manpower = {
+	scope = country
+
+	ai_is_valid = {
+		always = no
+	}
+
+	is_valid = {
+		manpower >= var:dip_manpower_amount
+	}
+
+	effect = {
+	save_scope_as = sender
+		var:pay_to = {
+			add_manpower =  scope:sender.var:dip_manpower_amount
+
+			add_opinion = { 
+				modifier = send_large_gift 
+				#multiply = var:dip_manpower_amount/100
+				target = scope:sender  
+			}
+		}
+		#debug_log = "send lots of money"
+	add_manpower = {subtract = var:dip_manpower_amount}	
+	}
+}
+
+dip_cancel_send_manpower = {
+	scope = country
+
+	ai_is_valid = {
+		always = no
+	}
+	is_valid = {
+		var:dip_manpower_amount > 0 
+	}
+	effect = {
+		set_variable = {
+			name = dip_manpower_amount
+			value = 0
+		}
+	}
+}
+
+dip_increase_manpower = {
+	scope = country
+
+	ai_is_valid = {
+		always = no
+	}
+	is_valid = {
+		manpower > var:dip_manpower_amount
+	}
+	effect = {
+		
+		change_variable = {
+			name = dip_manpower_amount
+			add = 1
+		}
+	}
+}
+dip_decrease_manpower = {
+	scope = country
+
+	ai_is_valid = {
+		always = no
+	}
+	is_valid = {
+		var:dip_manpower_amount > 0
+	}
+	effect = {
+		change_variable = {
+			name = dip_manpower_amount
+			add = -1
+		}
+	}
+}

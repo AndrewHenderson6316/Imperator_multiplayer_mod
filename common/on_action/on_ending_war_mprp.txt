@@ -7,8 +7,8 @@ on_ending_war = {
 		}
 		root = {
 			trigger_event = {
-					id = dhe_dde_pyrrhus.3 # event to give mil exp 
-					}
+				id = dhe_dde_pyrrhus.3 # event to give mil exp 
+			}
 		}
 		events = {
 		#

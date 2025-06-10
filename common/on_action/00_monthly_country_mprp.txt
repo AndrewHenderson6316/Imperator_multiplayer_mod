@@ -1,0 +1,51 @@
+﻿monthly_country_pulse = {
+	on_actions = {
+		monthly_reparation_payments_on_action
+        on_high_war_exhaustion
+	}
+}
+
+monthly_reparation_payments_on_action = {
+    effect = {
+        #Add income for reparations...
+        if = {
+            limit = { has_variable = paying_subsidies }
+            
+            save_scope_as = sub_country
+
+            add_treasury = {
+                value = var:dip_subsidies_amount
+                multiply = -1
+            }
+            #debug_log = "pay first"
+            var:paying_subsidies = {
+            	#debug_log = "pay subsidies [Player.MakeScope.Var('paying_subsidies').GetCountry.GetName] "
+                #debug_log = "pay second "
+                add_treasury = {
+                    value = scope:sub_country.var:dip_subsidies_amount
+                    
+                }
+                add_opinion = { 
+                    modifier = subsidies_opinion 
+                    target = scope:sub_country  
+                }
+            }
+            
+
+        }
+    }
+}
+
+on_high_war_exhaustion = {
+    effect = {
+        if = {
+            limit = {
+                has_war_exhaustion >= 20
+            }
+
+            trigger_event = {
+                id = player_war.1
+            }
+        }
+    }
+}

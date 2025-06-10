@@ -1,0 +1,3 @@
+﻿
+10_percent_income_for_10_years_defender_tt:0 "[attacker.GetName] will pay #Y 10%#! of their monthly income to [player.GetName] for #Y 5#! years. This will cost #Y 50#! war score.\n "
+10_percent_income_for_10_years_attacker_tt:0 "[defender.GetName] will pay #Y 10%#! of their monthly income to [player.GetName] for #Y 5#! years. This will cost #Y 50#! war score.\n"

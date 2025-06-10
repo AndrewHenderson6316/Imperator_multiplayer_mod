@@ -76,7 +76,7 @@ player_union_state = {
 	costs_diplomatic_slot = no
 	subject_can_cancel = no
 	
-	has_limited_diplomacy = no
+	has_limited_diplomacy = yes
 	only_trade_with_overlord =  no
 	
 
@@ -84,7 +84,6 @@ player_union_state = {
 		#diplomatic_reputation = -1
 	}
 	subject_modifier = {
-
 		#ruler_popularity_gain = -0.05
 		#global_commerce_modifier = 0.1
 	}

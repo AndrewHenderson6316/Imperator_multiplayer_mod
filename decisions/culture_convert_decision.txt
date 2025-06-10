@@ -16,17 +16,10 @@
 				culture = current_ruler.culture
 				#is_ai = no 
 			}
-
 			#every_integrated_culture = { current_ruler.culture }
 		}
 		
 		effect = {
-<<<<<<< Updated upstream
-			set_primary_culture_cleanup_effect = {
-				NEW_PRIMARY_CULTURE = current_ruler.culture
-				MAKE_OLD_CULTURE_INTEGRATED = yes
-			}
-=======
 			current_ruler.culture = {
 				save_scope_as = ruler_culture
 			}
@@ -43,17 +36,11 @@
 					}
 				}
 			}
->>>>>>> Stashed changes
+
 		}
 		
 		ai_will_do = {
 			factor = 0
-<<<<<<< Updated upstream
-			
-			}
-		}
-	}
-=======
 			ruler ={
 				has_trait = {
 					name = lunatic 
@@ -63,4 +50,4 @@
 		}
 	}
 }
->>>>>>> Stashed changes
+

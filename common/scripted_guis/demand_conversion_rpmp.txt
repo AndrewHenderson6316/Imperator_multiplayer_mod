@@ -2,7 +2,7 @@
 	scope = country
 
 	confirm_title = "demand_conversion"
-	confirm_text = "demand_conversion_confirm"
+	confirm_text = "propose_religion_conversion"
 
 	saved_scopes = {
 		target

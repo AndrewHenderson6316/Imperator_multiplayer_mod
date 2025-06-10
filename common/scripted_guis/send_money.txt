@@ -34,8 +34,8 @@ dip_change_money = {
 	is_shown = {
 		any_in_list = {
 			variable = dip_money_amount
-			is_ai = no
 		}
+		is_ai = no
 	}
 
 	is_valid = {

@@ -2,8 +2,8 @@
 
 player_subject_events.1 = {
     type = country_event
-    title = player_subject_events.t
-    desc = player_subject_events.desc
+    title = player_subject_events_1.t
+    desc = player_subject_events_1.desc
     right_portrait = current_ruler
     left_portrait = scope:sender.current_ruler
     picture = diadochi_coronation
@@ -12,7 +12,7 @@ player_subject_events.1 = {
 
     option = {      
         ai_chance = { factor = 0 }
-        name = player_subject_events.a
+        name = player_subject_events_1.a
         if = {
             limit = {
                 is_subject = no
@@ -27,7 +27,7 @@ player_subject_events.1 = {
     }
 
     option = {      
-        name = player_subject_events.b
+        name = player_subject_events_1.b
         ai_chance = { factor = 100 }
     }
 }

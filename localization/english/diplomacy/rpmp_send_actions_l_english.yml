@@ -1,0 +1,22 @@
+﻿l_english: 
+ send_money: "Send Money"
+ send_money_msg: "How Much money should we send  "
+ RESET: "Reset"
+ send_money_title: "[sender.GetName] Sends an Offer"
+ send_money_desc: "[sender.GetName] offers to send [sender.MakeScope.Var('send_amount').GetValue|0] @gold!\n"
+
+ send_manpower:0 "Send Manpower"
+ send_manpower_msg:0 "How Much manpower should we send  "
+ send_manpower_desc:0 "[Multiply_CFixedPoint( Player.MakeScope.Var('dip_manpower_amount').GetValue, '(CFixedPoint)500')|0] @manpower! [Multiply_CFixedPoint( Player.MakeScope.Var('dip_manpower_amount').GetValue, '(CFixedPoint)-10')|0] @political_influence!"
+ 
+ rpmp_send_events.1.t: "Money Has Been offered from [SCOPE.sC('sender').GetName]"
+ rpmp_send_events.1.desc: "WOOOO"
+ rpmp_send_events.1.a: "Accept Money"
+ rpmp_send_events.1.b: "Decline"
+ 
+ rpmp_send_events.2.t:0 "Manpower offered from [SCOPE.sC('sender').GetName]"
+ rpmp_send_events.2.desc:0 "Men for our war "
+ rpmp_send_events.2.a:0 "Accept Manpower"
+ rpmp_send_events.2.b:0 "Decline"
+
+

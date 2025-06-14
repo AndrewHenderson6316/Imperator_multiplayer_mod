@@ -51,21 +51,16 @@ dip_confirm_send_manpower = {
 
 	is_valid = {
 		manpower >= var:dip_manpower_amount
+		var:dip_manpower_amount > 0
 	}
-
+	
 	effect = {
-	save_scope_as = sender
+		save_scope_as = sender
 		var:pay_to = {
-			add_manpower =  scope:sender.var:dip_manpower_amount
-
-			add_opinion = { 
-				modifier = send_large_gift 
-				#multiply = var:dip_manpower_amount/100
-				target = scope:sender  
+			trigger_event = {
+				id = rpmp_send_events.2
 			}
 		}
-		#debug_log = "send lots of money"
-	add_manpower = {subtract = var:dip_manpower_amount}	
 	}
 }
 

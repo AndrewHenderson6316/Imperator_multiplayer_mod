@@ -1,4 +1,5 @@
 ﻿l_english:
+  player_client_state:0 "Client State"
   make_player_subject:0 "Make Player Subject"
   make_player_subject:0 "Demand Player Subject"
   make_player_subject: "Demand That [SCOPE.sC('target').GetName] Becomes A Player Subject?"
@@ -8,5 +9,3 @@
   make_player_subject_1.a:0 "become subject"
   make_player_confirm:0 " Ask [SCOPE.sC('target').GetName] To Be Our Subject \n Only For Other Players"
   make_player_subject_1.b:0 "cancel"
-  #religion_conversion_window: "Convert Religion Proposal"
-  #propose_religion_conversion: "Propose Conversion"

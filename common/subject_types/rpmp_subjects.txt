@@ -4,6 +4,8 @@ player_client_state = {
 	
 	joins_overlord_in_war = yes 
 	
+	#allowed_to_declare_war_against_others = yes
+	
 	protected_when_attacked = yes
 	has_overlords_ruler = no
 	can_be_integrated = no
@@ -18,13 +20,13 @@ player_client_state = {
 		diplomatic_reputation = -1
 	}
 	subject_modifier = {
-
 		ruler_popularity_gain = -0.05
 		global_commerce_modifier = 0.1
 	}
 	
 	allow = {
 		is_ai = no
+		always = no 
 		#num_of_cities < 150
 		is_tribal = no
 		scope:future_overlord = {
@@ -90,6 +92,7 @@ player_union_state = {
 	
 	allow = {
 		is_ai = no
+		always = no 
 		num_of_cities < 200
 		is_tribal = no
 		scope:future_overlord = {

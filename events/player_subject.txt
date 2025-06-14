@@ -20,7 +20,47 @@ player_subject_events.1 = {
             scope:sender = {
                 make_subject = {
                     target = root
+                    #type = $SUBJECT_TYPE$
                     type = player_client_state
+                }
+            }
+        }    
+    }
+
+    option = {      
+        name = player_subject_events_1.b
+        ai_chance = { factor = 100 }
+    }
+}
+player_subject_events.2 = {
+    type = country_event
+    title = player_subject_events.2.t
+    desc = player_subject_events.2.desc
+    picture = aqueducts
+    
+    right_portrait = current_ruler
+    left_portrait = scope:sender.current_ruler
+    picture = diadochi_coronation
+
+    trigger = {
+    
+    }
+
+    immediate = {
+
+    }
+
+    option = {      
+        ai_chance = { factor = 0 }
+        name = player_subject_events_1.a
+        if = {
+            limit = {
+                is_subject = no
+            }
+            scope:sender = {
+                make_subject = {
+                    target = root
+                    type = player_union_state
                 }
             }
         }    

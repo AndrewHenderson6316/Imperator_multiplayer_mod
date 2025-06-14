@@ -1,0 +1,157 @@
+﻿base_sub_window = {
+	name = "player_subjects_window"
+	size = { 430 275 }
+	position = { 700 245 }
+	movable = yes
+
+	blockoverride "Title_text" { text = "make_player_subject" }
+
+	blockoverride "White_buttons"
+	{
+		button_close = {
+			tooltip = "CLOSE"
+			onclick = "[ExecuteConsoleCommand('gui.ClearWidgets player_subjects_window')]"
+			#onclick = "[GetVariableSystem.Clear('sell_provinces_open')]"
+		}
+	}
+
+	margin_widget = {
+		size = { 100% 100% }
+
+		vbox = {
+			#direction = vertical
+			parentanchor = hcenter
+			margin_top = 0
+			margin_bottom = 15
+			layoutpolicy_vertical = expanding
+			widget = {
+				size = { 0 2 }
+			}
+
+			vbox = {
+				#size = { 0 80 }
+				layoutpolicy_horizontal = expanding
+
+				#datacontext = "[GetScriptedGui('make_player_subject')]"
+				#enabled = "[ScriptedGui.IsValid(GuiScope.SetRoot( Player.MakeScope ).End)]"
+				using = NoninteractableBG
+				blockoverride "Margins" { margin = { -5 0 }  margin_bottom = 6 }
+
+				#margin_widget = {
+				#	size = { 0 100 }
+				#	#position = { 5 0 }
+				#	layoutpolicy_horizontal = expanding
+
+				#	#datacontext = "[GetScriptedGui('dip_confirm_send_money')]"
+
+				#	textbox = {
+				#		visible = "[Not(ScriptedGui.IsValid(GuiScope.SetRoot( Player.MakeScope ).End))]"
+				#		parentanchor = hcenter
+				#		position = { 0 10 }
+				#		using = BaseFontS
+				#		using = Black_FontColor
+				#		text = "send_money"
+				#		autoresize = yes
+				#	}
+				#	textbox = {
+				#		visible = "[ScriptedGui.IsValid(GuiScope.SetRoot( Player.MakeScope ).End)]"
+				#		parentanchor = hcenter
+				#		position = { 0 10 }
+				#		using = BaseFontS
+				#		using = Black_FontColor
+				#		text = "send_money_msg"
+				#		autoresize = yes
+				#	}
+				#}
+				
+					margin_widget = {
+
+					size = { 0 28 }
+					layoutpolicy_horizontal = expanding
+					#layoutpolicy_vertical = expanding
+					hbox = {
+						margin = { 10 0 }
+						text_button_square = {
+							size = { 0 0 }
+							layoutpolicy_horizontal = expanding
+
+							datacontext = "[GetScriptedGui('make_player_client_subject')]"
+							enabled = "[ScriptedGui.IsValid(GuiScope.SetRoot( Player.MakeScope ).End)]"
+							blockoverride "On_click"
+							{
+								onclick = "[ScriptedGui.Execute(GuiScope.SetRoot( Player.MakeScope ).End)]"
+							}
+							blockoverride "Center_text" {
+								text = "Client state"
+							}
+						}
+
+
+						text_button_square = {
+							size = { 0 0 }
+							layoutpolicy_horizontal = expanding
+							enabled = "[ScriptedGui.IsValid(GuiScope.SetRoot( Player.MakeScope ).End)]"
+							datacontext = "[GetScriptedGui('make_player_subject_union')]"
+							blockoverride "On_click"
+							{
+								onclick = "[ScriptedGui.Execute(GuiScope.SetRoot( Player.MakeScope ).End)]"
+							}
+							blockoverride "Center_text" {
+								text = "Union"
+							}
+						}
+					}
+				}
+				
+			}
+
+			widget = {
+				size = { 100% 28 }
+				position = { 0 0 }
+				layoutpolicy_horizontal = expanding
+				#hbox = {
+				#	margin = { 10 0 }
+					
+				#	layoutpolicy_vertical = expanding
+				#	layoutpolicy_horizontal = expanding
+				#	text_button_square = {
+				#		layoutpolicy_vertical = expanding
+				#		layoutpolicy_horizontal = expanding
+				#		name = "decline_button"
+				#		size = { 0 0 }
+				#		blockoverride "Center_text" { text = "RESET" }
+				#		#datacontext = "[GetScriptedGui('dip_cancel_send_money')]"
+				#		enabled = "[ScriptedGui.IsValid(GuiScope.SetRoot( Player.MakeScope ).End)]"
+				#		blockoverride "On_click"
+				#		{
+							
+				#			onclick = "[ScriptedGui.Execute(GuiScope.SetRoot( Player.MakeScope ).End)]"
+							
+				#		}
+				#	}
+
+				#	widget = {
+				#		size = { 5 0 }
+				#	}
+
+				#	text_button_square = {
+				#		layoutpolicy_vertical = expanding
+				#		layoutpolicy_horizontal = expanding
+				#		name = "accept_button"
+				#		size = { 0 0 }
+				#		blockoverride "Center_text" { text = "OK_BUTTON" }
+				#		#datacontext = "[GetScriptedGui('dip_confirm_send_money')]"
+				#		enabled = "[ScriptedGui.IsValid(GuiScope.SetRoot( Player.MakeScope ).End)]"
+
+				#		blockoverride "On_click"
+				#		{
+				#			enabled = "[ScriptedGui.IsValid(GuiScope.SetRoot( Player.MakeScope ).End)]"
+				#			onclick = "[ScriptedGui.Execute(GuiScope.SetRoot( Player.MakeScope ).End)]"
+				#			onclick = "[ExecuteConsoleCommand('gui.ClearWidgets player_subjects_window')]"
+				#		}
+				#	}
+				#}
+			}
+		}
+	}
+}

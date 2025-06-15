@@ -1,8 +1,8 @@
 ﻿l_english:
   player_client_state:0 "Client State"
-  make_player_subject:0 "Make Player Subject"
-  make_player_subject:0 "Demand Player Subject"
-  make_player_subject: "Demand That [SCOPE.sC('target').GetName] Becomes A Player Subject?"
+  make_player_subject:0 "Offer Subject"
+  make_player_confirm:0 "Demand Player Subject"
+  demand_player_subject:0 "Demand That [SCOPE.sC('target').GetName] Becomes A Player Subject?"
 
   player_subject_events_1.t:0 "Become A Subject?"
   player_subject_events_1.desc:0 "Become Subject To [SCOPE.sC('sender').GetName] Will We Submit?"

@@ -51,21 +51,16 @@ dip_confirm_send_money = {
 
 	is_valid = {
 		treasury > var:dip_money_amount
+		var:dip_money_amount > 0
 	}
 
 	effect = {
-	save_scope_as = sender
+		save_scope_as = sender
 		var:pay_to = {
-			add_treasury =  scope:sender.var:dip_money_amount
-
-			add_opinion = { 
-				modifier = send_large_gift 
-				#multiply = var:dip_money_amount/100
-				target = scope:sender  
+			trigger_event = {
+				id = rpmp_send_events.1 
 			}
 		}
-		#debug_log = "send lots of money"
-	add_treasury = {subtract = var:dip_money_amount}	
 	}
 }
 

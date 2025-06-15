@@ -14,8 +14,14 @@
 		}
 	}
 	effect = {
+		clear_variable_list = dip_manpower_amount
+	 	clear_variable_list = dip_influence_amount
 		set_variable = {
 			name = dip_manpower_amount
+			value = 0
+		}
+		set_variable = {
+			name = dip_influence_amount
 			value = 0
 		}
 		set_variable = {
@@ -52,6 +58,7 @@ dip_confirm_send_manpower = {
 	is_valid = {
 		manpower >= var:dip_manpower_amount
 		var:dip_manpower_amount > 0
+		political_influence >= var:dip_influence_amount 
 	}
 	
 	effect = {
@@ -78,6 +85,10 @@ dip_cancel_send_manpower = {
 			name = dip_manpower_amount
 			value = 0
 		}
+		set_variable = {
+			name = dip_influence_amount
+			value = 0
+		}
 	}
 }
 
@@ -89,12 +100,17 @@ dip_increase_manpower = {
 	}
 	is_valid = {
 		manpower > var:dip_manpower_amount
+
 	}
 	effect = {
 		
 		change_variable = {
 			name = dip_manpower_amount
 			add = 1
+		}
+		change_variable = {
+			name = dip_influence_amount
+			add = 10
 		}
 	}
 }
@@ -111,6 +127,10 @@ dip_decrease_manpower = {
 		change_variable = {
 			name = dip_manpower_amount
 			add = -1
+		}
+		change_variable = {
+			name = dip_influence_amount
+			add = -10
 		}
 	}
 }

@@ -1,0 +1,9 @@
+.idea
+py310
+common/character_interactions/LoveB.txt
+events/LoveB_events.txt
+.cwtools
+.gitignore
+update.sh
+
+localization/english/.DS_Store

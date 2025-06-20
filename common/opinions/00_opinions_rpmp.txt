@@ -1,10 +1,14 @@
 ﻿send_large_gift = {
 	value = 20
-	yearly_decay = 1
+	yearly_decay = 1 #increase? to 2
 	max = 50
 }
 subsidies_opinion = {
 	value = 5
 	yearly_decay = 0.5
 	max = 50
+}
+mprp_subject_broke_free = {
+	value = -100
+	yearly_decay = 2
 }

@@ -1,0 +1,188 @@
+﻿country_decisions = {
+	
+	subject_break_free = {
+		
+		potential = {
+			num_of_cities >= 1
+			NOT = {
+				#overlord.opinion < 0
+			}
+			is_subject = yes
+			
+		}
+
+		allow = {
+			#NOT = {
+				
+				
+			#}
+			overlord ={
+				war = yes
+
+			}
+			is_ai = no 
+			capital_scope ={
+				has_siege = no
+			}
+			threat_in_owned_land < 1
+		}
+		
+		effect = {
+			overlord = {
+				save_temporary_scope_as = overlordscope
+				release_subject = root
+				every_active_war = {
+					limit = {
+						OR = {
+							scope:overlordscope = attacker_warleader
+							scope:overlordscope = defender_warleader
+						}
+					}
+					remove_from_war = root
+				}
+				add_opinion = {
+					modifier = mprp_subject_broke_free
+					target = root
+				}
+			}
+		}
+	}
+	subject_break_free_war = {
+		
+		potential = {
+			num_of_cities >= 1
+			NOT = {
+				overlord.opinion = {
+					value > 0
+					target = root 
+				}
+			}
+			overlord = {
+				war = yes 
+			}
+			is_subject = yes
+			
+		}
+
+		allow = {
+			#NOT = {
+				
+				
+			#}
+			overlord ={
+				war_score < -10
+			}
+			#is_ai = no 
+			capital_scope ={
+				has_siege = no
+			}
+		}
+		
+		effect = {
+			overlord = {
+				save_temporary_scope_as = overlordscope
+				release_subject = root
+				every_active_war = {
+					if ={
+						limit = {
+							scope:overlordscope = defender_warleader
+						}
+
+						remove_from_war = root
+					}
+					else if = {
+						limit = {
+							scope:overlordscope = attacker_warleader
+
+						}
+						
+						remove_from_war = root
+					}
+					
+
+				}
+				add_opinion = {
+					modifier = mprp_subject_broke_free
+					target = root
+				}
+
+			}
+			declare_war_with_wargoal = {
+				target = scope:overlordscope	
+				war_goal = independence_wargoal
+			}
+		}
+	}
+
+	subject_submit_to_new_overlord = {
+		
+		potential = {
+			num_of_cities >= 1
+			NOT = {
+				#overlord.opinion < 0
+			}
+			is_subject = yes
+			
+		}
+
+		allow = {
+			#NOT = {
+
+				
+			#}
+			overlord ={
+				war = yes
+			}
+			is_ai = no 
+			OR = {
+				capital_scope ={
+					has_siege = yes
+				}
+				war_score < -10				
+			}
+
+			
+		}
+		
+		effect = {
+		    overlord = {
+		        save_temporary_scope_as = overlordscope
+
+		        every_active_war = {
+		            if = {
+		                limit = {
+		                    scope:overlordscope = attacker_warleader
+		                }
+		                remove_from_war = root
+		                defender_warleader = {
+		                    save_temporary_scope_as = new_overlord
+		                }
+		            }
+
+		            if = {
+		                limit = {
+		                    scope:overlordscope = defender_warleader
+		                }
+		                remove_from_war = root
+		                attacker_warleader = {
+		                    save_temporary_scope_as = new_overlord
+		                }
+		            }
+		        }
+
+		        add_opinion = {
+		            modifier = mprp_subject_broke_free
+		            target = root
+		        }
+	        release_subject = root
+		}
+		save_scope_as = target
+		scope:new_overlord ={
+			make_subject = {
+				type = player_client_state
+				target = root
+			}
+		}
+	}
+}
+

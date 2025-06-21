@@ -1,0 +1,12 @@
+﻿mprp_new_overlord_effect = {
+	# REQUIRED 
+	# NEW_OVERLORD
+	# SUBJECT
+	$NEW_OVERLORD$ = {
+		make_subject = {
+			target = $SUBJECT$
+			type = $SUBJECT_TYPE$
+		}
+	}
+
+}

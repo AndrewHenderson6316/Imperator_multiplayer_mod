@@ -10,19 +10,19 @@
 		allow = {
 			overlord ={
 				save_temporary_scope_as = overlordscope
-				war = yes
-				any_current_war = {
+				any_current_war ={
+					defender_warleader = scope:overlordscope
 					war_score = {
-						target = scope:overlordscope
-						value <  -10
+						target = attacker_warleader
+						value > 10
 					}
 				}
 			}
 			is_ai = no 
 			capital_scope ={
 				has_siege = no
+				controller = root
 			}
-			threat_in_owned_land < 1
 		}
 		
 		effect = {
@@ -161,7 +161,7 @@
 		
 		effect = {
 		    overlord = {
-		        save_temporary_scope_as = overlordscope
+		        #save_temporary_scope_as = overlordscope
 		        
 		        add_opinion = {
 		            modifier = mprp_subject_broke_free
@@ -184,7 +184,7 @@
 	        	}
 	        	remove_from_war = root 
 	        }
-	        mprp_new_overlord_effect = {
+	        mprp_new_overlord_effect = { # add to  war on other side???
 	        	NEW_OVERLORD = scope:new_overlord
 	        	SUBJECT = root
 	        	SUBJECT_TYPE = player_client_state

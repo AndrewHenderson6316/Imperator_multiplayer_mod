@@ -1132,13 +1132,74 @@ base_window = {
 										}
 									}
 								}
-							}
+
+								vbox = {
+									visible = "[Not(IsDataModelEmpty(DiplomaticView.GetActions))]"
+                               		spacing = 4
+                            		margin_top = 4
+                              		margin_bottom = 6
+                              		margin_right = 4
+                              		alpha = 1
+                               		layoutpolicy_horizontal = expanding
+
+									category_drop = {
+										name = "open_button_dip"
+										layoutpolicy_horizontal = expanding
+										size = { 0 32 }
+										blockoverride "Text_alignment"
+										{
+											parentanchor = left|vcenter
+											align = left
+											position = { 16 -2 }
+											max_width = 310
+										}
+										blockoverride "Text"
+										{
+											text = "Political Actions"
+										}
+										blockoverride "On_click" { onclick = "[GetVariableSystem.Toggle( 'open_button_dip')]" }
+										blockoverride "Down" { visible = no }
+										blockoverride "Right" { visible = yes }
+										blockoverride "RightArrowVisible" { visible = yes }
+										visible = "[Not(GetVariableSystem.Exists( 'open_button_dip') )]"
+									}
+
+									category_drop = {
+										name = "close_button_dip"
+										layoutpolicy_horizontal = expanding
+										size = { 0 32 }
+										blockoverride "Text_alignment"
+										{
+											parentanchor = left|vcenter
+											align = left
+											position = { 16 -2 }
+											max_width = 310
+										}
+										blockoverride "Text" { text = "Political Actions" }
+										blockoverride "On_click" { onclick = "[GetVariableSystem.Toggle( 'open_button_dip')]" }
+										blockoverride "Down" { visible = yes }
+										blockoverride "Right" { visible = no }
+										blockoverride "RightArrowVisible" { visible = no }
+
+										visible = "[GetVariableSystem.Exists( 'open_button_dip')]"
+									}
+								}
+
+								vbox = {
+									using = diplomatic_actions_v2
+									layoutpolicy_horizontal = expanding
+									layoutpolicy_vertical = shrinking
+									visible = "[GetVariableSystem.Exists('open_button_dip')]"
+									spacing = 4
+									margin_bottom = -7
+									margin_top = -3
 
 							margin_widget = {
-								size = { 0 28 }
-								layoutpolicy_horizontal = expanding
-								margin = { 14 0 }
-								margin_right = 7
+		                   		size = { 0 28 }
+	                			layoutpolicy_horizontal = expanding
+	                			margin_right = 6
+                 				margin_left = 6
+                 				margin_top = -10
 
 
 								text_button_square = {
@@ -1158,18 +1219,20 @@ base_window = {
 									}
 								}
 							}
+
 							margin_widget = {
-							    size = { 0 28 }
-							    layoutpolicy_horizontal = expanding
-							    margin = { 14 0 }
-							    margin_right = 7
+		                   		size = { 0 28 }
+	                			layoutpolicy_horizontal = expanding
+	                			margin_right = 6
+                 				margin_left = 6
+                 				margin_top = -10
 
 							    text_button_square = {
 							        size = { 100% 28 }
 							        layoutpolicy_horizontal = expanding
 							        datacontext = "[GetScriptedGui('dip_demand_conversion')]"
 							        enabled = "[ScriptedGui.IsValid(GuiScope.SetRoot(Player.MakeScope).AddScope('target', DiplomaticView.GetTargetCountry.MakeScope).End)]"
-							        visible = "[Not(EqualTo_int32(DiplomaticView.GetTargetCountry.GetId, Player.GetId ))]"
+							        visible = "[And(Not(DiplomaticView.GetTargetCountry.IsBarbarian), Not(EqualTo_int32( DiplomaticView.GetTargetCountry.GetId, Player.GetId )))]"
 							        blockoverride "On_click" {
 							            onclick = "[ScriptedGui.Execute(GuiScope.SetRoot( Player.MakeScope ).AddScope('target', DiplomaticView.GetTargetCountry.MakeScope ).End)]"
 							        }
@@ -1178,11 +1241,13 @@ base_window = {
 							        }
 							    }
 							}
+
 							margin_widget = {
-								size = { 0 28 }
-								layoutpolicy_horizontal = expanding
-								margin = { 14 0 }
-								margin_right = 7
+		                   		size = { 0 28 }
+	                			layoutpolicy_horizontal = expanding
+	                			margin_right = 6
+                 				margin_left = 6
+                 				margin_top = -10
 
 								text_button_square = {
 									size = { 100% 28 }
@@ -1201,11 +1266,13 @@ base_window = {
 									}
 								}
 							}
+
 							margin_widget = {
-								size = { 0 28 }
-								layoutpolicy_horizontal = expanding
-								margin = { 14 0 }
-								margin_right = 7
+		                   		size = { 0 28 }
+	                			layoutpolicy_horizontal = expanding
+	                			margin_right = 6
+                 				margin_left = 6
+                 				margin_top = -10
 
 								text_button_square = {
 									size = { 100% 28 }
@@ -1250,10 +1317,11 @@ base_window = {
 							#}
 
 							margin_widget = {
-								size = { 0 28 }
-								layoutpolicy_horizontal = expanding
-								margin = { 14 0 }
-								margin_right = 7
+		                   		size = { 0 28 }
+	                			layoutpolicy_horizontal = expanding
+	                			margin_right = 6
+                 				margin_left = 6
+                 				margin_top = -10
 
 
 								text_button_square = {
@@ -1272,13 +1340,12 @@ base_window = {
 								}
 							}
 
-
-
 							margin_widget = {
-								size = { 0 28 }
-								layoutpolicy_horizontal = expanding
-								margin = { 14 0 }
-								margin_right = 7
+		                   		size = { 0 28 }
+	                			layoutpolicy_horizontal = expanding
+	                			margin_right = 6
+                 				margin_left = 6
+                 				margin_top = -10
 
 
 								text_button_square = {
@@ -1296,16 +1363,16 @@ base_window = {
 									}
 								}
 							}
-
-
-							vbox = {
+				        }
+                    }
+						vbox = {
 								layoutpolicy_vertical = expanding
-							}
-						}
-					}
-				}
-			}
-		}
+							   }
+						   }
+			    		}
+	    			}
+	     		}
+	    	}
 
 		margin_widget = {
 			size = { 0 182 }

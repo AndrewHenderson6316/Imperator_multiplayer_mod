@@ -1,0 +1,6 @@
+﻿port_assault_modifier = {
+	local_defensive = -1
+	local_output_modifier = -0.1
+	local_unrest = 1
+	local
+}

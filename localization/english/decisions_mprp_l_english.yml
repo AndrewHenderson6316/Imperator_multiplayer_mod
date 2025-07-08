@@ -1,3 +1,5 @@
 ﻿l_english:
  convert_to_ruler_culture:0 "Convert Primary Culture To Ruler Culture"
  convert_to_ruler_culture_desc:0 "Make Our Ruler Culture The Primary Culture Of Our Country"
+ invest_in_military:0 "Invest in our Military"
+ invest_in_military_desc:0 "allow our armies to be prepared for war"

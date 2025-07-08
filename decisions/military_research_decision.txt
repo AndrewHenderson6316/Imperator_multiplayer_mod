@@ -1,0 +1,22 @@
+﻿country_decisions = {
+	invest_in_military = {
+		potential ={
+			num_of_cities >=1
+		}
+		allow = {
+			#any_army = {
+			#	days_since_last_unit_victory < 100
+			#}
+		}
+		effect ={
+			add_country_modifier = {
+				name = invested_in_military_modifier
+				duration = 700
+			}
+			#add_military_experience = {
+			#	add = 1 
+			#	multiply = 
+			#}
+		}
+	}
+}

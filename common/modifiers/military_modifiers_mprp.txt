@@ -1,0 +1,5 @@
+﻿
+invested_in_military_modifier = {
+	monthly_military_experience_modifier = 0.3
+	global_freemen_output = -0.1
+}

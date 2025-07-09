@@ -39,7 +39,7 @@
 						NOT = { controller = root.unit_owner }
 						controller = { war_with = root.unit_owner }
 						NOT = { has_enemy_army = root.unit_owner }
-						NOT = { has_province_modifier = port_assault_modifier}
+						NOT = { has_province_modifier = PORT_ASSAULT_MODIFIIER}
 					}
 				}
 			}
@@ -52,7 +52,7 @@
 					NOT = { controller = root.unit_owner }
 					controller = { war_with = root.unit_owner }
 					NOT = { has_enemy_army = root.unit_owner }
-					NOT = { has_province_modifier = port_assault_modifier}
+					NOT = { has_province_modifier = PORT_ASSAULT_MODIFIIER}
 				}
 			}
 		}
@@ -68,7 +68,7 @@
 						NOT = { controller = root.unit_owner }
 						controller = { war_with = root.unit_owner }
 						NOT = { has_enemy_army = root.unit_owner }
-						NOT = { has_province_modifier = port_assault_modifier}
+						NOT = { has_province_modifier = PORT_ASSAULT_MODIFIIER}
 					}
 				}
 			}
@@ -96,7 +96,7 @@
 						NOT = { controller = root.unit_owner }
 						controller = { war_with = root.unit_owner }
 						NOT = { has_enemy_army = root.unit_owner }
-						NOT = { has_province_modifier = port_assault_modifier}
+						NOT = { has_province_modifier = PORT_ASSAULT_MODIFIIER}
 					}
 				}
 			}
@@ -110,12 +110,12 @@
 						NOT = { controller = root.unit_owner }
 						controller = { war_with = root.unit_owner }
 						NOT = { has_enemy_army = root.unit_owner }
-						NOT = { has_province_modifier = port_assault_modifier}
+						NOT = { has_province_modifier = PORT_ASSAULT_MODIFIIER}
 					}
 					#remove_building_level = fortress_building
 					add_province_modifier = {
-						name = port_assault_modifier
-						duration = 360
+						name = PORT_ASSAULT_MODIFIIER
+						duration = 365
 					}
 				}
 			}

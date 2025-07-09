@@ -1,6 +1,6 @@
-﻿port_assault_modifier = {
+﻿PORT_ASSAULT_MODIFIIER = {
+	fort_level = -1
 	local_defensive = -1
 	local_output_modifier = -0.1
 	local_unrest = 1
-	local
 }

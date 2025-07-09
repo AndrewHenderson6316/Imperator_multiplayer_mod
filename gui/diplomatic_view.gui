@@ -1316,6 +1316,30 @@ base_window = {
 							#	}
 							#}
 
+							#margin_widget = {
+		                   	#	size = { 0 28 }
+	                		#	layoutpolicy_horizontal = expanding
+	                		#	margin_right = 6
+                 			#	margin_left = 6
+                 			#	margin_top = -10
+
+
+							#	text_button_square = {
+							#		size = { 100% 28 }
+							#		layoutpolicy_horizontal = expanding
+							#		datacontext = "[GetScriptedGui('make_player_subject')]"
+							#		enabled = "[ScriptedGui.IsValid(GuiScope.SetRoot( Player.MakeScope ).AddScope('target', DiplomaticView.GetTargetCountry.MakeScope ).End)]"
+							#		visible = "[And(Not(DiplomaticView.GetTargetCountry.IsBarbarian), Not(EqualTo_int32( DiplomaticView.GetTargetCountry.GetId, Player.GetId )))]"
+							#		blockoverride "On_click" {
+							#			onclick = "[ScriptedGui.Execute(GuiScope.SetRoot( Player.MakeScope ).AddScope('target', DiplomaticView.GetTargetCountry.MakeScope ).End)]"
+							#		}
+							#		blockoverride "Center_text"
+							#		{
+							#			text = "make_player_subject"
+							#		}
+							#	}
+							#}
+
 							margin_widget = {
 		                   		size = { 0 28 }
 	                			layoutpolicy_horizontal = expanding
@@ -1332,6 +1356,7 @@ base_window = {
 									visible = "[And(Not(DiplomaticView.GetTargetCountry.IsBarbarian), Not(EqualTo_int32( DiplomaticView.GetTargetCountry.GetId, Player.GetId )))]"
 									blockoverride "On_click" {
 										onclick = "[ScriptedGui.Execute(GuiScope.SetRoot( Player.MakeScope ).AddScope('target', DiplomaticView.GetTargetCountry.MakeScope ).End)]"
+										onclick = "[ExecuteConsoleCommand('gui.createwidget gui/player_subjects.gui player_subjects_window')]"
 									}
 									blockoverride "Center_text"
 									{
@@ -1339,7 +1364,6 @@ base_window = {
 									}
 								}
 							}
-
 							margin_widget = {
 		                   		size = { 0 28 }
 	                			layoutpolicy_horizontal = expanding

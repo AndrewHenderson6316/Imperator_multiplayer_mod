@@ -31,3 +31,158 @@ player_subject_events.1 = {
         ai_chance = { factor = 100 }
     }
 }
+player_subject_events.2 = {
+    type = country_event
+    title = player_subject_events_1.t
+    desc = player_subject_events_2.desc
+    right_portrait = current_ruler
+    left_portrait = scope:sender.current_ruler
+    picture = diadochi_coronation
+    immediate = {
+    }
+
+    option = {      
+        ai_chance = { factor = 0 }
+        name = player_subject_events_2.a
+        if = {
+            limit = {
+                is_subject = no
+            }
+            scope:sender = {
+                make_subject = {
+                    target = root
+                    type = feudatory
+                }
+            }
+        }    
+    }
+
+    option = {      
+        name = player_subject_events_1.b
+        ai_chance = { factor = 100 }
+    }
+}
+player_subject_events.3 = {
+    type = country_event
+    title = player_subject_events_1.t
+    desc = player_subject_events_3.desc
+    right_portrait = current_ruler
+    left_portrait = scope:sender.current_ruler
+    picture = diadochi_coronation
+    immediate = {
+    }
+
+    option = {      
+        ai_chance = { factor = 0 }
+        name = player_subject_events_3.a
+        if = {
+            limit = {
+                is_subject = no
+            }
+            scope:sender = {
+                make_subject = {
+                    target = root
+                    type = tributary
+                }
+            }
+        }    
+    }
+
+    option = {      
+        name = player_subject_events_1.b
+        ai_chance = { factor = 100 }
+    }
+}
+player_subject_events.4 = {
+    type = country_event
+    title = player_subject_events_1.t
+    desc = player_subject_events_4.desc
+    right_portrait = current_ruler
+    left_portrait = scope:sender.current_ruler
+    picture = diadochi_coronation
+    immediate = {
+    }
+
+    option = {      
+        ai_chance = { factor = 0 }
+        name = player_subject_events_4.a
+        if = {
+            limit = {
+                is_subject = no
+            }
+            scope:sender = {
+                make_subject = {
+                    target = root
+                    type = satrapy
+                }
+            }
+        }    
+    }
+
+    option = {      
+        name = player_subject_events_1.b
+        ai_chance = { factor = 100 }
+    }
+}
+player_subject_events.5 = {
+    type = country_event
+    title = player_subject_events_1.t
+    desc = player_subject_events_5.desc
+    right_portrait = current_ruler
+    left_portrait = scope:sender.current_ruler
+    picture = diadochi_coronation
+    immediate = {
+    }
+
+    option = {      
+        ai_chance = { factor = 0 }
+        name = player_subject_events_5.a
+        if = {
+            limit = {
+                is_subject = no
+            }
+            scope:sender = {
+                make_subject = {
+                    target = root
+                    type = player_vassal_tribe
+                }
+            }
+        }    
+    }
+
+    option = {      
+        name = player_subject_events_1.b
+        ai_chance = { factor = 100 }
+    }
+}
+player_subject_events.6 = {
+    type = country_event
+    title = player_subject_events_1.t
+    desc = player_subject_events_6.desc
+    right_portrait = current_ruler
+    left_portrait = scope:sender.current_ruler
+    picture = diadochi_coronation
+    immediate = {
+    }
+
+    option = {      
+        ai_chance = { factor = 0 }
+        name = player_subject_events_6.a
+        if = {
+            limit = {
+                is_subject = no
+            }
+            scope:sender = {
+                make_subject = {
+                    target = root
+                    type = player_league_city_state
+                }
+            }
+        }    
+    }
+
+    option = {      
+        name = player_subject_events_1.b
+        ai_chance = { factor = 100 }
+    }
+}

@@ -1,0 +1,53 @@
+﻿country_decisions = {
+	
+	allow_install_ruler = {
+		
+		potential = {
+			num_of_cities >= 1
+			or = {
+				var:RulerChangeAllowed = 0
+				NOT = {has_variable = RulerChangeAllowed}
+			}
+		}
+
+		allow = {
+			is_ai = no 
+			
+		}
+		
+		effect = {
+			set_variable = {
+				name = RulerChangeAllowed
+				value = 1
+			}
+		}
+	}
+
+	disallow_install_ruler = {
+		potential = {
+			num_of_cities >= 1
+			var:RulerChangeAllowed = 1
+			NOT = {
+			
+			}
+			
+		}
+
+		allow = {
+			is_ai = no 
+			NOT = {
+				
+			}
+		}
+		
+		effect = {
+			change_variable = {
+				name = RulerChangeAllowed
+				value = 0
+			}
+			remove_variable = RulerChangeAllowed
+
+		}
+	}
+}
+

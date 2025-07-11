@@ -26,3 +26,7 @@
  disallow_install_ruler:0 "Disallow Ruler Change Requests"
  allow_install_ruler_desc:0 "This will let other players request that you change your ruler"
  disallow_install_ruler_desc:0 "This will not let other players request that you change your ruler"
+ install_claiment:0 "Install Claiment"
+ install_foreign_ruler:0 "Install Foreign Ruler"
+ install_claiment_select_title:0 "Install Claiment Selection"
+ install_foreign_ruler_select_title:0 "Install Foreign Ruler Selection"

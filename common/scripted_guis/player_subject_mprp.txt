@@ -82,7 +82,7 @@ player_feudatory_subject = {
 	}
 	is_valid = {
 		var:send_to = {
-			num_of_cities <= 10
+			num_of_cities <= 50
 			OR = {
 				overlord = ROOT
 				is_subject = no
@@ -248,5 +248,33 @@ player_city_state = {
 			}
 		}
 		#remove_variable	= send_to
+	}
+}
+player_colony = {
+	scope = country
+	confirm_title = "player_colony"
+	confirm_text = "make_player_confirm" 
+	saved_scopes = {
+		
+	}
+
+	is_shown = {
+		always = yes
+	}
+
+	ai_is_valid = {
+		always = no 
+	}
+	is_valid = {
+		is_tribal = no 
+	}
+
+	effect = {
+		save_scope_as = sender
+		var:send_to = {
+			trigger_event = {
+				id = player_subject_events.7
+			}
+		}
 	}
 }

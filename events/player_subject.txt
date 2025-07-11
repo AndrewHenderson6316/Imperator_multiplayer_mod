@@ -22,6 +22,7 @@ player_subject_events.1 = {
                 
             }
             scope:sender = {
+                release_subject = root
                 make_subject = {
                     target = root
                     type = player_client_state
@@ -32,7 +33,7 @@ player_subject_events.1 = {
 
     option = {      
         name = player_subject_events_1.b
-        ai_chance = { factor = 100 }
+        ai_chance = { factor = 1 }
     }
 }
 player_subject_events.2 = {
@@ -56,9 +57,10 @@ player_subject_events.2 = {
                 }
             }
             scope:sender = {
+                release_subject = root
                 make_subject = {
                     target = root
-                    type = feudatory
+                    type = player_feudatory
                 }
             }
         }    
@@ -66,7 +68,7 @@ player_subject_events.2 = {
 
     option = {      
         name = player_subject_events_1.b
-        ai_chance = { factor = 100 }
+        ai_chance = { factor = 1 }
     }
 }
 player_subject_events.3 = {
@@ -90,9 +92,10 @@ player_subject_events.3 = {
                 }
             }
             scope:sender = {
+                release_subject = root
                 make_subject = {
                     target = root
-                    type = tributary
+                    type = player_tributary
                 }
             }
         }    
@@ -100,7 +103,7 @@ player_subject_events.3 = {
 
     option = {      
         name = player_subject_events_1.b
-        ai_chance = { factor = 100 }
+        ai_chance = { factor = 1 }
     }
 }
 player_subject_events.4 = {
@@ -124,6 +127,7 @@ player_subject_events.4 = {
                 }
             }
             scope:sender = {
+                release_subject = root
                 make_subject = {
                     target = root
                     type = satrapy
@@ -134,7 +138,7 @@ player_subject_events.4 = {
 
     option = {      
         name = player_subject_events_1.b
-        ai_chance = { factor = 100 }
+        ai_chance = { factor = 1 }
     }
 }
 player_subject_events.5 = {
@@ -158,9 +162,10 @@ player_subject_events.5 = {
                 }
             }
             scope:sender = {
+                release_subject = root
                 make_subject = {
                     target = root
-                    type = vassal_tribe
+                    type = player_vassal_tribe
                 }
             }
         }    
@@ -168,7 +173,7 @@ player_subject_events.5 = {
 
     option = {      
         name = player_subject_events_1.b
-        ai_chance = { factor = 100 }
+        ai_chance = { factor = 1 }
     }
 }
 player_subject_events.6 = {
@@ -192,9 +197,10 @@ player_subject_events.6 = {
                 }
             }
             scope:sender = {
+                release_subject = root
                 make_subject = {
                     target = root
-                    type = player_league_city_state
+                    type = subject_league_city_state
                 }
             }
         }    
@@ -202,6 +208,44 @@ player_subject_events.6 = {
 
     option = {      
         name = player_subject_events_1.b
-        ai_chance = { factor = 100 }
+        ai_chance = { factor = 1 }
+    }
+}
+player_subject_events.7 = {
+    type = country_event
+    title = player_subject_events_1.t
+    desc = player_subject_events_1.desc
+    right_portrait = current_ruler
+    left_portrait = scope:sender.current_ruler
+    picture = diadochi_coronation
+    immediate = {
+    }
+
+    option = {      
+        ai_chance = { factor = 0 }
+        name = player_subject_events_1.a
+        if = {
+            limit = {
+                OR ={
+                    is_subject = no
+                    overlord = scope:sender
+                }
+            }
+            scope:sender = {
+                if = {
+                    limit = { root = {is_subject = yes}}
+                    release_subject = root
+                }
+                make_subject = {
+                    target = root
+                    type = subject_colony
+                }
+            }
+        }    
+    }
+
+    option = {      
+        name = player_subject_events_1.b
+        ai_chance = { factor = 1 }
     }
 }

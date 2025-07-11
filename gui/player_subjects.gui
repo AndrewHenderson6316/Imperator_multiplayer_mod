@@ -148,10 +148,26 @@
 								onclick = "[GetVariableSystem.Clear('player_subjects_open')]"
 							}
 							blockoverride "Center_text" {
-								text = "player_city_state"
+								text = "subject_league_city_state"
 							}
 						}
+						text_button_square_highlighted = { # colony
+							size = { 80% 0 }
+							#layoutpolicy_horizontal = expanding
 
+							datacontext = "[GetScriptedGui('player_colony')]"
+							enabled = "[ScriptedGui.IsValid(GuiScope.SetRoot( Player.MakeScope ).End)]"
+							blockoverride "On_click"
+							{
+								onclick = "[ScriptedGui.Execute(GuiScope.SetRoot( Player.MakeScope ).End)]"
+								enabled = "[ScriptedGui.IsValid(GuiScope.SetRoot( Player.MakeScope ).End)]"
+								onclick = "[ExecuteConsoleCommand('gui.ClearWidgets player_subjects_window')]"
+								onclick = "[GetVariableSystem.Clear('player_subjects_open')]"
+							}
+							blockoverride "Center_text" {
+								text = "subject_colony"
+							}
+						}
 					}
 				}
 			}

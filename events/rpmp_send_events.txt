@@ -103,7 +103,7 @@ rpmp_send_events.3 = { # Send 3 year truce to country
 
     option = {      
         name = rpmp_send_events.3.a
-
+        custom_tooltip =  rpmp_send_events.4.a.TT
         
         add_truce = {
         	target = scope:sender
@@ -152,7 +152,7 @@ rpmp_send_events.4 = { # Send 5 year truce to country
     option = {      
         
     	name = rpmp_send_events.3.a
-        #custom_tooltip =  rpmp_send_events.3.desc
+        custom_tooltip =  rpmp_send_events.4.a.TT
         add_truce = {
         	target = scope:sender
         	duration = 720
@@ -204,7 +204,7 @@ rpmp_send_events.5 = { # Send 10 year truce to country
     option = {      
         name = rpmp_send_events.3.a
 
-        #custom_tooltip =  rpmp_send_events.3.desc
+        custom_tooltip =  rpmp_send_events.4.a.TT
         add_truce = {
         	target = scope:sender
         	duration = 2000

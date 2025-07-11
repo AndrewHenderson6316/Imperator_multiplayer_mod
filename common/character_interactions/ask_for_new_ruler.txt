@@ -1,27 +1,50 @@
-﻿
+﻿#allow_ruler_change = {
 
-allow_ruler_change = {
-
-	on_own_nation = yes
-	on_other_nation = no 
+#	on_own_nation = yes
+#	on_other_nation = no 
 
 
-	allowed_trigger = {
-		scope:actor = {
-			is_monarchy = yes
-			stability < 51
-		}
-	}
+#	allowed_trigger = {
+
+#		scope:actor = {
+#			not = {
+#				has_variable = RulerChangeAllowed
+#			}
+#			is_monarchy = yes
+#			#stability < 51
+#		}
+#	}
 	
-	effect = {
-		scope:actor = {
-			set_variable = {
-				name = RulerChangeAllowed
-				value = 1
-			}
-		}
-	}
-}
+#	effect = {
+#		scope:actor = {
+#			set_variable = {
+#				name = RulerChangeAllowed
+#				value = 1
+#			}
+#		}
+#	}
+#}
+#disallow_ruler_change = {
+
+#	on_own_nation = yes
+#	on_other_nation = no 
+
+
+#	allowed_trigger = {
+		
+#		scope:actor = {
+#			has_variable = RulerChangeAllowed
+#			is_monarchy = yes
+#			#stability < 51
+#		}
+#	}
+	
+#	effect = {
+#		scope:actor = {
+#			remove_variable =  RulerChangeAllowed
+#		}
+#	}
+#}
 
 install_foreign_ruler = {
 

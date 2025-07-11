@@ -4,10 +4,8 @@
 		
 		potential = {
 			num_of_cities >= 1
-			or = {
-				var:RulerChangeAllowed = 0
-				NOT = {has_variable = RulerChangeAllowed}
-			}
+			NOT = {has_variable = RulerChangeAllowed}
+			
 		}
 
 		allow = {
@@ -26,11 +24,8 @@
 	disallow_install_ruler = {
 		potential = {
 			num_of_cities >= 1
-			var:RulerChangeAllowed = 1
-			NOT = {
-			
-			}
-			
+			has_variable = RulerChangeAllowed
+
 		}
 
 		allow = {
@@ -41,9 +36,9 @@
 		}
 		
 		effect = {
-			change_variable = {
+			set_variable = {
 				name = RulerChangeAllowed
-				value = 0
+				value = 1
 			}
 			remove_variable = RulerChangeAllowed
 

@@ -110,7 +110,7 @@ dip_increase_manpower = {
 		}
 		change_variable = {
 			name = dip_influence_amount
-			add = 10
+			add = 5
 		}
 	}
 }
@@ -130,7 +130,7 @@ dip_decrease_manpower = {
 		}
 		change_variable = {
 			name = dip_influence_amount
-			add = -10
+			add = -5
 		}
 	}
 }

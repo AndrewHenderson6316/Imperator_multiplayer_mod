@@ -30,7 +30,7 @@
 }
 player_client_subject = {
 	scope = country
-	confirm_title = "demand_player_subject"
+	confirm_title = "player_client_state"
 	confirm_text = "make_player_confirm" 
 	saved_scopes = {
 		
@@ -38,14 +38,19 @@ player_client_subject = {
 
 	is_shown = {
 		always = yes
+		is_tribal = no
 	}
 
 	ai_is_valid = {
 		always = no 
 	}
 	is_valid = {
-		always = yes
-
+		var:send_to = {
+			OR = {
+				overlord = ROOT
+				is_subject = no
+			}
+		}
 	}
 
 	effect = {
@@ -56,12 +61,12 @@ player_client_subject = {
 			}
 
 		}
-		remove_variable	= send_to
+		#remove_variable	= send_to
 	}
 }
 player_feudatory_subject = {
 	scope = country
-	confirm_title = "make_player_subject"
+	confirm_title = "player_feudatory_subject"
 	confirm_text = "make_player_confirm" 
 	saved_scopes = {
 		
@@ -69,6 +74,7 @@ player_feudatory_subject = {
 
 	is_shown = {
 		always = yes
+		is_tribal = no
 	}
 
 	ai_is_valid = {
@@ -77,6 +83,10 @@ player_feudatory_subject = {
 	is_valid = {
 		var:send_to = {
 			num_of_cities <= 10
+			OR = {
+				overlord = ROOT
+				is_subject = no
+			}
 		}
         is_subject = no
         num_of_cities >= 20
@@ -92,12 +102,12 @@ player_feudatory_subject = {
 				id = player_subject_events.2
 			}
 		}
-		remove_variable	= send_to
+		#remove_variable	= send_to
 	}
 }
 player_tributary_subject = {
 	scope = country
-	confirm_title = "make_player_subject"
+	confirm_title = "player_tributary_subject"
 	confirm_text = "make_player_confirm" 
 	saved_scopes = {
 		target
@@ -105,13 +115,19 @@ player_tributary_subject = {
 
 	is_shown = {
 		always = yes
+		is_tribal = no
 	}
 
 	ai_is_valid = {
 		always = no 
 	}
 	is_valid = {
-		always = yes
+		var:send_to = {
+			OR = {
+				overlord = ROOT
+				is_subject = no
+			}
+		}
 	}
 
 	effect = {
@@ -121,12 +137,12 @@ player_tributary_subject = {
 				id = player_subject_events.3
 			}
 		}
-		remove_variable	= send_to
+		#remove_variable	= send_to
 	}
 }
 player_satrapy_subject = {
 	scope = country
-	confirm_title = "make_player_subject"
+	confirm_title = "player_satrapy_subject"
 	confirm_text = "make_player_confirm" 
 	saved_scopes = {
 		
@@ -134,6 +150,7 @@ player_satrapy_subject = {
 
 	is_shown = {
 		always = yes
+		is_tribal = no
 	}
 
 	ai_is_valid = {
@@ -142,6 +159,10 @@ player_satrapy_subject = {
 	is_valid = {
 		var:send_to ={
 			is_valid_satrapy_subject = yes
+			OR = {
+				overlord = ROOT
+				is_subject = no
+			}
 		}
 		is_valid_satrapy_overlord = yes
 	}
@@ -153,12 +174,12 @@ player_satrapy_subject = {
 				id = player_subject_events.4
 			}
 		}
-		remove_variable	= send_to
+		#remove_variable	= send_to
 	}
 }
 player_tribe_subject = {
 	scope = country
-	confirm_title = "make_player_subject"
+	confirm_title = "player_tribe_subject"
 	confirm_text = "make_player_confirm" 
 	saved_scopes = {
 		
@@ -166,9 +187,9 @@ player_tribe_subject = {
 
 	is_shown = {
 		#always = yes
-		var:send_to = {
-			is_tribal = yes
-		}
+		#var:send_to = {
+		#	is_tribal = yes
+		#}
 	}
 
 	ai_is_valid = {
@@ -177,6 +198,10 @@ player_tribe_subject = {
 	is_valid = {
 		var:send_to = {
 			is_tribal = yes
+			OR = {
+				overlord = ROOT
+				is_subject = no
+			}
 		}
 	}
 
@@ -187,12 +212,12 @@ player_tribe_subject = {
 				id = player_subject_events.5
 			}
 		}
-		remove_variable	= send_to
+		#remove_variable	= send_to
 	}
 }
 player_city_state = {
 	scope = country
-	confirm_title = "make_player_subject"
+	confirm_title = "player_city_state"
 	confirm_text = "make_player_confirm" 
 	saved_scopes = {
 		
@@ -208,8 +233,11 @@ player_city_state = {
 	is_valid = {
 		var:send_to = {
 			num_of_cities = 1
+			OR = {
+				overlord = ROOT
+				is_subject = no
+			}
 		}
-		always = yes
 	}
 
 	effect = {
@@ -219,6 +247,6 @@ player_city_state = {
 				id = player_subject_events.6
 			}
 		}
-		remove_variable	= send_to
+		#remove_variable	= send_to
 	}
 }

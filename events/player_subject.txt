@@ -15,7 +15,11 @@ player_subject_events.1 = {
         name = player_subject_events_1.a
         if = {
             limit = {
-                is_subject = no
+                OR ={
+                    is_subject = no
+                    overlord = scope:sender
+                }
+                
             }
             scope:sender = {
                 make_subject = {
@@ -34,7 +38,7 @@ player_subject_events.1 = {
 player_subject_events.2 = {
     type = country_event
     title = player_subject_events_1.t
-    desc = player_subject_events_2.desc
+    desc = player_subject_events_1.desc
     right_portrait = current_ruler
     left_portrait = scope:sender.current_ruler
     picture = diadochi_coronation
@@ -43,10 +47,13 @@ player_subject_events.2 = {
 
     option = {      
         ai_chance = { factor = 0 }
-        name = player_subject_events_2.a
+        name = player_subject_events_1.a
         if = {
             limit = {
-                is_subject = no
+                OR ={
+                    is_subject = no
+                    overlord = scope:sender
+                }
             }
             scope:sender = {
                 make_subject = {
@@ -65,7 +72,7 @@ player_subject_events.2 = {
 player_subject_events.3 = {
     type = country_event
     title = player_subject_events_1.t
-    desc = player_subject_events_3.desc
+    desc = player_subject_events_1.desc
     right_portrait = current_ruler
     left_portrait = scope:sender.current_ruler
     picture = diadochi_coronation
@@ -74,10 +81,13 @@ player_subject_events.3 = {
 
     option = {      
         ai_chance = { factor = 0 }
-        name = player_subject_events_3.a
+        name = player_subject_events_1.a
         if = {
             limit = {
-                is_subject = no
+                OR ={
+                    is_subject = no
+                    overlord = scope:sender
+                }
             }
             scope:sender = {
                 make_subject = {
@@ -96,7 +106,7 @@ player_subject_events.3 = {
 player_subject_events.4 = {
     type = country_event
     title = player_subject_events_1.t
-    desc = player_subject_events_4.desc
+    desc = player_subject_events_1.desc
     right_portrait = current_ruler
     left_portrait = scope:sender.current_ruler
     picture = diadochi_coronation
@@ -105,10 +115,13 @@ player_subject_events.4 = {
 
     option = {      
         ai_chance = { factor = 0 }
-        name = player_subject_events_4.a
+        name = player_subject_events_1.a
         if = {
             limit = {
-                is_subject = no
+                OR ={
+                    is_subject = no
+                    overlord = scope:sender
+                }
             }
             scope:sender = {
                 make_subject = {
@@ -127,7 +140,7 @@ player_subject_events.4 = {
 player_subject_events.5 = {
     type = country_event
     title = player_subject_events_1.t
-    desc = player_subject_events_5.desc
+    desc = player_subject_events_1.desc
     right_portrait = current_ruler
     left_portrait = scope:sender.current_ruler
     picture = diadochi_coronation
@@ -136,15 +149,18 @@ player_subject_events.5 = {
 
     option = {      
         ai_chance = { factor = 0 }
-        name = player_subject_events_5.a
+        name = player_subject_events_1.a
         if = {
             limit = {
-                is_subject = no
+                OR ={
+                    is_subject = no
+                    overlord = scope:sender
+                }
             }
             scope:sender = {
                 make_subject = {
                     target = root
-                    type = player_vassal_tribe
+                    type = vassal_tribe
                 }
             }
         }    
@@ -158,7 +174,7 @@ player_subject_events.5 = {
 player_subject_events.6 = {
     type = country_event
     title = player_subject_events_1.t
-    desc = player_subject_events_6.desc
+    desc = player_subject_events_1.desc
     right_portrait = current_ruler
     left_portrait = scope:sender.current_ruler
     picture = diadochi_coronation
@@ -167,10 +183,13 @@ player_subject_events.6 = {
 
     option = {      
         ai_chance = { factor = 0 }
-        name = player_subject_events_6.a
+        name = player_subject_events_1.a
         if = {
             limit = {
-                is_subject = no
+                OR ={
+                    is_subject = no
+                    overlord = scope:sender
+                }
             }
             scope:sender = {
                 make_subject = {

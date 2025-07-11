@@ -196,6 +196,7 @@ player_vassal_tribe = { #Tribal Vassal
 	}
 	
 	allow = {
+		always = no 
 		is_tribal = yes
 		scope:future_overlord = {
 			is_subject = no

@@ -1,9 +1,8 @@
 ﻿l_english:
-  player_client_state:0 "Client State"
+
   make_player_subject:0 "Offer Subject"
   make_player_confirm:0 "Demand Player Subject"
-  demand_player_subject:0 "Demand That [SCOPE.sC('target').GetName] Becomes A Subject?"
- 
+  demand_player_subject:0 "Demand That [Player.MakeScope.Var('send_to').GetName] Becomes A Subject?"
 
   player_subject_events_1.t:0 "Become A Subject?"
   player_subject_events_1.desc:0 "Become Subject To [SCOPE.sC('sender').GetName] Will We Submit?"
@@ -13,8 +12,11 @@
 
   AM_player_client_state:0 "Are a Client State(Player)"
   LEAD_player_client_state:0 "Overlord of Client State(Player)"
+  CANCEL_player_client_stateTITLE:0 "Cancel Client State (Player)"
+  CANCEL_player_client_state_DESC:0 "We will Release The Client State (Player)"
+  CANCEL_player_client_state_TOOLTIP_HEADER:0 "Release The Client State (Player)"
 
-
+  player_client_state:0 "Client State"
   player_feudatory_subject:0 "Feudatory"
   player_tributary_subject:0 "Tributary"
   player_satrapy_subject:0 "Satrapy"

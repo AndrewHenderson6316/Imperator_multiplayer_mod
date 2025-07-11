@@ -1,0 +1,202 @@
+﻿base_sub_window = {
+	name = "offer_truce_window"
+	size = { 450 250 }
+	position = { 665 205 }
+	movable = yes
+
+	blockoverride "Title_text" { text = "offer_truce" }
+
+	blockoverride "White_buttons"
+	{
+		button_close = {
+			tooltip = "CLOSE"
+			onclick = "[ExecuteConsoleCommand('gui.ClearWidgets offer_truce_window')]"
+			onclick = "[GetVariableSystem.Clear('offer_truce_open')]"
+		}
+	}
+
+	margin_widget = {
+		size = { 100% 100% }
+
+		vbox = {
+			#direction = vertical
+			parentanchor = hcenter
+			margin_top = 20
+			margin_bottom = 15
+
+			widget = {
+				size = { 350 0 }
+				#layoutpolicy_horizontal = expanding
+				layoutpolicy_vertical = expanding
+				hbox = {
+					margin_top = 10
+					margin_bottom = 20
+					spacing = 5
+					layoutpolicy_horizontal = expanding
+					text_button_square_highlighted = {	# toggle
+						size = { 80% 0 }
+						layoutpolicy_horizontal = expanding
+
+						datacontext = "[GetScriptedGui('dip_bilateral_truce')]"
+						enabled = "[ScriptedGui.IsValid(GuiScope.SetRoot( Player.MakeScope ).End)]"
+						blockoverride "On_click"
+						{
+							onclick = "[ScriptedGui.Execute(GuiScope.SetRoot( Player.MakeScope ).End)]"
+							enabled = "[ScriptedGui.IsValid(GuiScope.SetRoot( Player.MakeScope ).End)]"
+							visible = "[GetVariableSystem.Exists('bilateral_truce')]"
+							onclick = "[GetVariableSystem.Toggle('bilateral_truce')]"
+						
+						}
+						blockoverride "Center_text" {
+							text = "NOT BILATERAL"
+						}
+					}
+					widget = {
+						size = {0 10}
+					}
+					text_button_square = {	# toggle
+						size = { 80% 0 }
+						layoutpolicy_horizontal = expanding
+
+						datacontext = "[GetScriptedGui('dip_bilateral_truce')]"
+						enabled = "[ScriptedGui.IsValid(GuiScope.SetRoot( Player.MakeScope ).End)]"
+						blockoverride "On_click"
+						{
+							onclick = "[ScriptedGui.Execute(GuiScope.SetRoot( Player.MakeScope ).End)]"
+							enabled = "[And(ScriptedGui.IsValid(GuiScope.SetRoot( Player.MakeScope ).End),Not(GetVariableSystem.Exists('bilateral_truce')))]"
+							visible = "[Not(GetVariableSystem.Exists('bilateral_truce'))]"
+							onclick = "[GetVariableSystem.Toggle('bilateral_truce')]"
+						
+						}
+						blockoverride "Center_text" {
+							text = "BILATERAL"
+						}
+					}
+
+				}
+				
+			}
+			scrollarea = {
+				size = { 412 100 }
+				layoutpolicy_vertical = expanding
+				using = NoninteractableBG
+				scrollbarpolicy_horizontal = always_off
+
+				scrollbar_vertical = {
+					using = VerticalScrollBar
+				}
+				using = VerticalScrollAreaCutOff
+
+				scrollwidget = {
+
+					vbox = {
+						spacing = 5
+						text_button_square_highlighted = {	#2 year
+							size = { 80% 0 }
+							#layoutpolicy_horizontal = expanding
+
+							datacontext = "[GetScriptedGui('dip_offer_2_year_truce')]"
+							enabled = "[ScriptedGui.IsValid(GuiScope.SetRoot( Player.MakeScope ).End)]"
+							blockoverride "On_click"
+							{
+								onclick = "[ScriptedGui.Execute(GuiScope.SetRoot( Player.MakeScope ).End)]"
+								enabled = "[ScriptedGui.IsValid(GuiScope.SetRoot( Player.MakeScope ).End)]"
+								onclick = "[ExecuteConsoleCommand('gui.ClearWidgets offer_truce_window')]"
+								onclick = "[GetVariableSystem.Clear('offer_truce_open')]"
+							}
+							blockoverride "Center_text" {
+								text = "offer_truce_msg_3"
+							}
+						}
+						text_button_square_highlighted = {	# dip_offer_5_year_truce
+							size = { 80% 0 }
+							#layoutpolicy_horizontal = expanding
+
+							datacontext = "[GetScriptedGui('dip_offer_5_year_truce')]"
+							enabled = "[ScriptedGui.IsValid(GuiScope.SetRoot( Player.MakeScope ).End)]"
+							blockoverride "On_click"
+							{
+								onclick = "[ScriptedGui.Execute(GuiScope.SetRoot( Player.MakeScope ).End)]"
+								enabled = "[ScriptedGui.IsValid(GuiScope.SetRoot( Player.MakeScope ).End)]"
+								onclick = "[ExecuteConsoleCommand('gui.ClearWidgets offer_truce_window')]"
+								onclick = "[GetVariableSystem.Clear('offer_truce_open')]"
+							}
+							blockoverride "Center_text" {
+								text = "offer_truce_msg_5"
+							}
+						}
+						text_button_square_highlighted = {	#dip_offer_10_year_truce
+							size = { 80% 0 }
+							#layoutpolicy_horizontal = expanding
+
+							datacontext = "[GetScriptedGui('dip_offer_10_year_truce')]"
+							blockoverride "On_click"
+							{
+								onclick = "[ScriptedGui.Execute(GuiScope.SetRoot( Player.MakeScope ).End)]"
+								enabled = "[ScriptedGui.IsValid(GuiScope.SetRoot( Player.MakeScope ).End)]"
+								onclick = "[ExecuteConsoleCommand('gui.ClearWidgets offer_truce_window')]"
+								onclick = "[GetVariableSystem.Clear('offer_truce_open')]"
+							}
+							blockoverride "Center_text" {
+								text = "offer_truce_msg_8"
+							}
+						}
+
+						#text_button_square_highlighted = { # Satrapy
+						#	size = { 80% 0 }
+						#	#layoutpolicy_horizontal = expanding
+
+						#	datacontext = "[GetScriptedGui('player_satrapy_subject')]"
+						#	enabled = "[ScriptedGui.IsValid(GuiScope.SetRoot( Player.MakeScope ).End)]"
+						#	blockoverride "On_click"
+						#	{
+						#		onclick = "[ScriptedGui.Execute(GuiScope.SetRoot( Player.MakeScope ).End)]"
+						#		enabled = "[ScriptedGui.IsValid(GuiScope.SetRoot( Player.MakeScope ).End)]"
+						#		onclick = "[ExecuteConsoleCommand('gui.ClearWidgets offer_truce_window')]"
+						#		onclick = "[GetVariableSystem.Clear('offer_truce_open')]"
+						#	}
+						#	blockoverride "Center_text" {
+						#		text = "player_satrapy_subject"
+						#	}
+						#}
+						#text_button_square_highlighted = { # Tribal
+						#	size = { 80% 0 }
+						#	#layoutpolicy_horizontal = expanding
+
+						#	datacontext = "[GetScriptedGui('player_tribe_subject')]"
+						#	enabled = "[ScriptedGui.IsValid(GuiScope.SetRoot( Player.MakeScope ).End)]"
+						#	blockoverride "On_click"
+						#	{
+						#		onclick = "[ScriptedGui.Execute(GuiScope.SetRoot( Player.MakeScope ).End)]"
+						#		enabled = "[ScriptedGui.IsValid(GuiScope.SetRoot( Player.MakeScope ).End)]"
+						#		onclick = "[ExecuteConsoleCommand('gui.ClearWidgets player_subjects_window')]"
+						#		onclick = "[GetVariableSystem.Clear('offer_truce_open')]"
+						#	}
+						#	blockoverride "Center_text" {
+						#		text = "player_tribe_subject"
+						#	}
+						#}
+						#text_button_square_highlighted = { # league city
+						#	size = { 80% 0 }
+						#	#layoutpolicy_horizontal = expanding
+
+						#	datacontext = "[GetScriptedGui('player_city_state')]"
+						#	enabled = "[ScriptedGui.IsValid(GuiScope.SetRoot( Player.MakeScope ).End)]"
+						#	blockoverride "On_click"
+						#	{
+						#		onclick = "[ScriptedGui.Execute(GuiScope.SetRoot( Player.MakeScope ).End)]"
+						#		enabled = "[ScriptedGui.IsValid(GuiScope.SetRoot( Player.MakeScope ).End)]"
+						#		onclick = "[ExecuteConsoleCommand('gui.ClearWidgets player_subjects_window')]"
+						#		onclick = "[GetVariableSystem.Clear('offer_truce_open')]"
+						#	}
+						#	blockoverride "Center_text" {
+						#		text = "player_city_state"
+						#	}
+						#}
+
+					}
+				}
+			}
+		}
+	}
+}

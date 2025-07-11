@@ -48,5 +48,32 @@
 			}
 		}
 	}
+
+	deify_pyrrhus = {
+	    potential = {
+			primary_culture = epirote
+			heritage = epirote_heritage
+	    }
+	
+	    allow = {
+	    	owns = 379
+	    	has_deity_in_pantheon = deity:omen_heracles
+	    }
+	
+	    effect = {
+
+			char:70 = {
+				deify_character = {
+	                deity = deity:omen_heracles
+	                country = ROOT
+	            }
+			}
+
+	    }
+	
+	    ai_will_do = {
+	        base = 1
+	    }
+	}
 }
 

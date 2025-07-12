@@ -5,10 +5,8 @@
 		potential = {
 			num_of_cities >= 1
 			NOT = {
-				
 				culture = current_ruler.culture
 			}
-			
 		}
 
 		allow = {
@@ -39,14 +37,43 @@
 		}
 		
 		ai_will_do = {
-			factor = 0
-			ruler ={
-				has_trait = {
-					name = lunatic 
-					factor 100
+			base = 0
+			modifier = {
+				any_character = {
+					ruler ={
+						has_trait = lunatic 
+					}	
 				}
+				factor = 1
 			}
 		}
+	}
+
+	deify_pyrrhus = {
+	    potential = {
+			primary_culture = epirote
+			heritage = epirote_heritage
+	    }
+	
+	    allow = {
+	    	owns = 379
+	    	has_deity_in_pantheon = deity:omen_heracles
+	    }
+	
+	    effect = {
+
+			char:70 = {
+				deify_character = {
+	                deity = deity:omen_heracles
+	                country = ROOT
+	            }
+			}
+
+	    }
+	
+	    ai_will_do = {
+	        base = 1
+	    }
 	}
 }
 

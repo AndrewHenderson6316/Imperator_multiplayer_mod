@@ -1,0 +1,125 @@
+﻿dip_offer_truce = {
+	scope = country
+
+	saved_scopes = {
+		target
+	}
+
+	#confirm_title = "make_player_subject"
+	#confirm_text = "make_player_confirm" 
+
+	ai_is_valid = {
+		always = no
+	}
+	is_valid = {
+		in_diplomatic_range = scope:target
+		NOT = {
+			scope:target = root
+			is_ai = yes
+		}
+		is_subject = no 
+	}
+
+	effect = {
+		clear_variable_list = bilateral_truce
+		set_variable = {
+			name = bilateral_truce
+			value = 0
+		}
+		save_scope_as = sender
+		set_variable = {
+		  name = send_to
+		  value = scope:target
+		}
+	}
+}
+dip_offer_2_year_truce = {
+	scope = country
+	confirm_title = "offer_truce"
+	confirm_text = "offer_truce_msg_2" 
+	ai_is_valid = {
+		always = no
+	}
+	is_valid = {
+
+	}
+	effect = {
+		save_scope_as = sender
+		var:send_to = {
+			trigger_event = {
+				id = rpmp_send_events.3
+			}
+		}
+	}
+}
+
+dip_offer_5_year_truce = {
+	scope = country
+	confirm_title = "offer_truce"
+	confirm_text = "offer_truce_msg_5" 
+	ai_is_valid = {
+		always = no
+	}
+	is_valid = {
+
+	}
+	effect = {
+		save_scope_as = sender
+		var:send_to = {
+			trigger_event = {
+				id = rpmp_send_events.4
+			}
+		}
+	}
+}
+dip_offer_10_year_truce = {
+	scope = country
+	confirm_title = "offer_truce"
+	confirm_text = "offer_truce_msg_10" 
+	ai_is_valid = {
+		always = no
+	}
+	is_valid = {
+
+	}
+	effect = {
+		save_scope_as = sender
+		var:send_to = {
+			trigger_event = {
+				id = rpmp_send_events.5
+			}
+		}
+	}
+}
+dip_bilateral_truce = {
+	scope = country
+	#confirm_title = "offer_truce"
+	#confirm_text = "offer_truce_msg_5" 
+	ai_is_valid = {
+		always = no
+	}
+	is_valid = {
+
+	}
+	effect = {
+		set_variable = {
+			name = bilateral_truce
+			value = 1
+		}
+	}
+}
+
+
+dip_clear_bilateral_truce = {
+	scope = country
+
+	ai_is_valid = {
+		always = no
+	}
+	is_valid = {
+
+	}
+	effect = {
+		clear_variable_list = bilateral_truce
+	}
+}

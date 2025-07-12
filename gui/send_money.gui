@@ -11,7 +11,7 @@
 		button_close = {
 			tooltip = "CLOSE"
 			onclick = "[ExecuteConsoleCommand('gui.ClearWidgets send_money_window')]"
-			#onclick = "[GetVariableSystem.Clear('sell_provinces_open')]"
+			onclick = "[GetVariableSystem.Clear('send_money_open')]"
 		}
 	}
 
@@ -157,7 +157,7 @@
 							enabled = "[ScriptedGui.IsValid(GuiScope.SetRoot( Player.MakeScope ).End)]"
 							onclick = "[ScriptedGui.Execute(GuiScope.SetRoot( Player.MakeScope ).End)]"
 							onclick = "[ExecuteConsoleCommand('gui.ClearWidgets send_money_window')]"
-							#onclick = "[GetVariableSystem.Clear('sell_provinces_open')]"
+							onclick = "[GetVariableSystem.Clear('send_money_open')]"
 						}
 					}
 				}

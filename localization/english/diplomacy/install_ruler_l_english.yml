@@ -1,0 +1,32 @@
+﻿l_english:
+ make_our_ruler.2.t:0 "Proposal to change our Ruler"
+ make_our_ruler.2.desc:0 "We are asked by [SCOPE.sC('actor').GetName] to Put [SCOPE.sChar('recipient').GetName] As the new ruler of our country"
+ make_our_ruler.2.a:0 "Make Them Our New Ruler"
+ make_our_ruler.2.b:0 "Decline"
+
+ make_our_ruler.3.t:0 "Failed to make a ruler"
+ make_our_ruler.3.desc:0 "Asking [SCOPE.sC('receiver_country').GetName] has failed "
+ make_our_ruler.3.a:0 "make ruler was null"
+ make_our_ruler.3.b:0 "Decline"
+
+ make_our_ruler.4.t:0 "Make Ruler Declined"
+ make_our_ruler.4.desc:0 "[SCOPE.sC('receiver_country').GetName] Declined to Put [SCOPE.sChar('recipient').GetName] As the new ruler of their country"
+ make_our_ruler.4.a:0 "This is no good"
+ make_our_ruler.4.b:0 "Decline"
+
+ make_our_ruler.5.t:0 "Make Ruler Accepted"
+ make_our_ruler.5.desc:0 "[SCOPE.sC('receiver_country').GetName] accepted to Put [SCOPE.sChar('recipient').GetName] As the new ruler of our country"
+ make_our_ruler.5.a:0 "Yippe"
+ make_our_ruler.5.b:0 "Decline"
+ 
+
+ allow_install_ruler:0 "Allow Ruler Change Requests"
+ allow_ruler_change:0 "Allow Ruler Change"
+ disallow_ruler_change:0 "Disallow Ruler Change"
+ disallow_install_ruler:0 "Disallow Ruler Change Requests"
+ allow_install_ruler_desc:0 "This will let other players request that you change your ruler.\n PLEASE READ After clicking this the other player must use a character interaction (RIGHTCLICK) on your RULER"
+ disallow_install_ruler_desc:0 "This will not let other players request that you change your ruler"
+ install_claiment:0 "Install Claiment"
+ install_foreign_ruler:0 "Install Foreign Ruler"
+ install_claiment_select_title:0 "Install Claiment Selection"
+ install_foreign_ruler_select_title:0 "Install Foreign Ruler Selection"

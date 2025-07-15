@@ -100,13 +100,7 @@ player_feudatory = { #Latin Allies
 	}
 	
 	allow = {
-		num_of_cities <= 50
-		scope:future_overlord = {
-			is_subject = no
-			num_of_cities >= 50
-			is_tribal = no
-			this.culture_group = root.culture_group
-		}
+		always = no 
 	}
 	
 	# on_enable = {}

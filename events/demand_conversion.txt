@@ -30,9 +30,8 @@ demand_conversion.1 = {
         ai_chance = { 
             modifier ={
                 factor = 100
-                is_subject_of = {
-                    target != scope:sender
-                }
+                is_subject_of != scope:sender
+            
             }
         }
     }

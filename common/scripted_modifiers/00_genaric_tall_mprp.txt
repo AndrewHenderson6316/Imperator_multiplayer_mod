@@ -1,0 +1,16 @@
+tall_mission_complete = {
+	modifier = {
+		trigger = {
+			has_variable = {
+				name = generic_tall_complete
+			} 
+		}
+		add = {
+			value = {
+				add = var:generic_tall_complete
+				#multiply = -0.005 #Changed from -0.01 so it's equal to the negative of the positive modifier
+			}
+		}
+		#desc = APPROVAL_MODIFIER_TYRANNY_NEGATIVE
+	}
+}

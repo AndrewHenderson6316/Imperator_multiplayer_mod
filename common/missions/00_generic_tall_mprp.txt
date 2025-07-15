@@ -1,0 +1,305 @@
+﻿generic_mprp_tall = {
+    header = "mission_image_general"
+    icon = "general_1"
+
+    repeatable = yes
+
+    chance = {}
+
+    potential = {
+    	num_of_cities < 50 
+    	any_owned_province = {
+ 			governorship = {
+    			any_governorship_state = {
+					any_state_province = { 
+						count >= 3
+						total_population >= 30
+					}
+				}
+				#any_governorship_state = {
+				#	count =< 3
+				#}
+			}
+    	}
+    }
+
+    abort = {}
+
+    on_potential = {
+	    random_owned_province = {
+			limit = {
+				governorship = {
+					exists = governor_or_ruler
+					any_governorship_state = {
+						any_state_province = { 
+							count >= 3
+							total_population >= 30 
+						}
+					}
+				}
+			}
+			governorship = {
+				save_scope_as = tall_gouvernorship
+				governor_or_ruler = {
+					switch = {
+						trigger = is_ruler #If the governor is the ruler then we always want to use the country capital.
+						no = { #This is a normal governor.
+							PREV = {
+								ordered_governorship_state = {
+									max = 1
+									check_range_bounds = no
+									order_by = {
+										every_state_province = {
+											add = total_population
+										}
+									}
+									ordered_state_province = {
+										max = 1
+										check_range_bounds = no
+										order_by = total_population
+										save_scope_as = governorship_capital
+									}
+									save_scope_as = governorship_capital_area
+								}
+							}
+						}
+						yes = { #This was the ruler
+							ROOT = {
+								capital_scope = {
+									save_scope_as = governorship_capital
+									state = {
+										save_scope_as = governorship_capital_area
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+
+		scope:governorship_capital = {
+			if = {
+				limit = { dominant_province_culture = owner.culture }
+				set_variable = was_dominant_culture
+			}
+		}
+	}
+
+    on_start = {
+    	#add_country_modifier =
+    }
+
+    on_abort = {}
+	
+    generic_mprp_tall_task_1 = {
+        icon = "task_political"
+
+        potential = {
+
+		}
+       
+        allow = {
+        	scope:tall_gouvernorship = {
+        		any_governorship_state = {
+					any_state_province = {
+        				count >= 2
+	        			total_population >= 20
+	        			num_of_used_building_slots >= 6
+	        		}
+        		}
+			}
+        }
+
+        on_completion = {
+			add_country_modifier = {
+				name = tall_country_modifier
+			}
+			#add_country_modifier = {
+			#	name = 
+			#}
+			unlock_invention = global_building_slot_inv
+			#unlock_invention = global_settlement_building_slot_inv
+        	
+        	#scope:governorship_capital_area = {
+	        #	every_state_province= {
+	        #		limit = {
+	        #			total_population >=20 
+	        #			num_of_used_building_slots >= 6
+	        #		}
+	        #	}
+	        #}
+        }
+    }
+
+    generic_mprp_tall_task_2 = {
+        icon = "task_political"
+
+        potential = {num_of_cities < 50}
+        requires = {generic_mprp_tall_task_1}
+        allow = {
+        	current_ruler = {
+        		popularity >= 75 
+        	}
+        	scope:tall_gouvernorship = {
+        		any_governorship_state = {
+        			count > 1
+        			any_state_province = {
+        				count > 1
+        				num_of_freemen = 20 
+        				num_of_court_building = 3
+        			}
+        		}
+        	}
+        }
+
+       on_completion = {
+
+        	scope:tall_gouvernorship = {
+        		every_governorship_state = {
+        			limit = {
+		    			#num_of_freemen = 20 
+        				#num_of_court_building = 3
+		    			#NOT = {has_province_modifier = tall_production_modifier}
+        			}
+	        		add_state_modifier = {
+						name = tall_production_modifier
+					}
+        		}	
+        	}
+        }
+    }
+
+    generic_mprp_tall_task_3 = {
+        icon = "task_political"
+
+        potential = {}
+        requires = {generic_mprp_tall_task_2}
+        allow = {
+			scope:governorship_capital = {
+				num_of_foundry_building = 3 
+				num_of_slaves = 20	
+			}			
+        }
+
+        on_completion = {
+        	scope:governorship_capital = {
+        		add_permanent_province_modifier = {
+        			name = tall_production_modifier
+        		}	
+        	}
+        }
+    }
+
+    generic_mprp_tall_task_4 = {
+        icon = "task_political"
+
+        potential = {
+        	num_of_cities < 50
+			scope:tall_gouvernorship = {	
+    			any_governorship_state = {
+					count <= 4
+					any_state_province = { count < 6 }
+				}		
+				
+			}
+		}
+		requires = {generic_mprp_tall_task_2}
+        allow = {
+        	scope:governorship_capital_area = {
+        		any_state_province = {
+	    			count >= 5
+	    			num_of_aqueduct_building = 15
+
+        		}
+        	}
+        }
+
+        on_completion = {
+			#add_country_modifier = {
+			#	name = tall_aquaduct_modifier
+			#}
+        	#scope:governorship_capital = {
+        	#	add_permanent_province_modifier = {
+        	#		name = tall_aquaduct_modifier
+        	#	}	
+        	#}
+        	scope:tall_gouvernorship = {
+        		every_governorship_state = {
+	        		add_state_modifier = {
+						name = tall_aquaduct_modifier
+					}
+        		}	
+        	}
+        }
+    }
+
+    generic_mprp_tall_task_5 = {
+        icon = "task_political"
+
+        potential = {}
+        requires = {generic_mprp_tall_task_2}
+        allow = {
+        	scope:governorship_capital_area = {
+        		region = {
+        			any_region_province = {
+        				count >= 10
+        				owner = root
+        			}	
+        		}
+        	}
+        	
+        }
+
+        on_completion = {
+        	add_country_modifier = {name = tall_citizen_modifier}
+        	#every_owned_province = {
+        	#	add_state_modifier = {
+        	#		name = tall_aquaduct_modifier
+        	#	}
+        	#}
+        }
+    }
+
+    generic_mprp_tall_task_6 = {
+        icon = "task_political"
+
+        potential = {}
+        requires = {generic_mprp_tall_task_3 generic_mprp_tall_task_4 generic_mprp_tall_task_5}
+        allow = {}
+
+        on_completion = {}
+    }
+
+    generic_mprp_tall_task_final = {
+        icon = "task_political"
+
+        final = yes
+
+        potential = {}
+        requires = {generic_mprp_tall_task_6}
+        allow = {}
+
+        on_completion = {
+        	add_country_modifier = {name = garden_civilization_mod}
+        	#if = {
+        	#	limit = {
+        	#		has_variable = generic_tall_complete
+        	#	}
+        	#	change_variable = {
+        	#		name = generic_tall_complete
+        	#		value = {
+        	#			add = var:generic_tall_complete
+        	#			add = 1
+        	#		}
+        	#	}
+        	#}
+        	#else = {
+	        #	set_variable = {
+	        #		name =	generic_tall_complete
+	        #		value = 1
+	        #	}
+        	#}
+        }
+    }
+}

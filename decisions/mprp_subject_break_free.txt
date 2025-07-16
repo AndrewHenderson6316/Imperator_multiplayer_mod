@@ -5,170 +5,170 @@
 		potential = {
 			num_of_cities >= 1
 			is_subject = yes
+			overlord = {
+				war = yes
+			}
 		}
 
 		allow = {
 			overlord ={
 				save_temporary_scope_as = overlordscope
-				any_current_war ={
-					defender_warleader = scope:overlordscope
+				any_current_war = {
 					war_score = {
-						target = attacker_warleader
-						value > 10
-					}
+						target = scope:overlordscope
+						value < 0
+					}	
 				}
 			}
-			is_ai = no 
+			opinion = {
+				target = overlord
+				value < 10
+			}
+			is_ai = no   
 			capital_scope ={
 				has_siege = no
 				controller = root
+			}
+
+		}
+		
+		effect = {
+			overlord = {
+				save_scope_as = overlordscope
+			}
+			hidden_effect = {
+	            every_current_war = {
+	                limit = {
+	                    any_war_participant = {this = scope:overlordscope} 
+	                }
+	                remove_from_war = ROOT
+	            }
+	        }
+	        scope:overlordscope ={
+				add_opinion = {
+					modifier = subject_broke_free_mprp #subject_broke_free_mprp
+					target = root
+				}
+			}
+		}
+	}
+
+	subject_break_free_war = { #                   
+		
+		potential = {
+			num_of_cities >= 1
+			is_subject = yes
+
+			#overlord = {
+			#	war = yes 
+			#}
+		}
+
+		allow = {
+			overlord ={
+				save_temporary_scope_as = overlordscope
+				#any_current_war = {
+				#	war_score = {
+				#		target = scope:overlordscope
+				#		value < -10
+				#	}	
+				#}
+			}
+			#opinion = {
+			#	target = overlord
+			#	value < 0
+			#}
+			is_ai = no 
+			capital_scope ={
+				OR = {
+					has_siege = no
+					is_previous_controller = no 	
+				}
 			}
 		}
 		
 		effect = {
 			overlord = {
-				save_temporary_scope_as = overlordscope
-				release_subject = root
-				every_active_war = {
-					limit = {
-						OR = {
-							scope:overlordscope = attacker_warleader
-							scope:overlordscope = defender_warleader
-						}
-					}
-					remove_from_war = root
-				}
+				save_scope_as = overlordscope
+			}
+			hidden_effect = {
+	            every_current_war = {
+	                limit = {
+	                    any_war_participant = {this = scope:overlordscope} 
+	                }
+	                remove_from_war = ROOT
+	            }
+	        }
+	        scope:overlordscope ={
 				add_opinion = {
-					modifier = mprp_subject_broke_free
+					modifier = subject_broke_free_mprp #subject_broke_free_mprp
 					target = root
 				}
 			}
-
+			declare_war_with_wargoal = {
+				war_goal = independence_wargoal
+				province = root.capital_scope
+				target = scope:overlordscope	
+			}
 		}
 	}
-	#subject_break_free_war = {
-		
-	#	potential = {
-	#		num_of_cities >= 1
-	#		NOT = {
-	#			#overlord = {
-	#			#	has_opinion = {
-	#			#		value > 0
-	#			#		target = root 
-	#			#	}
-	#			#}
-
-	#		}
-	#		overlord = {
-	#			war = yes 
-	#		}
-	#		is_subject = yes
-			
-	#	}
-
-	#	allow = {
-	#		#NOT = {
-				
-				
-	#		#}
-	#		overlord ={
-	#			save_temporary_scope_as = overlordscope
-	#			any_current_war ={
-	#				war_score {
-	#					target = scope:overlordscope
-	#					value =-10
-	#				}
-	#			}
-	#		}
-	#		#is_ai = no 
-	#		capital_scope ={
-	#			OR = {
-	#				has_siege = no
-	#				is_previous_controller = no 	
-	#			}
-	#		}
-	#	}
-		
-	#	effect = {
-	#		overlord = {
-	#			save_temporary_scope_as = overlordscope
-	#			release_subject = root
-	#			every_active_war = {
-	#				if = {
-	#					limit = {
-	#						scope:overlordscope = defender_warleader
-	#					}
-
-	#					remove_from_war = root
-	#				}
-	#				else if = {
-	#					limit = {
-	#						scope:overlordscope = attacker_warleader
-
-	#					}
-						
-	#					remove_from_war = root
-	#				}
-					
-
-	#			}
-	#			add_opinion = {
-	#				modifier = mprp_subject_broke_free
-	#				target = root
-	#			}
-
-	#		}
-	#		declare_war_with_wargoal = {
-	#			target = scope:overlordscope	
-	#			war_goal = independence_wargoal
-	#		}
-	#	}
-	#}
 
 	subject_submit_to_new_overlord = {
 		
 		potential = {
 			num_of_cities >= 1
-			#NOT = {
-			#	#overlord.opinion < 0
-			#}
 			is_subject = yes
-			#war = yes
-			
+			war = yes
+	        capital_scope = {
+	        	or = {
+		        	has_siege = yes
+		        	is_previous_controller != ROOT
+	        	}
+	        }
 		}
 
 		allow = {
-			overlord ={
+			overlord = {
 				save_temporary_scope_as = overlordscope
-				any_current_war ={
-					defender_warleader = scope:overlordscope
+				any_current_war = {
 					war_score = {
-						target = attacker_warleader
-						value > 10
-					}
+						target = scope:overlordscope
+						value < -20
+					}	
 				}
 			}
 			is_ai = no 
-			capital_scope ={
-				OR = {
-					has_siege = yes
-					not ={
-						controller = root
-					}
-				}
+			root.capital_scope = {
+				siege = {
+		        	siege_controller = {
+		        		nor= {
+		        			this = root
+		        			this = overlord
+		        		}
+		        	}
+	        	}
 			}
+
 		}
 		
 		effect = {
-		    overlord = {
-		        #save_temporary_scope_as = overlordscope
-		        
-		        add_opinion = {
-		            modifier = mprp_subject_broke_free
-		            target = root
-		        }
-		        release_subject = root
+			overlord = {
+				save_scope_as = overlordscope
+			}
+			hidden_effect = {
+	            every_current_war = {
+	                limit = {
+	                    any_war_participant = {this = scope:overlordscope} 
+	                }
+	                remove_from_war = ROOT
+	            }
 	        }
+	        scope:overlordscope ={
+				add_opinion = {
+					modifier = subject_broke_free_mprp #subject_broke_free_mprp
+					target = root
+				}
+			}
 	        capital_scope = {
 	        	siege = {
 		        	siege_controller = {
@@ -176,19 +176,15 @@
 		        	}
 	        	}
 	        }
-	        every_active_war = {
-	        	limit = {
-	        		any_war_participant = {
-	        			this = root
-	        		}
-	        	}
-	        	remove_from_war = root 
+	        make_subject = {
+	        	target = scope:new_overlord
+	        	type = player_client_state
 	        }
-	        mprp_new_overlord_effect = { # add to  war on other side???
-	        	NEW_OVERLORD = scope:new_overlord
-	        	SUBJECT = root
-	        	SUBJECT_TYPE = player_client_state
-	        }
+	        #mprp_new_overlord_effect = { # add to  war on other side???
+	        #	NEW_OVERLORD = scope:new_overlord
+	        #	SUBJECT = root
+	        #	SUBJECT_TYPE = player_client_state
+	        #}
 		}
 	}
 }

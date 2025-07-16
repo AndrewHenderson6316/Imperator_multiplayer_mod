@@ -1,0 +1,101 @@
+﻿namespace = make_our_ruler
+
+make_our_ruler.2 = { #MAKE RULER proposed
+	type = country_event
+	title = "make_our_ruler.2.t"
+	desc = "make_our_ruler.2.desc"
+	
+	left_portrait = scope:target # Proposee
+	right_portrait = scope:recipient # NEW RULER
+	 
+	picture = council_country
+
+	immediate = { 
+		save_scope_as = receiver_country 
+		scope:recipient.employer = { save_scope_as = proposer_country }
+		#debug_log = "[SCOPE.sChar('target').GetName|Y]"
+	}
+	
+	option = {
+		name = "make_our_ruler.2.a"
+		scope:recipient = {
+			move_country = scope:target.employer
+
+		}
+		scope:target.employer = {
+			set_as_ruler = scope:recipient
+			remove_variable = RulerChangeAllowed
+		}
+		scope:actor = {
+			trigger_event = { id = make_our_ruler.5 }
+		}
+
+
+
+		ai_chance = { factor = 0 }
+		
+	}
+	
+	option = {
+		name = "make_our_ruler.2.b"
+		scope:recipient.employer = {
+			
+		}
+		scope:actor = {
+			trigger_event = { id = make_our_ruler.4 }
+		}
+		ai_chance = { factor = 1 }
+	}
+}
+
+make_our_ruler.3 = { #MAKE RULER null
+	type = country_event
+	title = "make_our_ruler.3.t"
+	desc = "make_our_ruler.3.desc"
+	
+	picture = greek_court
+	
+	goto_location = scope:receiver_country
+	
+	option = {
+		name = "make_our_ruler.3.a"
+		custom_tooltip = no_effect_tooltip
+
+	}
+} 
+
+make_our_ruler.4 = { #MAKE RULER declined
+	type = country_event
+	title = "make_our_ruler.4.t"
+	desc = "make_our_ruler.4.desc"
+	
+	picture = greek_court
+	
+	left_portrait = scope:recipient
+	right_portrait = scope:target
+	
+	goto_location = scope:receiver_country
+
+	option = {
+		name = "make_our_ruler.4.a"
+
+	}
+} 
+
+make_our_ruler.5 = { #MAKE RULER approved!
+	type = country_event
+	title = "make_our_ruler.5.t"
+	desc = "make_our_ruler.5.desc"
+	
+	picture = diadochi_greek_royal_wedding
+	
+	left_portrait = scope:recipient
+	right_portrait = scope:target
+	
+	goto_location = scope:receiver_country
+	
+	option = {
+		name = "make_our_ruler.5.a"
+
+	}
+}

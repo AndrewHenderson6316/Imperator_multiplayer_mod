@@ -2,7 +2,11 @@
 Version 0.1
 
 TODO 
-	Non aggression pacts
 	subsidies 
-	player subjects get event to join war on either side or break free on wars of independence 
 	allow resuply in land diplomatic demand 
+
+
+
+	missions
+		if all provinces have over civ level/ population?
+			

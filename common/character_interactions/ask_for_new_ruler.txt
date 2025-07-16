@@ -1,0 +1,159 @@
+﻿#allow_ruler_change = {
+
+#	on_own_nation = yes
+#	on_other_nation = no 
+
+
+#	allowed_trigger = {
+
+#		scope:actor = {
+#			not = {
+#				has_variable = RulerChangeAllowed
+#			}
+#			is_monarchy = yes
+#			#stability < 51
+#		}
+#	}
+	
+#	effect = {
+#		scope:actor = {
+#			set_variable = {
+#				name = RulerChangeAllowed
+#				value = 1
+#			}
+#		}
+#	}
+#}
+#disallow_ruler_change = {
+
+#	on_own_nation = yes
+#	on_other_nation = no 
+
+
+#	allowed_trigger = {
+		
+#		scope:actor = {
+#			has_variable = RulerChangeAllowed
+#			is_monarchy = yes
+#			#stability < 51
+#		}
+#	}
+	
+#	effect = {
+#		scope:actor = {
+#			remove_variable =  RulerChangeAllowed
+#		}
+#	}
+#}
+
+install_foreign_ruler = {
+
+	on_other_nation = yes
+	on_own_nation = no
+	
+	
+	potential_trigger = {
+		scope:actor = {
+			is_monarchy = yes
+		}
+		hidden:scope:target.employer = {
+			NOR = { 
+				this = scope:actor
+				tag = REB
+				tag = BAR
+			}
+			has_variable = RulerChangeAllowed
+		}
+		hidden:scope:target = {
+			prisoner_valid_for_country_events_trigger = yes
+			is_mercenary = no
+		}
+	}
+	
+	allowed_trigger = {
+		hidden:scope:actor = {
+			is_monarchy = yes
+		}
+		hidden:scope:target.employer = {
+			is_monarchy = yes
+		}
+		scope:target = {
+			is_ruler = yes
+		}
+	}
+	
+	character_actor_trigger = {
+		is_ruler = no
+		age > 16
+	}
+	
+	effect = {
+		hidden_effect = {
+			scope:target.employer = {
+				trigger_event = { id = make_our_ruler.2 }
+				#remove_variable = {
+				#	name = RulerChangeAllowed
+				#}
+			}
+		}
+	}
+}
+
+install_claiment = {
+
+	on_other_nation = yes
+	on_own_nation = no
+	
+	
+	potential_trigger = {
+		scope:actor = {
+			is_monarchy = yes
+		}
+		hidden:scope:target.employer = {
+			NOR = { 
+				this = scope:actor
+				tag = REB
+				tag = BAR
+			}
+			has_variable = RulerChangeAllowed
+
+		}
+		hidden:scope:target = {
+			prisoner_valid_for_country_events_trigger = yes
+			is_mercenary = no
+		}
+	}
+	
+	allowed_trigger = {
+		hidden:scope:actor = {
+			is_monarchy = yes
+		}
+		hidden:scope:target.employer = {
+			is_monarchy = yes
+			OR = {
+				war = yes
+				stability < 50
+			}
+		}
+		scope:target = {
+			is_ruler = yes
+		}
+	}
+	
+	character_target_trigger = {
+		is_ruler = no
+		from_ruler_family = yes
+		age > 16
+	}
+	
+	effect = {
+		hidden_effect = {
+			scope:target.employer = {
+				trigger_event = { id = make_our_ruler.2 }
+				#remove_variable = {
+				#	name = RulerChangeAllowed
+				#}
+			}
+		}
+	}
+}

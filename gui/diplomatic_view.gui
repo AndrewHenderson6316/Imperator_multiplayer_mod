@@ -1390,7 +1390,176 @@ base_window = {
 								}
 							}
 				        }
+				        item = {	## subject interactions
+							vbox = {
+								layoutpolicy_horizontal = expanding
+								vbox = {
+									visible = "[And(Not(IsDataModelEmpty(DiplomaticView.GetActions)),Player.MakeScope.IsSubject)]"
+									margin_left = 0
+									margin_right = 4
+									layoutpolicy_horizontal = expanding
+
+									category_drop = {
+										layoutpolicy_horizontal = expanding
+										size = { 0 32 }
+										blockoverride "Text_alignment"
+										{
+											parentanchor = left|vcenter
+											align = left
+											position = { 16 -2 }
+											max_width = 310
+										}
+										blockoverride "Text"
+										{
+											text = "[DiplomaticActionCategory.GetName]"
+										}
+										blockoverride "On_click" { onclick = "[DiplomaticActionCategory.OnClick]" }
+										blockoverride "Down" { visible = yes }
+										blockoverride "Right" { visible = no }
+										blockoverride "RightArrowVisible" { visible = no }
+										visible = "[DiplomaticActionCategory.IsExpanded]"
+									}
+
+									category_drop = {
+										name = "close_button_dip"
+										layoutpolicy_horizontal = expanding
+										size = { 0 32 }
+										blockoverride "Text_alignment"
+										{
+											parentanchor = left|vcenter
+											align = left
+											position = { 16 -2 }
+											max_width = 310
+										}
+										blockoverride "Text" { text = "[DiplomaticActionCategory.GetName]" }
+										blockoverride "On_click" { onclick = "[DiplomaticActionCategory.OnClick]" }
+										blockoverride "Down" { visible = no }
+										blockoverride "Right" { visible = yes }
+										blockoverride "RightArrowVisible" { visible = yes }
+
+										visible = "[Not(DiplomaticActionCategory.IsExpanded)]"
+									}
+								}
+
+								vbox = {
+									using = diplomatic_actions_v2
+									layoutpolicy_horizontal = expanding
+								}
+							}
+						}
+
+								vbox = {
+									datacontext = "[GetScriptedGui('dip_subject_independence')]"
+									visible = "[ScriptedGui.IsValid(GuiScope.SetRoot(Player.MakeScope).AddScope('target', DiplomaticView.GetTargetCountry.MakeScope).End)]"
+                               		spacing = 4
+                            		margin_top = 4
+                              		margin_bottom = 6
+                              		margin_right = 4
+                              		alpha = 1
+                               		layoutpolicy_horizontal = expanding
+
+									category_drop = {
+										name = "open_button_dip2"
+										layoutpolicy_horizontal = expanding
+										size = { 0 32 }
+										blockoverride "Text_alignment"
+										{
+											parentanchor = left|vcenter
+											align = left
+											position = { 16 -2 }
+											max_width = 310
+										}
+										blockoverride "Text"
+										{
+											text = "Subject Actions"
+										}
+										blockoverride "On_click" { onclick = "[GetVariableSystem.Toggle( 'open_button_dip2')]" }
+										blockoverride "Down" { visible = no }
+										blockoverride "Right" { visible = yes }
+										blockoverride "RightArrowVisible" { visible = yes }
+										visible = "[Not(GetVariableSystem.Exists( 'open_button_dip2'))]"
+									}
+
+									category_drop = {
+										name = "close_button_dip"
+										layoutpolicy_horizontal = expanding
+										size = { 0 32 }
+										blockoverride "Text_alignment"
+										{
+											parentanchor = left|vcenter
+											align = left
+											position = { 16 -2 }
+											max_width = 310
+										}
+										blockoverride "Text" { text = "Subject Actions" }
+										blockoverride "On_click" { onclick = "[GetVariableSystem.Toggle( 'open_button_dip2')]" }
+										blockoverride "Down" { visible = yes }
+										blockoverride "Right" { visible = no }
+										blockoverride "RightArrowVisible" { visible = no }
+
+										visible = "[GetVariableSystem.Exists( 'open_button_dip2')]"
+									}
+								}
+
+								vbox = {
+									using = diplomatic_actions_v2
+									layoutpolicy_horizontal = expanding
+									layoutpolicy_vertical = shrinking
+									visible = "[GetVariableSystem.Exists('open_button_dip2')]"
+									spacing = 4
+									margin_bottom = -7
+									margin_top = -3
+
+							margin_widget = {
+		                   		size = { 0 28 }
+	                			layoutpolicy_horizontal = expanding
+	                			margin_right = 6
+                 				margin_left = 6
+                 				margin_top = -10
+                 				datacontext = "[GetScriptedGui('dip_subject_independence')]"
+								visible = "[ScriptedGui.IsShown(GuiScope.SetRoot(Player.MakeScope).AddScope('target', DiplomaticView.GetTargetCountry.MakeScope).End)]"
+
+								text_button_square = {
+							        size = { 100% 28 }
+							        layoutpolicy_horizontal = expanding
+							        datacontext = "[GetScriptedGui('dip_subject_independence')]"
+							        enabled = "[ScriptedGui.IsValid(GuiScope.SetRoot(Player.MakeScope).AddScope('target', DiplomaticView.GetTargetCountry.MakeScope).End)]"
+							        visible = "[And(Not(DiplomaticView.GetTargetCountry.IsBarbarian), Not(EqualTo_int32( DiplomaticView.GetTargetCountry.GetId, Player.GetId )))]"
+							        blockoverride "On_click" {
+							            onclick = "[ScriptedGui.Execute(GuiScope.SetRoot( Player.MakeScope ).AddScope('target', DiplomaticView.GetTargetCountry.MakeScope ).End)]"
+							        }
+							        blockoverride "Center_text" {
+							            text = "dip_subject_independence"
+							        }
+								}
+							}
+
+							margin_widget = {
+		                   		size = { 0 28 }
+	                			layoutpolicy_horizontal = expanding
+	                			margin_right = 6
+                 				margin_left = 6
+                 				margin_top = -10
+								datacontext = "[GetScriptedGui('dip_subject_independence_war')]"
+								visible = "[ScriptedGui.IsShown(GuiScope.SetRoot(Player.MakeScope).AddScope('target', DiplomaticView.GetTargetCountry.MakeScope).End)]"
+
+							    text_button_square = {
+							        size = { 100% 28 }
+							        layoutpolicy_horizontal = expanding
+							        datacontext = "[GetScriptedGui('dip_subject_independence_war')]"
+							        enabled = "[ScriptedGui.IsValid(GuiScope.SetRoot(Player.MakeScope).AddScope('target', DiplomaticView.GetTargetCountry.MakeScope).End)]"
+							        visible = "[And(Not(DiplomaticView.GetTargetCountry.IsBarbarian), Not(EqualTo_int32( DiplomaticView.GetTargetCountry.GetId, Player.GetId )))]"
+							        blockoverride "On_click" {
+							            onclick = "[ScriptedGui.Execute(GuiScope.SetRoot( Player.MakeScope ).AddScope('target', DiplomaticView.GetTargetCountry.MakeScope ).End)]"
+							        }
+							        blockoverride "Center_text" {
+							            text = "dip_subject_independence_war"
+							        }
+							    }
+							}
+						}
                     }
+                    			
 						vbox = {
 								layoutpolicy_vertical = expanding
 							   }

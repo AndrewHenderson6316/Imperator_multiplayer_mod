@@ -1,0 +1,8 @@
+﻿l_english:
+ dip_subject_independence:0 "Peacefull Independence"
+ demand_independence:0 "Demand Independence"
+ demand_independence_text:0 "This Will secure our Independence from our overlord at this time of Weakness\nThis Removes us from their war and makes us Independent"
+
+ dip_subject_independence_war:0 "Independence War"
+ demand_independence_war:0 "Demand Independence War"
+ demand_independence_war_text:0 "This Will Star a War for our Independence from our overlord at this time of Weakness\nThis removes us from their Wars and Declares war on Our overlord "

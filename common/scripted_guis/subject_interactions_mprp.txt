@@ -43,6 +43,7 @@
             }
         }
         scope:target ={
+        	release_subject = root
 			add_opinion = {
 				modifier = subject_broke_free_mprp #subject_broke_free_mprp
 				target = ROOT

@@ -13,7 +13,7 @@ make_our_ruler.2 = { #MAKE RULER proposed
 	immediate = { 
 		save_scope_as = receiver_country 
 		scope:recipient.employer = { save_scope_as = proposer_country }
-		debug_log = "[SCOPE.sChar('target').GetName|Y]"
+		#debug_log = "[SCOPE.sChar('target').GetName|Y]"
 	}
 	
 	option = {
@@ -24,6 +24,7 @@ make_our_ruler.2 = { #MAKE RULER proposed
 		}
 		scope:target.employer = {
 			set_as_ruler = scope:recipient
+			remove_variable = RulerChangeAllowed
 		}
 		scope:actor = {
 			trigger_event = { id = make_our_ruler.5 }

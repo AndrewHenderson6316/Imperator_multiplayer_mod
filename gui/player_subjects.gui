@@ -1,0 +1,176 @@
+﻿base_sub_window = {
+	name = "player_subjects_window"
+	size = { 430 250 }
+	position = { 665 205 }
+	movable = yes
+
+	blockoverride "Title_text" { text = "player_subject_title" }
+
+	blockoverride "White_buttons"
+	{
+		button_close = {
+			tooltip = "CLOSE"
+			onclick = "[ExecuteConsoleCommand('gui.ClearWidgets player_subjects_window')]"
+			onclick = "[GetVariableSystem.Clear('player_subjects_open')]"
+		}
+	}
+
+
+	margin_widget = {
+		size = { 100% 100% }
+
+		vbox = {
+			#direction = vertical
+			parentanchor = hcenter
+			margin_top = 20
+			margin_bottom = 15
+
+			widget = {
+				size = { 150 0 }
+				layoutpolicy_horizontal = expanding
+				layoutpolicy_vertical = expanding
+
+				tag = {
+					parentanchor = center
+					#text = "[]"
+				}
+			}
+			scrollarea = {
+				size = { 412 100 }
+				layoutpolicy_vertical = expanding
+				using = NoninteractableBG
+				scrollbarpolicy_horizontal = always_off
+
+				scrollbar_vertical = {
+					using = VerticalScrollBar
+				}
+				using = VerticalScrollAreaCutOff
+
+				scrollwidget = {
+
+					vbox = {
+						spacing = 5
+						text_button_square_highlighted = {	# Client State
+							size = { 80% 0 }
+							#layoutpolicy_horizontal = expanding
+
+							datacontext = "[GetScriptedGui('player_client_subject')]"
+							enabled = "[ScriptedGui.IsValid(GuiScope.SetRoot( Player.MakeScope ).End)]"
+							blockoverride "On_click"
+							{
+								onclick = "[ScriptedGui.Execute(GuiScope.SetRoot( Player.MakeScope ).End)]"
+								enabled = "[ScriptedGui.IsValid(GuiScope.SetRoot( Player.MakeScope ).End)]"
+								onclick = "[ExecuteConsoleCommand('gui.ClearWidgets player_subjects_window')]"
+								onclick = "[GetVariableSystem.Clear('player_subjects_open')]"
+							}
+							blockoverride "Center_text" {
+								text = "player_client_state"
+							}
+						}
+						text_button_square_highlighted = {	#Feudatory
+							size = { 80% 0 }
+							#layoutpolicy_horizontal = expanding
+
+							datacontext = "[GetScriptedGui('player_feudatory_subject')]"
+							blockoverride "On_click"
+							{
+								onclick = "[ScriptedGui.Execute(GuiScope.SetRoot( Player.MakeScope ).End)]"
+								enabled = "[ScriptedGui.IsValid(GuiScope.SetRoot( Player.MakeScope ).End)]"
+								onclick = "[ExecuteConsoleCommand('gui.ClearWidgets player_subjects_window')]"
+								onclick = "[GetVariableSystem.Clear('player_subjects_open')]"
+							}
+							blockoverride "Center_text" {
+								text = "player_feudatory_subject"
+							}
+						}
+						text_button_square_highlighted = {	#Tributary
+							size = { 80% 0 }
+							#layoutpolicy_horizontal = expanding
+
+							datacontext = "[GetScriptedGui('player_tributary_subject')]"
+							enabled = "[ScriptedGui.IsValid(GuiScope.SetRoot( Player.MakeScope ).End)]"
+							blockoverride "On_click"
+							{
+								onclick = "[ScriptedGui.Execute(GuiScope.SetRoot( Player.MakeScope ).End)]"
+								enabled = "[ScriptedGui.IsValid(GuiScope.SetRoot( Player.MakeScope ).End)]"
+								onclick = "[ExecuteConsoleCommand('gui.ClearWidgets player_subjects_window')]"
+								onclick = "[GetVariableSystem.Clear('player_subjects_open')]"
+							}
+							blockoverride "Center_text" {
+								text = "player_tributary_subject"
+							}
+						}
+						text_button_square_highlighted = { # Satrapy
+							size = { 80% 0 }
+							#layoutpolicy_horizontal = expanding
+
+							datacontext = "[GetScriptedGui('player_satrapy_subject')]"
+							enabled = "[ScriptedGui.IsValid(GuiScope.SetRoot( Player.MakeScope ).End)]"
+							blockoverride "On_click"
+							{
+								onclick = "[ScriptedGui.Execute(GuiScope.SetRoot( Player.MakeScope ).End)]"
+								enabled = "[ScriptedGui.IsValid(GuiScope.SetRoot( Player.MakeScope ).End)]"
+								onclick = "[ExecuteConsoleCommand('gui.ClearWidgets player_subjects_window')]"
+								onclick = "[GetVariableSystem.Clear('player_subjects_open')]"
+							}
+							blockoverride "Center_text" {
+								text = "player_satrapy_subject"
+							}
+						}
+						text_button_square_highlighted = { # Tribal
+							size = { 80% 0 }
+							#layoutpolicy_horizontal = expanding
+
+							datacontext = "[GetScriptedGui('player_tribe_subject')]"
+							enabled = "[ScriptedGui.IsValid(GuiScope.SetRoot( Player.MakeScope ).End)]"
+							blockoverride "On_click"
+							{
+								onclick = "[ScriptedGui.Execute(GuiScope.SetRoot( Player.MakeScope ).End)]"
+								enabled = "[ScriptedGui.IsValid(GuiScope.SetRoot( Player.MakeScope ).End)]"
+								onclick = "[ExecuteConsoleCommand('gui.ClearWidgets player_subjects_window')]"
+								onclick = "[GetVariableSystem.Clear('player_subjects_open')]"
+							}
+							blockoverride "Center_text" {
+								text = "player_tribe_subject"
+							}
+						}
+						text_button_square_highlighted = { # league city
+							size = { 80% 0 }
+							#layoutpolicy_horizontal = expanding
+
+							datacontext = "[GetScriptedGui('player_city_state')]"
+							enabled = "[ScriptedGui.IsValid(GuiScope.SetRoot( Player.MakeScope ).End)]"
+							blockoverride "On_click"
+							{
+								onclick = "[ScriptedGui.Execute(GuiScope.SetRoot( Player.MakeScope ).End)]"
+								enabled = "[ScriptedGui.IsValid(GuiScope.SetRoot( Player.MakeScope ).End)]"
+								onclick = "[ExecuteConsoleCommand('gui.ClearWidgets player_subjects_window')]"
+								onclick = "[GetVariableSystem.Clear('player_subjects_open')]"
+							}
+							blockoverride "Center_text" {
+								text = "subject_league_city_state"
+							}
+						}
+						text_button_square_highlighted = { # colony
+							size = { 80% 0 }
+							#layoutpolicy_horizontal = expanding
+
+							datacontext = "[GetScriptedGui('player_colony')]"
+							enabled = "[ScriptedGui.IsValid(GuiScope.SetRoot( Player.MakeScope ).End)]"
+							blockoverride "On_click"
+							{
+								onclick = "[ScriptedGui.Execute(GuiScope.SetRoot( Player.MakeScope ).End)]"
+								enabled = "[ScriptedGui.IsValid(GuiScope.SetRoot( Player.MakeScope ).End)]"
+								onclick = "[ExecuteConsoleCommand('gui.ClearWidgets player_subjects_window')]"
+								onclick = "[GetVariableSystem.Clear('player_subjects_open')]"
+							}
+							blockoverride "Center_text" {
+								text = "subject_colony"
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

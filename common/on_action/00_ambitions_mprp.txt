@@ -1,0 +1,265 @@
+﻿ambition_become_great_warrior_monthly = {
+	effect = {
+		custom_tooltip = ambition_become_great_warrior_monthly_tooltip
+		hidden_effect = {
+			random_list = {
+				5 = {
+					trigger = {
+						martial < adolescent_stat_max
+					}
+					add_martial = 1
+				}
+				2 = {
+					trigger = {
+						martial < adolescent_stat_max
+					}
+					add_martial = 2
+				}
+				2 = {
+					random_list = {
+						1 = {
+							trigger = {
+								charisma >= 1
+							}
+							add_charisma = -1
+						}
+						1 = {
+							trigger = {
+								finesse >= 1
+							}
+							add_finesse = -1
+						}
+						1 = {
+							trigger = {
+								zeal >= 1
+							}
+							add_zeal = -1
+						}
+					}
+				}
+				1 = {
+					random_list = {
+						1 = {
+							trigger = {
+								charisma < adolescent_stat_max
+							}
+							add_charisma = 1
+						}
+						1 = {
+							trigger = {
+								finesse < adolescent_stat_max
+							}
+							add_finesse = 1
+						}
+						1 = {
+							trigger = {
+								zeal < adolescent_stat_max
+							}
+							add_zeal = 1
+						}
+					}
+				}
+				90 = {}
+			}
+		}
+	}
+}
+
+ambition_become_despot_monthly = {
+	effect = {
+		custom_tooltip = ambition_become_despot_monthly_tooltip
+		hidden_effect = {
+			if = {
+				limit = { 
+					is_alive = yes
+				}
+				random_list = {
+					5 = {
+						trigger = {
+							martial < adolescent_stat_max
+						}
+						add_martial = 1
+						add_corruption = 5
+					}
+					2 = {
+						trigger = {
+							martial < adolescent_stat_max
+							finesse < adolescent_stat_max
+						}
+						add_martial = 1
+						add_finesse = 1
+						add_corruption = 10
+					}
+					2 = {
+						random_list = {
+							1 = {
+								trigger = {
+									charisma >= 1
+								}
+								add_charisma = -1
+							}
+							1 = {
+								trigger = {
+									zeal >= 1
+								}
+								add_zeal = -1
+							}
+						}
+					}
+					1 = {
+						random_list = {
+							1 = {
+								trigger = {
+									charisma < adolescent_stat_max
+								}
+								add_charisma = 1
+							}
+							1 = {
+								trigger = {
+									zeal < adolescent_stat_max
+								}
+								add_zeal = 1
+							}
+						}
+					}
+					90 = {}
+				}
+			}
+		}
+	}
+}
+
+ambition_become_bureaucrat_monthly = {
+	effect = {
+		custom_tooltip = ambition_become_bureaucrat_monthly_tooltip
+		hidden_effect = {
+			random_list = {
+				5 = {
+					trigger = {
+						finesse < adolescent_stat_max
+					}
+					add_finesse = 1
+				}
+				2 = {
+					trigger = {
+						finesse < adolescent_stat_max
+					}
+					add_finesse = 2
+				}
+				2 = {
+					random_list = {
+						1 = {
+							trigger = {
+								charisma >= 1
+							}
+							add_charisma = -1
+						}
+						1 = {
+							trigger = {
+								zeal >= 1
+							}
+							add_zeal = -1
+						}
+						1 = {
+							trigger = {
+								martial >= 1
+							}
+							add_martial = -1
+						}
+					}
+				}
+				1 = {
+					random_list = {
+						1 = {
+							trigger = {
+								charisma < adolescent_stat_max
+							}
+							add_charisma = 1
+						}
+						1 = {
+							trigger = {
+								zeal < adolescent_stat_max
+							}
+							add_zeal = 1
+						}
+						1 = {
+							trigger = {
+								martial < adolescent_stat_max
+							}
+							add_martial = 1
+						}
+					}
+				}
+				90 = {}
+			}
+		}
+	}
+}
+ambition_become_rich_monthly = {
+	effect = {
+		custom_tooltip = ambition_become_rich_monthly_tooltip
+		hidden_effect = {
+			random_list = {
+				5 = {
+					trigger = {
+						finesse < adolescent_stat_max
+					}
+					add_finesse = 1
+					add_corruption = 5
+				}
+				2 = {
+					trigger = {
+						finesse < adolescent_stat_max
+					}
+					add_finesse = 2
+					add_corruption = 10
+				}
+				1 = {
+					random_list = {
+						1 = {
+							trigger = {
+								charisma < adolescent_stat_max
+							}
+							add_charisma = 1
+						}
+						1 = {
+							trigger = {
+								zeal < adolescent_stat_max
+							}
+							add_zeal = 1
+						}
+						1 = {
+							trigger = {
+								martial < adolescent_stat_max
+							}
+							add_martial = 1
+						}
+					}
+				}
+				2 = {
+					random_list = {
+						1 = {
+							trigger = {
+								charisma >= 1
+							}
+							add_charisma = -1
+						}
+						1 = {
+							trigger = {
+								zeal >= 1
+							}
+							add_zeal = -1
+						}
+						1 = {
+							trigger = {
+								martial >= 1
+							}
+							add_martial = -1
+						}
+					}
+				}
+				90 = {}
+			}
+		}
+	}
+}

@@ -84,3 +84,153 @@ rpmp_send_events.2 = {	# Send manpower to country
 		}
     }
 }
+
+rpmp_send_events.3 = { # Send 3 year truce to country 
+    type = country_event
+    title = rpmp_send_events.3.t
+    desc = rpmp_send_events.3.desc
+    picture = greek_philosophers
+    
+    left_portrait = current_ruler
+
+    trigger = {
+    
+    }
+
+    immediate = {
+
+    }
+
+    option = {      
+        name = rpmp_send_events.3.a
+        custom_tooltip =  rpmp_send_events.4.a.TT
+        
+        add_truce = {
+        	target = scope:sender
+        	duration = 10
+        }
+        if = {
+        	limit = {
+        		scope:sender.var:bilateral_truce = 1
+        	}
+        	scope:sender = {
+		        add_truce = {
+	    	    	target = root
+    	    		duration = 10
+        		}
+        	}
+        }
+
+		ai_chance= {
+			factor = 1
+		}
+    }
+    option = {      
+        name = rpmp_send_events.3.b
+
+		ai_chance= {
+			factor = 0
+		}
+    }
+}
+rpmp_send_events.4 = { # Send 5 year truce to country 
+    type = country_event
+    title = rpmp_send_events.4.t
+    desc = rpmp_send_events.3.desc
+    picture = greek_philosophers
+    
+    left_portrait = current_ruler
+
+    trigger = {
+    
+    }
+
+    immediate = {
+
+    }
+
+    option = {      
+        
+    	name = rpmp_send_events.3.a
+        custom_tooltip =  rpmp_send_events.4.a.TT
+        add_truce = {
+        	target = scope:sender
+        	duration = 720
+        }
+        if = {
+        	limit = {
+
+        		scope:sender.var:bilateral_truce = 1
+        	}
+        	scope:sender = {
+		        add_truce = {
+	    	    	target = root
+    	    		duration = 720
+        		}
+        	}
+        }
+        else ={
+
+        }
+
+		ai_chance= {
+			factor = 1
+		}
+    }
+    option = {      
+        name = rpmp_send_events.3.b
+
+		ai_chance= {
+			factor = 0
+		}
+    }
+}
+rpmp_send_events.5 = { # Send 10 year truce to country 
+    type = country_event
+    title = rpmp_send_events.3.t
+    desc = rpmp_send_events.3.desc
+    picture = greek_philosophers
+    
+    left_portrait = current_ruler
+
+    trigger = {
+    
+    }
+
+    immediate = {
+
+    }
+
+    option = {      
+        name = rpmp_send_events.3.a
+
+        custom_tooltip =  rpmp_send_events.4.a.TT
+        add_truce = {
+        	target = scope:sender
+        	duration = 2000
+        }
+        if = {
+        	limit = {
+        		scope:sender.var:bilateral_truce = 1
+        	}
+        	scope:sender = {
+		        add_truce = {
+	    	    	target = root
+    	    		duration = 2000
+        		}
+        	}
+
+        }
+
+		ai_chance= {
+			factor = 1
+		}
+    }
+    option = {      
+        name = rpmp_send_events.3.b
+
+		ai_chance= {
+			factor = 0
+		}
+    }
+}

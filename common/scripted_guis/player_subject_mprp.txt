@@ -5,8 +5,8 @@
 		target
 	}
 
-	confirm_title = "make_player_subject"
-	confirm_text = "make_player_confirm" 
+	#confirm_title = "make_player_subject"
+	#confirm_text = "make_player_confirm" 
 
 	ai_is_valid = {
 		always = no
@@ -15,16 +15,266 @@
 		in_diplomatic_range = scope:target
 		NOT = {
 			scope:target = root
+			is_ai = yes
 		}
 		is_subject = no 
 	}
 	effect = {
 		save_scope_as = sender
-		scope:target = {
+		set_variable = {
+		  name = send_to
+		  value = scope:target
+		}
+
+	}
+}
+player_client_subject = {
+	scope = country
+	confirm_title = "player_client_state"
+	confirm_text = "make_player_confirm" 
+	saved_scopes = {
+		
+	}
+
+	is_shown = {
+		always = yes
+		is_tribal = no
+	}
+
+	ai_is_valid = {
+		always = no 
+	}
+	is_valid = {
+		var:send_to = {
+			OR = {
+				overlord = ROOT
+				is_subject = no
+			}
+		}
+	}
+
+	effect = {
+		save_scope_as = sender
+		var:send_to = {
 			trigger_event = {
 				id = player_subject_events.1
 			}
-		}
 
+		}
+		#remove_variable	= send_to
+	}
+}
+player_feudatory_subject = {
+	scope = country
+	confirm_title = "player_feudatory_subject"
+	confirm_text = "make_player_confirm" 
+	saved_scopes = {
+		
+	}
+
+	is_shown = {
+		always = yes
+		is_tribal = no
+	}
+
+	ai_is_valid = {
+		always = no 
+	}
+	is_valid = {
+		var:send_to = {
+			num_of_cities <= 50
+			OR = {
+				overlord = ROOT
+				is_subject = no
+			}
+		}
+        is_subject = no
+        num_of_cities >= 20
+        is_tribal = no
+        this.culture_group = root.culture_group
+        
+	}
+
+	effect = {
+		save_scope_as = sender
+		var:send_to = {
+			trigger_event = {
+				id = player_subject_events.2
+			}
+		}
+		#remove_variable	= send_to
+	}
+}
+player_tributary_subject = {
+	scope = country
+	confirm_title = "player_tributary_subject"
+	confirm_text = "make_player_confirm" 
+	saved_scopes = {
+		target
+	}
+
+	is_shown = {
+		always = yes
+		is_tribal = no
+	}
+
+	ai_is_valid = {
+		always = no 
+	}
+	is_valid = {
+		var:send_to = {
+			OR = {
+				overlord = ROOT
+				is_subject = no
+			}
+		}
+	}
+
+	effect = {
+		save_scope_as = sender
+		var:send_to = {
+			trigger_event = {
+				id = player_subject_events.3
+			}
+		}
+		#remove_variable	= send_to
+	}
+}
+player_satrapy_subject = {
+	scope = country
+	confirm_title = "player_satrapy_subject"
+	confirm_text = "make_player_confirm" 
+	saved_scopes = {
+		
+	}
+
+	is_shown = {
+		always = yes
+		is_tribal = no
+	}
+
+	ai_is_valid = {
+		always = no 
+	}
+	is_valid = {
+		var:send_to ={
+			is_valid_satrapy_subject = yes
+			OR = {
+				overlord = ROOT
+				is_subject = no
+			}
+		}
+		is_valid_satrapy_overlord = yes
+	}
+
+	effect = {
+		save_scope_as = sender
+		var:send_to = {
+			trigger_event = {
+				id = player_subject_events.4
+			}
+		}
+		#remove_variable	= send_to
+	}
+}
+player_tribe_subject = {
+	scope = country
+	confirm_title = "player_tribe_subject"
+	confirm_text = "make_player_confirm" 
+	saved_scopes = {
+		
+	}
+
+	is_shown = {
+		#always = yes
+		#var:send_to = {
+		#	is_tribal = yes
+		#}
+	}
+
+	ai_is_valid = {
+		always = no 
+	}
+	is_valid = {
+		var:send_to = {
+			is_tribal = yes
+			OR = {
+				overlord = ROOT
+				is_subject = no
+			}
+		}
+	}
+
+	effect = {
+		save_scope_as = sender
+		var:send_to = {
+			trigger_event = {
+				id = player_subject_events.5
+			}
+		}
+		#remove_variable	= send_to
+	}
+}
+player_city_state = {
+	scope = country
+	confirm_title = "player_city_state"
+	confirm_text = "make_player_confirm" 
+	saved_scopes = {
+		
+	}
+
+	is_shown = {
+		always = yes
+	}
+
+	ai_is_valid = {
+		always = no 
+	}
+	is_valid = {
+		var:send_to = {
+			num_of_cities = 1
+			OR = {
+				overlord = ROOT
+				is_subject = no
+			}
+		}
+	}
+
+	effect = {
+		save_scope_as = sender
+		var:send_to = {
+			trigger_event = {
+				id = player_subject_events.6
+			}
+		}
+		#remove_variable	= send_to
+	}
+}
+player_colony = {
+	scope = country
+	confirm_title = "player_colony"
+	confirm_text = "make_player_confirm" 
+	saved_scopes = {
+		
+	}
+
+	is_shown = {
+		always = yes
+	}
+
+	ai_is_valid = {
+		always = no 
+	}
+	is_valid = {
+		is_tribal = no 
+	}
+
+	effect = {
+		save_scope_as = sender
+		var:send_to = {
+			trigger_event = {
+				id = player_subject_events.7
+			}
+		}
 	}
 }

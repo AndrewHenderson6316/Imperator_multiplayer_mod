@@ -19,4 +19,16 @@
  rpmp_send_events.2.a:0 "Accept Manpower"
  rpmp_send_events.2.b:0 "Decline"
 
+ offer_truce:0"Offer Truce"
+ offer_truce_msg:0 "SEND TRUCE"
+ offer_truce_msg_3:0 "3 year truce offer"
+ offer_truce_msg_5:0 "5 year truce offer"
+ offer_truce_msg_8:0 "8 year truce offer"
+ rpmp_send_events.3.t:0 "Truce offered from [SCOPE.sC('sender').GetName]"
+ rpmp_send_events.4.t:0 "Truce offered from [SCOPE.sC('sender').GetName]"
+ rpmp_send_events.3.desc:0 "Peace but for how long?\nTruce with [SCOPE.sC('sender').GetName] "
+ rpmp_send_events.3.a:0 "PEACE IN OUR TIME!"
+ rpmp_send_events.3.a.TT:0 "THIS IS A BILATERAL TRUCE BOTH NATIONS GET A TRUCE"
+ rpmp_send_events.3.b:0 "Decline truce "
 
+ rpmp_send_events.4.a.TT:0 "This Displays Wrong and Adds 3 Years"

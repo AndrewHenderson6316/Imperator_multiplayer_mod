@@ -1,2 +1,3 @@
 ﻿l_english:
- MODIFIER_STATE_FORT_LIMIT:1 "State Fort Limit"
+ MODIFIER_STATE_FORT_LIMIT:1 "Fort Infrastructure Capacity"
+ PORT_ASSAULT_MODIFIIER: "Port Assaulted"

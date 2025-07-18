@@ -1,50 +1,50 @@
-﻿#allow_ruler_change = {
+﻿allow_ruler_change = {
 
-#	on_own_nation = yes
-#	on_other_nation = no 
+	on_own_nation = yes
+	on_other_nation = no 
 
 
-#	allowed_trigger = {
+	allowed_trigger = {
 
-#		scope:actor = {
-#			not = {
-#				has_variable = RulerChangeAllowed
-#			}
-#			is_monarchy = yes
-#			#stability < 51
-#		}
-#	}
+		scope:target = {
+			not = {
+				has_variable = RulerChangeAllowed
+			}
+			is_ruler = yes
+			#stability < 51
+		}
+	}
 	
-#	effect = {
-#		scope:actor = {
-#			set_variable = {
-#				name = RulerChangeAllowed
-#				value = 1
-#			}
-#		}
-#	}
-#}
-#disallow_ruler_change = {
+	effect = {
+		scope:target = {
+			set_variable = {
+				name = RulerChangeAllowed
+				#value = 1
+			}
+		}
+	}
+}
+disallow_ruler_change = {
 
-#	on_own_nation = yes
-#	on_other_nation = no 
+	on_own_nation = yes
+	on_other_nation = no 
 
 
-#	allowed_trigger = {
+	allowed_trigger = {
 		
-#		scope:actor = {
-#			has_variable = RulerChangeAllowed
-#			is_monarchy = yes
-#			#stability < 51
-#		}
-#	}
+		scope:target = {
+			has_variable = RulerChangeAllowed
+			is_ruler = yes
+			#stability < 51
+		}
+	}
 	
-#	effect = {
-#		scope:actor = {
-#			remove_variable =  RulerChangeAllowed
-#		}
-#	}
-#}
+	effect = {
+		scope:target = {
+			remove_variable =  RulerChangeAllowed
+		}
+	}
+}
 
 install_foreign_ruler = {
 
@@ -62,11 +62,12 @@ install_foreign_ruler = {
 				tag = REB
 				tag = BAR
 			}
-			has_variable = RulerChangeAllowed
+			
 		}
 		hidden:scope:target = {
 			prisoner_valid_for_country_events_trigger = yes
 			is_mercenary = no
+			has_variable = RulerChangeAllowed
 		}
 	}
 	
@@ -115,12 +116,13 @@ install_claiment = {
 				tag = REB
 				tag = BAR
 			}
-			has_variable = RulerChangeAllowed
+			
 
 		}
 		hidden:scope:target = {
 			prisoner_valid_for_country_events_trigger = yes
 			is_mercenary = no
+			has_variable = RulerChangeAllowed
 		}
 	}
 	

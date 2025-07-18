@@ -44,7 +44,7 @@
 						has_trait = lunatic 
 					}	
 				}
-				factor = 1
+				add = 1
 			}
 		}
 	}

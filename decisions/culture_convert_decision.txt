@@ -45,6 +45,10 @@
 					name = lunatic 
 					factor 100
 				}
+<<<<<<< Updated upstream
+=======
+				add = 1
+>>>>>>> Stashed changes
 			}
 		}
 	}

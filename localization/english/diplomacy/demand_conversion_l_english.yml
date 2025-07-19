@@ -9,4 +9,4 @@
   demand_conversion_1.a_tt:0 " testing this is awful"
   demand_conversion_1.b:0 "#R Decline#! Religious Conversion"
   religion_conversion_window: "Convert Religion Proposal"
-  propose_religion_conversion: "Propose [SCOPE.sC('target').GetName] Convert To Our Religion"
+  propose_religion_conversion: "Propose that [SCOPE.sC('target').GetName] converts to our #E Religion#!"

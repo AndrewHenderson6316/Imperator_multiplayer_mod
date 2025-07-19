@@ -29,6 +29,6 @@
  rpmp_send_events.3.desc:0 "Peace but for how long?\nTruce with [SCOPE.sC('sender').GetName] "
  rpmp_send_events.3.a:0 "Peace in our time!"
  rpmp_send_events.3.a.TT:0 "THIS IS A BILATERAL TRUCE BOTH NATIONS GET A TRUCE"
- rpmp_send_events.3.b:0 "Reject truce"
+ rpmp_send_events.3.b:0 "Its a trap!"
 
  rpmp_send_events.4.a.TT:0 "#R This Displays Wrong and Adds 3 Years#!"

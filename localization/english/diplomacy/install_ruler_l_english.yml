@@ -1,23 +1,23 @@
 ﻿l_english:
  make_our_ruler.2.t:0 "Proposal to change our Ruler"
- make_our_ruler.2.desc:0 "We are asked by [SCOPE.sC('actor').GetName] to Put [SCOPE.sChar('recipient').GetName] As the new ruler of our country"
- make_our_ruler.2.a:0 "Make Them Our New Ruler"
- make_our_ruler.2.b:0 "Decline"
+ make_our_ruler.2.desc:0 "We are asked by [SCOPE.sC('actor').GetName] to install [SCOPE.sChar('recipient').GetName] as the new ruler of our nation"
+ make_our_ruler.2.a:0 "Accept the Proposal"
+ make_our_ruler.2.b:0 "What mockery is this?"
 
  make_our_ruler.3.t:0 "Failed to make a ruler"
  make_our_ruler.3.desc:0 "Asking [SCOPE.sC('receiver_country').GetName] has failed "
  make_our_ruler.3.a:0 "make ruler was null"
  make_our_ruler.3.b:0 "Decline"
 
- make_our_ruler.4.t:0 "Make Ruler Declined"
- make_our_ruler.4.desc:0 "[SCOPE.sC('receiver_country').GetName] Declined to Put [SCOPE.sChar('recipient').GetName] As the new ruler of their country"
- make_our_ruler.4.a:0 "This is no good"
- make_our_ruler.4.b:0 "Decline"
+ make_our_ruler.4.t:0 "Proposal Rejected"
+ make_our_ruler.4.desc:0 "[SCOPE.sC('receiver_country').GetName] has rejected to install [SCOPE.sChar('recipient').GetName] as the new ruler of their nation"
+ make_our_ruler.4.a:0 "Dismiss"
+ make_our_ruler.4.b:0 "Dismiss"
 
- make_our_ruler.5.t:0 "Make Ruler Accepted"
- make_our_ruler.5.desc:0 "[SCOPE.sC('receiver_country').GetName] accepted to Put [SCOPE.sChar('recipient').GetName] As the new ruler of our country"
- make_our_ruler.5.a:0 "Yippe"
- make_our_ruler.5.b:0 "Decline"
+ make_our_ruler.5.t:0 "A New Head of State"
+ make_our_ruler.5.desc:0 "[SCOPE.sC('receiver_country').GetName] has accepted to install [SCOPE.sChar('recipient').GetName] as the new ruler of their nation"
+ make_our_ruler.5.a:0 "Dismiss"
+ make_our_ruler.5.b:0 "Dismiss"
  
 
  allow_install_ruler:0 "Allow Ruler Change Requests"

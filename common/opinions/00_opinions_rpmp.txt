@@ -8,3 +8,7 @@ subsidies_opinion = {
 	yearly_decay = 0.5
 	max = 50
 }
+subject_broke_free_mprp = {
+	value = -100
+	yearly_decay = 2
+}

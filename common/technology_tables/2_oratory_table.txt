@@ -3,4 +3,5 @@
 	skill = charisma
 	country_civilization_value = 0.5
 	diplomatic_range_modifier = 0.05
+	naval_range = 0.05
 } 

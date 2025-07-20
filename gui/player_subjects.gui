@@ -64,7 +64,7 @@
 								onclick = "[GetVariableSystem.Clear('player_subjects_open')]"
 							}
 							blockoverride "Center_text" {
-								text = "player_client_state"
+								text = "Client State"
 							}
 						}
 						text_button_square_highlighted = {	#Feudatory
@@ -80,7 +80,7 @@
 								onclick = "[GetVariableSystem.Clear('player_subjects_open')]"
 							}
 							blockoverride "Center_text" {
-								text = "player_feudatory_subject"
+								text = "Feudatory"
 							}
 						}
 						text_button_square_highlighted = {	#Tributary
@@ -97,7 +97,7 @@
 								onclick = "[GetVariableSystem.Clear('player_subjects_open')]"
 							}
 							blockoverride "Center_text" {
-								text = "player_tributary_subject"
+								text = "Tributary"
 							}
 						}
 						text_button_square_highlighted = { # Satrapy
@@ -114,7 +114,7 @@
 								onclick = "[GetVariableSystem.Clear('player_subjects_open')]"
 							}
 							blockoverride "Center_text" {
-								text = "player_satrapy_subject"
+								text = "Satrapy"
 							}
 						}
 						text_button_square_highlighted = { # Tribal
@@ -131,7 +131,7 @@
 								onclick = "[GetVariableSystem.Clear('player_subjects_open')]"
 							}
 							blockoverride "Center_text" {
-								text = "player_tribe_subject"
+								text = "Tribal Vassal"
 							}
 						}
 						text_button_square_highlighted = { # league city
@@ -148,7 +148,7 @@
 								onclick = "[GetVariableSystem.Clear('player_subjects_open')]"
 							}
 							blockoverride "Center_text" {
-								text = "subject_league_city_state"
+								text = "League City State"
 							}
 						}
 						text_button_square_highlighted = { # colony
@@ -165,7 +165,7 @@
 								onclick = "[GetVariableSystem.Clear('player_subjects_open')]"
 							}
 							blockoverride "Center_text" {
-								text = "subject_colony"
+								text = "Colony"
 							}
 						}
 					}

@@ -100,3 +100,17 @@ dip_subject_independence_war = {
 		}
 	}
 }
+dip_subject = {
+
+	is_shown = {
+		num_of_cities >= 1
+		is_subject = yes 
+	}
+	is_valid = {
+		in_diplomatic_range = scope:target
+		overlord = scope:target
+		NOT = {
+			scope:target = ROOT
+		}
+	}
+}

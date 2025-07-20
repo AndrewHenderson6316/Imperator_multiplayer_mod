@@ -1,0 +1,102 @@
+﻿dip_subject_independence = {
+	scope = country
+
+	confirm_title = "demand_independence"
+	confirm_text = "demand_independence_text"
+
+	saved_scopes = {
+		target
+	}
+
+	is_shown = {
+		num_of_cities >= 1
+		is_subject = yes 
+		overlord = scope:target
+	}
+	ai_is_valid = {
+		always = no
+	}
+
+	is_valid = {
+		in_diplomatic_range = scope:target
+		scope:target = {
+			any_current_war = {
+				war_score = {
+					target = scope:target
+					value < -20
+				}	
+			}
+		}
+		NOT = {
+			scope:target = ROOT
+		}
+
+	}
+
+	effect = {
+		hidden_effect = {
+            every_current_war = {
+                limit = {
+                    any_war_participant = {this = scope:target} 
+                }
+                remove_from_war = ROOT
+            }
+        }
+        scope:target ={
+        	release_subject = root
+			add_opinion = {
+				modifier = subject_broke_free_mprp #subject_broke_free_mprp
+				target = ROOT
+			}
+		}
+	}
+}
+dip_subject_independence_war = {
+	scope = country
+
+	confirm_title = "demand_independence_war"
+	confirm_text = "demand_independence_war_text"
+
+	saved_scopes = {
+		target
+	}
+
+	is_shown = {
+		num_of_cities >= 1
+		is_subject = yes 
+		overlord = scope:target
+	}
+	ai_is_valid = {
+		always = no
+	}
+
+	is_valid = {
+		in_diplomatic_range = scope:target
+		overlord = scope:target
+		NOT = {
+			scope:target = ROOT
+		}
+	}
+
+	effect = {
+		hidden_effect = {
+            every_current_war = {
+                limit = {
+                    any_war_participant = {this = scope:target} 
+                }
+                remove_from_war = ROOT
+            }
+        }
+        scope:target ={
+			add_opinion = {
+				modifier = subject_broke_free_mprp #subject_broke_free_mprp
+				target = ROOT
+			}
+		}
+		declare_war_with_wargoal = {
+			war_goal = independence_wargoal
+			province = root.capital_scope
+			target = scope:target	
+		}
+	}
+}

@@ -14,10 +14,10 @@
  rpmp_send_events.1.a: "Accept Money"
  rpmp_send_events.1.b: "Decline"
  
- rpmp_send_events.2.t:0 "Manpower offered from [SCOPE.sC('sender').GetName]"
- rpmp_send_events.2.desc:0 "Men for our war "
- rpmp_send_events.2.a:0 "Accept Manpower"
- rpmp_send_events.2.b:0 "Decline"
+ rpmp_send_events.2.t:0 "Manpower from [SCOPE.sC('sender').GetName]"
+ rpmp_send_events.2.desc:0 "Soldies from #E [SCOPE.sC('sender').GetName]#! have arrived to bolster our forces."
+ rpmp_send_events.2.a:0 "We need all the men we can get"
+ rpmp_send_events.2.b:0 "Send them back whence they came"
 
  offer_truce:0"Offer Truce"
  offer_truce_msg:0 "SEND TRUCE"
@@ -27,8 +27,8 @@
  rpmp_send_events.3.t:0 "Truce offered from [SCOPE.sC('sender').GetName]"
  rpmp_send_events.4.t:0 "Truce offered from [SCOPE.sC('sender').GetName]"
  rpmp_send_events.3.desc:0 "Peace but for how long?\nTruce with [SCOPE.sC('sender').GetName] "
- rpmp_send_events.3.a:0 "PEACE IN OUR TIME!"
+ rpmp_send_events.3.a:0 "Peace in our time!"
  rpmp_send_events.3.a.TT:0 "THIS IS A BILATERAL TRUCE BOTH NATIONS GET A TRUCE"
- rpmp_send_events.3.b:0 "Decline truce "
+ rpmp_send_events.3.b:0 "Its a trap!"
 
- rpmp_send_events.4.a.TT:0 "This Displays Wrong and Adds 3 Years"
+ rpmp_send_events.4.a.TT:0 "#R This Displays Wrong and Adds 3 Years#!"

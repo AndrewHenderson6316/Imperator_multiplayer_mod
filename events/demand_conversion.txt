@@ -28,10 +28,14 @@ demand_conversion.1 = {
     option = {      
         name = demand_conversion_1.b
         ai_chance = { 
+            add = 0 
             modifier ={
-                factor = 100
-                is_subject_of != scope:sender
-            
+                is_subject_of = scope:sender
+                add = 1
+            }
+            modifier ={
+                debug_only = yes 
+                add = 1
             }
         }
     }

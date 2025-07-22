@@ -6,6 +6,7 @@
 	potential_trigger = {
 		scope:actor = {
 			is_monarchy = yes
+
 		}
 		hidden:scope:target.employer = {
 			NOR = {
@@ -17,6 +18,7 @@
 		hidden:scope:target = {
 			prisoner_valid_for_country_events_trigger = yes
 			is_mercenary = no
+			is_ruler = yes
 		}
 	}
 	allowed_trigger = {

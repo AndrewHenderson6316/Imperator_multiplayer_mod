@@ -13,7 +13,6 @@
 		not = {
 			#religion = scope:target.religion
 		}
-		#always = yes
 	}
 	ai_is_valid = {
 		always = no
@@ -30,7 +29,6 @@
 	effect = {
 		#debug_log = "demanded conversion"
 		clear_variable_list = convert_to 
-		#add_stability = 100
 
 		set_variable = {
 			name = convert_to
@@ -38,7 +36,6 @@
 		}
 		save_scope_as = sender
 		scope:target = {
-			#add_stability = -100
 			trigger_event = {id = demand_conversion.1}
 		}
 	}

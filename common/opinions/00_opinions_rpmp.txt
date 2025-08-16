@@ -12,3 +12,7 @@ subject_broke_free_mprp = {
 	value = -100
 	yearly_decay = 2
 }
+alexanders_body_destroyed ={
+	value = -50
+	yearly_decay = 5 
+}

@@ -11,8 +11,8 @@
 	is_shown = {
 		num_of_cities >= 1
 		is_subject = yes 
-		overlord = scope:target
 	}
+
 	ai_is_valid = {
 		always = no
 	}
@@ -30,7 +30,9 @@
 		NOT = {
 			scope:target = ROOT
 		}
-
+		
+		scope:target = overlord
+		
 	}
 
 	effect = {
@@ -64,8 +66,8 @@ dip_subject_independence_war = {
 	is_shown = {
 		num_of_cities >= 1
 		is_subject = yes 
-		overlord = scope:target
 	}
+
 	ai_is_valid = {
 		always = no
 	}

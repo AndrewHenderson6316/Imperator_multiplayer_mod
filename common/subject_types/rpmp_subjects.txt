@@ -20,6 +20,7 @@ player_client_state = {
 		diplomatic_reputation = -1
 	}
 	subject_modifier = {
+
 		ruler_popularity_gain = -0.05
 		global_commerce_modifier = 0.1
 	}
@@ -40,7 +41,7 @@ player_client_state = {
 	}
 }
 player_union_state = {
-	subject_pays = subject_client_state_pays
+	subject_pays = subject_pays_union
 	
 	joins_overlord_in_war = yes 
 	
@@ -94,6 +95,7 @@ player_feudatory = { #Latin Allies
 	overlord_modifier = {
 		
 	}
+
 	subject_modifier = {
 		global_citizen_happyness = negative_happiness_small_svalue
 		army_maintenance_cost = -0.1

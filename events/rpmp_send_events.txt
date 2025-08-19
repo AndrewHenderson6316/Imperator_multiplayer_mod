@@ -69,7 +69,7 @@ rpmp_send_events.2 = {	# Send manpower to country
 		scope:sender = {
 			add_manpower = {subtract = var:dip_manpower_amount}	
 			add_political_influence = {
-				add = subtract_influence_small
+				subtract = 2.5
 				multiply = var:dip_manpower_amount
 			}
 		}

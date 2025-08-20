@@ -25,7 +25,7 @@ player_subject_events.1 = {
                 release_subject = root
                 make_subject = {
                     target = root
-                    type = player_client_state
+                    type = client_state
                 }
             }
         }    
@@ -60,7 +60,7 @@ player_subject_events.2 = {
                 release_subject = root
                 make_subject = {
                     target = root
-                    type = player_feudatory
+                    type = feudatory
                 }
             }
         }    
@@ -95,7 +95,7 @@ player_subject_events.3 = {
                 release_subject = root
                 make_subject = {
                     target = root
-                    type = player_tributary
+                    type = tributary
                 }
             }
         }    
@@ -165,7 +165,7 @@ player_subject_events.5 = {
                 release_subject = root
                 make_subject = {
                     target = root
-                    type = player_vassal_tribe
+                    type = vassal_tribe
                 }
             }
         }    

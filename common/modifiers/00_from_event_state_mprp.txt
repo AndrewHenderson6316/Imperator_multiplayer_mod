@@ -1,0 +1,4 @@
+﻿state_improvement_military = { 
+	local_fort_limit = 1
+	local_monthly_state_loyalty = 0.01
+}

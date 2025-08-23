@@ -1,0 +1,201 @@
+template double_tooltip_vert {
+	container = {
+		alwaystransparent = no
+
+		widget = {
+			name = "background"
+			using = DefaultTooltipBackground
+			size = { 100% 100% }
+			alwaystransparent = no
+		}
+
+		flowcontainer = {
+			flowcontainer = {
+				direction = vertical
+				ignoreinvisible = yes
+
+				textbox = {
+					using = DefaultTooltipText
+					margin = { 20 20 }
+					margin_top = 10
+					multiline = yes
+					maximumsize = { 450 -1 }
+					block "TopText" {}
+				}
+
+				block "line" {
+					icon = {
+						size = { 85% 1 }
+						using = flat_background_white
+						alpha = 0.7
+						parentanchor = hcenter
+					}
+				}
+
+				textbox = {
+					using = DefaultTooltipText
+					margin = { 20 0 }
+					margin_top = 10
+					multiline = yes
+					maximumsize = { 450 -1 }
+					block "BotText" {}
+				}
+
+				textbox = {
+					using = DefaultTooltipText
+					margin = { 20 20 }
+					margin_top = 10
+					multiline = yes
+					maximumsize = { 450 -1 }
+					block "ThirdText" {}
+				}
+			}
+			margin_widget = {
+				size = { 10 100% }
+				margin = { 0 6 }
+				using = ProgressLockIndicator
+			}
+		}
+	}
+}
+
+template internal_starting_country_flag
+{
+	icon = {
+		name = "shadow"
+		texture = "gfx/interface/map/flag_shadow.dds"
+
+		block "shadow" {
+			block "size"
+			{
+				size = { 120 120 }
+			}
+		}
+	}
+
+	icon = {
+		block "show_as_icon"
+		{
+			visible = no
+		}
+		block "flag_contents"
+		{
+		}
+	}
+
+	button = {
+		inherit_visual_state = no
+		distribute_visual_state = no
+
+		onclick = "[GetVariableSystem.Set('country_selection', 'selected')]"
+		onclick = "[GetVariableSystem.Clear('mission_map')]" # to hide map selection
+		clicksound = "event:/SFX/UI/Province/sfx_ui_province_select"
+		oversound = "event:/SFX/UI/Generic/sfx_ui_generic_mouse_over"
+
+		block "click"
+		{
+
+		}
+
+		block "show_as_button"
+		{
+			visible = yes
+		}
+		block "flag_contents"
+		{
+		}
+	}
+}
+
+types InvictusTypes {
+	# requires Country datacontext
+	type starting_nation = widget {
+		size = { 50 50 }
+		using = internal_starting_country_flag
+
+		onmousehierarchyenter = "[SetHighlightCountry( Country.Self )]"
+		blockoverride "flag"
+		{
+			texture = "[Country.AccessCoatOfArms.GetTexture('(int32)120','(int32)120')]"
+			frame = "[Country.AccessCoatOfArms.GetFrame('(int32)120','(int32)120')]"
+		}
+		blockoverride "click"
+		{
+			onclick = "[SetLobbyCountryTag(Country.GetTag)]"
+		}
+
+		blockoverride "size"
+		{
+			size = { 50 50 }
+		}
+		blockoverride "flag_contents" {
+			size = { 50 50 }
+			framesize = { 120 120 }
+			modify_texture = {
+				name = "area"
+				texture = "gfx/interface/map/flag_area.dds"
+				blend_mode = alphamultiply
+			}
+			modify_texture = {
+				name = "Darker"
+				texture = "gfx/interface/map/flag_overlay.dds"
+				alpha = 0.8
+				blend_mode = multiply
+			}
+			modify_texture = {
+				name = "Brighter"
+				texture = "gfx/interface/map/flag_highlight.dds"
+				blend_mode = overlay
+			}
+			block "flag"
+			{
+				texture = "gfx/interface/debug/placeholder_flag.dds"# Added to avoid error for missing texture "flag"
+			}
+		}
+		onmousehierarchyleave = "[ClearHighlightColors]"
+	}
+
+	type starting_nation_map = starting_nation {
+		scale = 0.7
+		blockoverride "shadow" {
+			size = { 53 53 }
+		}
+	}
+
+	type button_resize = button  {
+		texture = "gfx/interface/base_parts/white_button_color_200fs.dds"
+		spriteType = Corneredtiled
+		spriteborder = { 100 100 }
+		gfxtype = framedbuttongfx
+		size = { 22 22 }
+		clicksound = "event:/SFX/UI/Generic/2.0/sfx_ui_button_secondary"
+		framesize = { 100 100 }
+		upframe = 1
+		overframe = 2
+		downframe = 3
+		disableframe = 4
+		modify_texture = {
+			name = "Alpha"
+			texture = "gfx/icons/expand.dds"
+			blend_mode = alphamultiply
+		}
+	}
+
+	type button_tab_inv = widget {
+		layoutpolicy_horizontal = expanding
+		size = { 0 26 }
+		tab_button = {
+			size = { 100% 100% }
+		}
+		category_button_open = {
+			size = { 100% 100% }
+			background = {
+				using = flat_background_white
+				shaderfile = "gfx/FX/pdxgui_default.shader"
+			}
+			block "MaxVisible" {
+				visible = no
+			}
+		}
+	}
+}

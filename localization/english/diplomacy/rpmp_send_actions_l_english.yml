@@ -32,3 +32,6 @@
  rpmp_send_events.3.b:0 "Its a trap!"
 
  rpmp_send_events.4.a.TT:0 "#R This Displays Wrong and Adds 3 Years#!"
+
+ manpower_add:0 "+ 500"
+ manpower_subtract:0 "- 500"

@@ -14,4 +14,39 @@ NCountry ={
 
 	#BASE_NAVAL_RANGE = 700	# 650 base
 }
+
+
+NLevy = {
+	MIN_SIZE = 0 # minimum number of cohorts raised as levy
+}
+
+NHorde = {
+	CHARACTER_LOOT_CUT = 0.2
+	BARBARIANS_TO_SLAVES = 0.1
+	BARBARIANS_TO_FREEMEN = 0.25
+	BARBARIAN_POWER_MULT = 1	
+	BARBARIAN_PRIMARY = 0.5
+	BARBARIAN_SECONDARY = 0.3
+	BARBARIAN_FLANK = 0.2
 	
+	BARBARIAN_RANGE = 1000 #Distance barbarians may go before getting homesick.
+	BARBARIAN_CLOSENESS_PREFERENCE = 2 #Barbarians' preference to pick a target close to current location.
+	BARBARIAN_HOME_PREFERENCE = 1 #Barbarians' preference to pick a target close to home location.
+	
+	BARBARIAN_TRIBAL_SPAWN = 0.24
+	BARBARIAN_TOTAL_SPAWN = 0.12
+
+	MIN_BARBARIAN_SPAWN_POWER = 2
+	BARBARIAN_TO_POWERFUL = 10
+	BARBARIAN_DISPLACEMENTDIFF = 3
+	
+	
+	BARBARIAN_DESTROY_CIV_FACTOR = 0.2
+	BARBARIAN_HORDE_BARBIE_INCREASE =5
+	
+	BARBARIAN_LOOT_MULT = 5
+	
+	EXTRA_BARBARIAN_NUM = 5
+	
+	BARB_REINFORCE_OUTSIDE_SIEGE = 1
+}

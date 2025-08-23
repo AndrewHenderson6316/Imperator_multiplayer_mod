@@ -7,7 +7,7 @@
 
  send_manpower:0 "Send Manpower"
  send_manpower_msg:0 "How Much manpower should we send  "
- send_manpower_desc:0 "[Multiply_CFixedPoint( Player.MakeScope.Var('dip_manpower_amount').GetValue, '(CFixedPoint)500')|0] @manpower! [Multiply_CFixedPoint( Player.MakeScope.Var('dip_manpower_amount').GetValue, '(CFixedPoint)-2.5')|0] @political_influence!"
+ send_manpower_desc:0 "[Multiply_CFixedPoint( Player.MakeScope.Var('dip_manpower_amount').GetValue, '(CFixedPoint)250')|0] @manpower! [Multiply_CFixedPoint( Player.MakeScope.Var('dip_manpower_amount').GetValue, '(CFixedPoint)-2.5')|0] @political_influence!"
  
  rpmp_send_events.1.t: "Money Has Been offered from [SCOPE.sC('sender').GetName]"
  rpmp_send_events.1.desc: "WOOOO"
@@ -32,3 +32,5 @@
  rpmp_send_events.3.b:0 "Its a trap!"
 
  rpmp_send_events.4.a.TT:0 "#R This Displays Wrong and Adds 3 Years#!"
+ manpower_add:0 "+ 250"
+ manpower_subtract:0 "- 250"

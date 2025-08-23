@@ -5,7 +5,7 @@
 
 base_window = {
 	name = "diplomatic_view"
-	size = { 640 900 }
+	size = { 640 1000 }
 	allow_outside = yes
 	using = FadeStates
 	state = {
@@ -838,7 +838,7 @@ base_window = {
 			margin_left = @window_margin_left
 
 			margin_widget = {
-				size = { 250 402 }
+				size = { 250 502 }
 				margin_bottom = 14
 				sub_header_v = {
 					size = { 100% 100% }
@@ -940,7 +940,7 @@ base_window = {
 			}
 
 			margin_widget = {
-				size = { 350 400 }
+				size = { 350 500 }
 				margin_left = 4
 				sub_header_v = {
 					size = { 100% 100% }
@@ -1041,7 +1041,7 @@ base_window = {
 					}
 				}
 				scrollarea = {
-					size = { 342 298 }
+					size = { 342 398 }
 					position = { 0 88 }
 					scrollbarpolicy_horizontal = always_off
 					using = VerticalScrollAreaCutOff

@@ -5,7 +5,7 @@
 
 	potential_trigger = {
 		scope:actor = {
-			is_monarchy = yes
+			is_ai = no
 
 		}
 		hidden:scope:target.employer = {
@@ -14,6 +14,7 @@
 				tag = BAR
 				has_variable = RulerChangeAllowed
 			}
+			this = scope:actor
 		}
 		hidden:scope:target = {
 			prisoner_valid_for_country_events_trigger = yes
@@ -26,7 +27,7 @@
 			not = {
 				has_variable = RulerChangeAllowed
 			}
-			is_monarchy = yes
+			is_republic = no
 			#stability < 51
 		}
 	}
@@ -56,7 +57,7 @@ disallow_ruler_change = {
 	allowed_trigger = {
 		scope:target.employer = {
 			has_variable = RulerChangeAllowed
-			is_monarchy = yes
+			is_republic = no
 			#stability < 51
 		}
 	}
@@ -76,7 +77,8 @@ install_foreign_ruler = {
 	
 	potential_trigger = {
 		scope:actor = {
-			is_monarchy = yes
+			is_ai = no
+
 		}
 		hidden:scope:target.employer = {
 			NOR = { 
@@ -95,10 +97,10 @@ install_foreign_ruler = {
 	
 	allowed_trigger = {
 		hidden:scope:actor = {
-			is_monarchy = yes
+			is_republic = no
 		}
 		hidden:scope:target.employer = {
-			is_monarchy = yes
+			is_republic = no
 			has_variable = RulerChangeAllowed	
 		}
 		scope:target = {
@@ -129,7 +131,7 @@ install_claiment = {
 	
 	potential_trigger = {
 		hidden:scope:target.employer = {
-			is_monarchy = yes
+			is_republic = no
 			NOR = { 
 				this = scope:actor
 				tag = REB
@@ -146,10 +148,10 @@ install_claiment = {
 	
 	allowed_trigger = {
 		hidden:scope:actor = {
-			is_monarchy = yes
+			is_republic = no
 		}
 		hidden:scope:target.employer = {
-			is_monarchy = yes
+			is_republic = no
 		}
 		scope:target = {
 			is_ruler = yes

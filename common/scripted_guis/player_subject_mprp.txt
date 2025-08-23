@@ -115,7 +115,6 @@ player_tributary_subject = {
 
 	is_shown = {
 		always = yes
-		is_tribal = no
 	}
 
 	ai_is_valid = {
@@ -149,22 +148,14 @@ player_satrapy_subject = {
 	}
 
 	is_shown = {
-		always = yes
-		is_tribal = no
+		always = no
 	}
 
 	ai_is_valid = {
 		always = no 
 	}
 	is_valid = {
-		var:send_to ={
-			is_valid_satrapy_subject = yes
-			OR = {
-				overlord = ROOT
-				is_subject = no
-			}
-		}
-		is_valid_satrapy_overlord = yes
+		always = no
 	}
 
 	effect = {

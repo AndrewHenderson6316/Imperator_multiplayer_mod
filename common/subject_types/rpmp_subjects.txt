@@ -55,11 +55,10 @@ player_union_state = {
 	
 
 	overlord_modifier = {
-		#diplomatic_reputation = -1
+		global_population_happiness = 0.02
 	}
 	subject_modifier = {
-		#ruler_popularity_gain = -0.05
-		#global_commerce_modifier = 0.1
+		global_population_happiness = 0.02
 	}
 	
 	allow = {

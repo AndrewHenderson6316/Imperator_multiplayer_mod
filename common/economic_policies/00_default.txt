@@ -46,7 +46,7 @@ expense_army = {
 	low = {
 		levy_size_multiplier = 0.075 
 		happiness_for_same_culture_modifier = 0.05
-		experience_decay = 0.001
+		experience_decay = 0.01
 		land_morale_modifier = -0.25
 		army_maintenance_cost = -0.25 #Legion Maintenance
 	}
@@ -58,7 +58,7 @@ expense_army = {
 		levy_size_multiplier = 0.075
 		land_morale_modifier = 0.1
 		army_maintenance_cost = 0.25 #Legion Maintenance
-		experience_decay = -0.001
+		experience_decay = -0.01
 	}
 	
 	ai_will_do_low = {
@@ -174,7 +174,7 @@ expense_fort = {
 
 expense_wages = {
 	low = {
-		monthly_character_experience_decay = 0.005
+		monthly_character_experience_decay = 0.5
 		monthly_wage_modifier = -0.25
 		monthly_local_governor_wage = -0.25
 		monthly_corruption = 0.25
@@ -182,7 +182,7 @@ expense_wages = {
 	default = {
 	}
 	high = {
-		monthly_character_experience_decay = -0.005
+		monthly_character_experience_decay = -0.5
 		monthly_wage_modifier = 0.5
 		monthly_local_governor_wage = 0.5
 		monthly_corruption = -0.10

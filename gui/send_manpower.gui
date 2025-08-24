@@ -82,7 +82,7 @@
 								onclick = "[ScriptedGui.Execute(GuiScope.SetRoot( Player.MakeScope ).End)]"
 							}
 							blockoverride "Center_text" {
-								text = "-500"
+								text = "manpower_subtract"
 							}
 						}
 
@@ -106,7 +106,7 @@
 								onclick = "[ScriptedGui.Execute(GuiScope.SetRoot( Player.MakeScope ).End)]"
 							}
 							blockoverride "Center_text" {
-								text = "+500"
+								text = "manpower_add"
 							}
 						}
 

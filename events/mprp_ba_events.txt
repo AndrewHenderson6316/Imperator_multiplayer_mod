@@ -1,0 +1,161 @@
+﻿namespace = greek_union_ba
+
+greek_union_ba.1 = {
+    type = country_event
+    title = greek_union_ba.1.t
+    desc = greek_union_ba.1.desc
+    picture = aqueducts
+    
+    #hidden = yes
+
+    left_portrait = current_ruler
+
+    trigger = {
+    	
+    }
+
+    immediate = {
+
+    }
+    option = {
+    	name = accept
+    	scope:sender = {
+    		trigger_event = {
+	    		id = greek_union_ba.2
+	    		#target = scope:ally_country
+	    		days = 35
+	    	}
+	    	#hidden = {
+				while = {
+					count = 5
+					random_owned_province = {
+						while = {
+							count =  5
+							random_pops_in_province = {
+								set_pop_culture = scope:ally_country.culture
+							}
+						}
+					}
+				}
+	    	#}
+    	}
+    	#hidden = {
+	    	while = {
+				count = 5
+				random_owned_province = {
+					while = {
+						count =  5
+						random_pops_in_province = {
+							set_pop_culture = scope:sender.culture
+						}
+					}
+				}
+			}	
+    	#}
+    }
+    option = {
+    	name = decline
+    }
+}
+
+greek_union_ba.2 = {
+    type = country_event
+    title = greek_union_ba.2.t
+    desc = greek_union_ba.2.desc
+    picture = aqueducts
+    
+    #hidden = yes
+
+    left_portrait = current_ruler
+
+    trigger = {
+    	
+    }
+
+	immediate = {
+
+	}
+
+    option = {
+    	save_scope_as = sender
+    	scope:ally_country = {
+			trigger_event = {
+				id = greek_union_ba.3
+			}
+			change_government = diarchy
+
+    	}
+		make_subject = {
+			type = player_union_state
+			target = scope:ally_country
+		}
+		random_country_culture = {
+			limit = { is_culture = scope:ally_country.culture }
+			ROOT = { integrate_country_culture = PREV }
+		}
+		add_country_modifier = {
+			name = GREEK_UNIFICATION_MOD
+			#days = -1
+		}
+		change_government = diarchy
+
+	}
+
+
+}
+greek_union_ba.3 = {
+    type = country_event
+    title = greek_union_ba.3.t
+    desc = greek_union_ba.3.desc
+    picture = aqueducts
+    
+    #hidden = yes
+
+    left_portrait = current_ruler
+
+    trigger = {
+    	
+    }
+
+	immediate = {
+
+	}
+
+    option = {
+		random_country_culture = {
+			limit = { is_culture = scope:sender.culture }
+			ROOT = { integrate_country_culture = PREV }
+		}
+		add_country_modifier = {
+			name = GREEK_UNIFICATION_MOD
+			days = -1
+		}
+	}
+
+
+}
+greek_union_ba.4 = {
+    type = country_event
+    title = greek_union_ba.4.t
+    desc = greek_union_ba.4.desc
+    picture = aqueducts
+    
+    hidden = yes
+
+    left_portrait = current_ruler
+
+    trigger = {
+    	
+    }
+
+	immediate = {
+		current_ruler = {
+			save_scope_as = subject_ruler
+		}
+    	set_as_coruler = overlord.current_ruler
+    	overlord = {
+    		set_as_coruler = scope:subject_ruler
+    	}
+	}
+
+}

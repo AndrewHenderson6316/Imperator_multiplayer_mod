@@ -22,22 +22,25 @@ demand_conversion.1 = {
             change_religion_effect = {
                 RELIGION = scope:sender.religion
             }
-        }    
-    }
-
-    option = {      
-        name = demand_conversion_1.b
+        } 
         ai_chance = { 
-           
+            factor = 0
             modifier ={
                 is_subject_of = scope:sender
                 factor = 1
             }
+        }
+    }
+
+    option = {
+        name = demand_conversion_1.b
+        ai_chance = { 
+            factor = 1
+           
             modifier ={
-                debug_only = yes 
-                factor = 1
+                is_subject_of = scope:sender
+                factor = 0
             }
-            factor = 0 
         }
     }
 }

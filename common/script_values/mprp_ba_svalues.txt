@@ -1,0 +1,9 @@
+﻿state_culture_pops_svalue = {
+	value = 0
+	every_state_province = {
+		every_pops_in_province = {
+			limit = { country_culture = { is_integrated = yes } }
+			add = 1
+		}
+	}
+}

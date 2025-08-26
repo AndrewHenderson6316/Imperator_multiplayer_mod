@@ -4,3 +4,9 @@
 	local_output_modifier = -0.1
 	local_unrest = 1
 }
+debug_mod = {
+	local_tax_modifier = 100
+}
+global_money_mod = {
+	global_tax_income = 100
+}

@@ -150,9 +150,7 @@
 				num_of_cities >= 20
 			}
 			not = {
-				any_subject = {
-					type = player_union_state
-				}
+				has_country_modifier = GREEK_UNIFICATION_MOD
 			}
 			any_allied_country = {
 				opinion = {
@@ -174,14 +172,25 @@
 					country_culture_group = northern_hellenic
 				}
 				is_monarchy = yes
-
+				opinion = {
+					target = root  
+					value > 100
+				}
+			}
+			custom_tooltip = {
+				text = "HAS_BUREAUCRACY_3_TT"
+				or = {
+					#has_country_modifier = bureaucracy_2
+					has_country_modifier = bureaucracy_3
+					has_country_modifier = bureaucracy_4
+				}
 			}
 		}
 		
 		effect = {
 			save_scope_as = sender
 			ordered_allied_country = {
-				order_by = opinion
+				#order_by = opinion
 				limit = {
 					OR = {
 						country_culture_group = illyro_hellenic
@@ -193,7 +202,7 @@
 			}
 			scope:ally_country ={
 				trigger_event = {
-					target = scope:sender
+					#target = scope:sender
 					id = greek_union_ba.1
 					days = 0
 				}
@@ -209,21 +218,16 @@
 	n_hellenic_union_decision = {
 		
 		potential = {
+			is_ai = no
 			num_of_cities >= 1
 			OR = {
 				country_culture_group = illyro_hellenic
 				country_culture_group = southern_hellenic
 				country_culture_group = northern_hellenic
 			}
-			OR = {
-				is_ai = no
-				num_of_cities >= 20
-			}
+			num_of_cities >= 20
 			not = {
-				any_subject = {
-					type = player_union_state
-				}
-
+				has_country_modifier = GREEK_UNIFICATION_MOD
 			}
 			any_allied_country = {
 				opinion = {
@@ -231,7 +235,6 @@
 					value > 0
 				}
 			} 
-			
 			is_subject = no
 		}
 		
@@ -242,23 +245,36 @@
 				country_culture_group = pelasgian
 				religion = hellenic_religion
 			
-				is_monarchy = yes				
+				is_monarchy = yes
+				opinion = {
+					target = root  
+					value > 100
+				}			
+			}
+			custom_tooltip = {
+				text = "HAS_BUREAUCRACY_3_TT"
+				or = {
+					#has_country_modifier = bureaucracy_2
+					has_country_modifier = bureaucracy_3
+					has_country_modifier = bureaucracy_4
+				}
 			}
 		}
 
 		effect = {
 			save_scope_as = sender
 			ordered_allied_country = {
-				count = 1
-				order_by = opinion
+				position = 1
+				#order_by = opinion
 				limit = {
 					country_culture_group = pelasgian
+		
 				}
 				save_scope_as = ally_country
 			}
 			scope:ally_country ={
 				trigger_event = {
-					target = scope:sender
+					#target = scope:sender
 					id = greek_union_ba.1
 					days = 0
 				}

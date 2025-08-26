@@ -10,9 +10,9 @@
   WRONG_RELIGION_HAPPINESS:2 "\nNot State Religion: $VALUE|+0%$"
 
   n_hellenic_union_decision: "Form a Pan-Hellenic union"
-  n_hellenic_union_decision_desc:0 "This Will ask our closest ally of Pelagasian culture to unite our nations under a Diarchic Co-rulership"
+  n_hellenic_union_decision_desc:0 "This Will ask our closest ally of#Y Pelagasian#! culture to unite our nations under a#Y Diarchic#! Co-rulership\nWe may be able to Stand side by side and Unite the land of Hellas together"
   p_hellenic_union_decision: "Form a Pan-Hellenic union"
-  p_hellenic_union_decision_desc:0 "This will ask our closest ally of Pelagasian culture to unite our nations under a #Y Diarchy#! Co-rulership"
+  p_hellenic_union_decision_desc:0 "This will ask our closest ally of#Y Hellenic#! culture to unite our nations under a #Y Diarchic#! Co-rulership\nWe may be able to Stand side by side and Unite the land of Hellas together"
   Tier_3_genaric: "Decalre Ourselves a Grand Nation"
   Tier_3_genaric_desc: "We are strong and powerful"
 
@@ -21,13 +21,18 @@
   player_union_state: "Co Ruling States"
   AM_player_union_state: "Co Ruling States"
   LEAD_player_union_state: "Co Ruling States"
+  CANCEL_player_union_stateTITLE: "Cancel Union"
+  CANCEL_player_union_state_TOOLTIP_HEADER: "End our Cultural Union "
+  CANCEL_player_union_state_NOT_IN_TRUCE: "Does Not have Truce"
+  CANCEL_player_union_state_FLAVOR: "This is the end of our Great Union"
+
 
 
   diarchy:0 "Diarchy"
   diarchy_ruler:0 "CoRuler"
   diarchy_consort:0 "CoRuler"
-  RULER_TERM_DESCRIPTION_MONARCHY_CORULER:0 "Diarchy of #Y [SCOPE.GetRootScope.GetCountry.GetName]#!."
-
+  diarchy_desc:0 "Diarchy of ."
+  RULER_TERM_DESCRIPTION_MONARCHY_CORULER:0 "The August Reign of [GovernmentView.GetPlayer.GetRuler.GetPraenomen] and [GovernmentView.GetPlayer.GetCoRuler.GetPraenomen]"
   ONE_WILUSA_NAME:0 "Kingdom of Wilusa"
 
 

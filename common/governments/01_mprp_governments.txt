@@ -8,8 +8,8 @@
 
 	bonus = {
 		global_freemen_output = output_large_svalue
-		character_loyalty = 5
-		global_pop_assimilation_speed_modifier = 0.15
+		character_loyalty = 2
+		global_pop_assimilation_speed_modifier = 0.10
 	}
 	base = {
 		assault_ability = -0.4

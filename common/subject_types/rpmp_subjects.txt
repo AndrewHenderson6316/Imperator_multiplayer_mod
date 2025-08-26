@@ -40,7 +40,7 @@
 #	}
 #}
 player_union_state = {
-	subject_pays = 0
+	#subject_pays = 
 	
 	joins_overlord_in_war = yes 
 	

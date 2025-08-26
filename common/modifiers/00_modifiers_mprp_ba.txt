@@ -1,3 +1,9 @@
-GREEK_UNIFICATION_MOD = {
+﻿GREEK_UNIFICATION_MOD = {
 	happiness_for_same_culture_modifier = 0.06
+}
+debug_mod = {
+	local_tax_modifier = 100
+}
+global_money_mod = {
+	global_tax_income = 100
 }

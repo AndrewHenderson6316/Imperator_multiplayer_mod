@@ -95,7 +95,6 @@ greek_union_ba.2 = {
 		}
 		add_country_modifier = {
 			name = GREEK_UNIFICATION_MOD
-			#days = -1
 		}
 		change_government = diarchy
 
@@ -128,7 +127,6 @@ greek_union_ba.3 = {
 		}
 		add_country_modifier = {
 			name = GREEK_UNIFICATION_MOD
-			days = -1
 		}
 	}
 

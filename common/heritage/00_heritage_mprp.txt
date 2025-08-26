@@ -1,0 +1,37 @@
+﻿epiros_heritage = {
+	modifier = {
+		#good
+		mountain_combat_bonus = 0.10
+		omen_power = 0.05
+		#bad
+		global_commerce_modifier = -0.1
+	}
+	
+	trigger = {
+		always = no
+	}
+}
+thrakia_heritage = {
+	modifier = {
+		#good
+		global_tax_modifier = 0.05
+		light_infantry_discipline = 0.15
+		#bad
+		global_import_commerce_modifier = -0.05
+	}
+	
+	trigger = {
+		always = no
+	}
+}
+
+wandering_dorian_heritage = {
+	modifier = {
+		global_migration_speed_modifier = 0.15
+		discipline = 0.05
+		country_civilization_value = -0.10
+	}
+	trigger = {
+		tag = OSN
+	}
+}

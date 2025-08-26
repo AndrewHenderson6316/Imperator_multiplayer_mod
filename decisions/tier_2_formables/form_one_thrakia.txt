@@ -1,0 +1,73 @@
+﻿country_decisions = {
+
+	form_one_thrakia = { 
+		
+		potential = { 
+			num_of_cities >= 1 
+			NOT = {
+				tag = 1TR
+			}
+			NOR = { 
+				is_tier_2_formable_trigger = yes
+				is_endgame_tag_trigger = yes 
+			}
+			country_culture_group = proto_thracian
+		}
+		
+		highlight = { 
+			scope:province = { 
+				OR = {
+					is_ba_thrace = yes
+				}
+			}
+		}
+		
+		allow = { 
+			custom_tooltip = {
+				text = formable_new_nation_exists
+				NOT = {
+					any_country = {
+						tag = 1TR
+					}
+				}
+			}
+			can_form_nation_trigger = yes 
+			custom_tooltip = {
+				text = own_highlighted_provinces_thrace
+				thrakia_territory_svalue >= 100
+			}
+		}
+
+		effect = {
+			custom_tooltip = "tier_2_formable_tooltip"
+			change_country_name = "ONE_THRAKIA_NAME"
+			add_2_free_province_investments = yes
+			capital_scope = {
+				if = {
+					limit = {
+						root = {
+							is_tribal = yes
+						}
+					}
+					capital_formable_tribal_effect = yes
+				}
+				else = {
+					capital_formable_small_effect = yes
+				}
+				formable_capital_modifier_normal_effect = yes
+			}
+			hidden_effect = {
+				change_country_adjective = "ONE_THRAKIA_ADJECTIVE"
+				change_country_tag = 1TR
+				change_country_color = asturia_color
+				change_country_flag = ONE_THRAKIA_FLAG
+				set_country_heritage = thrakia_heritage
+				
+			}
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+} 

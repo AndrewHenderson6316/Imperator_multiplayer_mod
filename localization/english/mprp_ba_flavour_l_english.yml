@@ -1,0 +1,44 @@
+﻿l_english:
+  wandering_dorian_heritage:0 "Heritage of Wandering Dorians"
+  wandering_dorian_heritage_desc:0 "The Dorians, descendants of the heroic Heracles, are steadfast warriors of land and sea. From Epirote hills to the Pelleponese they forged disciplined armies and enduring Civilisations. Guided by ancestral legacy, their tribes blend strength, cunning, and tradition, leaving an indelible mark on Greece’s history and the paths of conquest."
+  epiros_heritage: "Epirote Heritage"
+  epiros_heritage_desc: "The Molossians of Epirus, descendants of Neoptolemus, son of Achilles, are fierce mountain warriors. Guided by Dodona’s sacred oracle, they thrive in rugged highlands, blending divine guidance and martial skill. Isolated yet resilient, their tribes master highland combat, forging a proud legacy rooted in heroism and the mountains of Epirus."
+  thrakia_heritage: "Thrakian Heritage"
+  thrakia_heritage_desc: "Thrakian"
+
+  #WRONG_RELIGION_HAPPINESS:0 "Wrong Religion happiness %f"
+  WRONG_RELIGION_HAPPINESS:2 "\nNot State Religion: $VALUE|+0%$"
+
+  n_hellenic_union_decision: "Form a Pan-Hellenic union"
+  n_hellenic_union_decision_desc:0 "This Will ask our closest ally of Pelagasian culture to unite our nations under a Diarchic Co-rulership"
+  p_hellenic_union_decision: "Form a Pan-Hellenic union"
+  p_hellenic_union_decision_desc:0 "This will ask our closest ally of Pelagasian culture to unite our nations under a #Y Diarchy#! Co-rulership"
+  Tier_3_genaric: "Decalre Ourselves a Grand Nation"
+  Tier_3_genaric_desc: "We are strong and powerful"
+
+  GREEK_UNIFICATION_MOD: "Greek Unification Modifier"
+
+  player_union_state: "Co Ruling States"
+  AM_player_union_state: "Co Ruling States"
+  LEAD_player_union_state: "Co Ruling States"
+
+
+  diarchy:0 "Diarchy"
+  diarchy_ruler:0 "CoRuler"
+  diarchy_consort:0 "CoRuler"
+  RULER_TERM_DESCRIPTION_MONARCHY_CORULER:0 "Diarchy of #Y [SCOPE.GetRootScope.GetCountry.GetName]#!."
+
+  ONE_WILUSA_NAME:0 "Kingdom of Wilusa"
+
+
+
+
+  greek_union_ba.1.t: "1"
+  greek_union_ba.2.t: "2"
+  greek_union_ba.3.t: "3"
+  greek_union_ba.4.t: "4"
+
+  greek_union_ba.1.desc: "1 d"
+  greek_union_ba.2.desc: "2 d "
+  greek_union_ba.3.desc: "3 d "
+  greek_union_ba.4.desc: " 4 d"

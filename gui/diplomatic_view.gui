@@ -929,6 +929,106 @@ base_window = {
 										}
 									}
 									vbox = {
+										layoutpolicy_horizontal = expanding
+										layoutpolicy_vertical = shrinking
+										margin_right = 4
+										overlappingitembox = {
+											margin_right = 14
+											datamodel = "[DiplomaticView.GetTargetCountry.MakeScope.GetList('embargo_list')]"
+											visible = "[Not(IsDataModelEmpty(DiplomaticView.GetTargetCountry.MakeScope.GetList('embargo_list')))]"
+											layoutpolicy_horizontal = expanding
+											layoutpolicy_vertical = fixed
+											size = { 0 36 }
+											spacing = 2
+											margin_left = 38
+											icon = {
+												texture = "gfx/interface/icons/tradegoods/global_import_embargo_commerce_modifier.dds"
+												tooltip = "embargo_gui_tt"
+												position = { 0 -1 }
+												size = { 34 34 }
+											}
+											item = {
+
+												country_flag = {
+													datacontext = "[Scope]"
+													tooltip = "[Scope.GetCountry.GetName]"
+
+													blockoverride "flag"
+													{
+														texture = "[Scope.GetCountry.AccessCoatOfArms.GetTexture('(int32)56','(int32)56')]"
+														frame = "[Scope.GetCountry.AccessCoatOfArms.GetFrame('(int32)56','(int32)56')]"
+														framesize = { 56 56 }
+													}
+
+													blockoverride "size"
+													{
+														size = { 30 30 }
+													}
+
+													blockoverride "click"
+													{
+														onclick = "[OpenDiplomacy(Scope.GetCountry)]"
+													}
+
+													blockoverride "hover_leave"
+													{
+														onmousehierarchyleave = "[DiplomaticView.ResetHighlight]"
+													}
+												}
+											}
+										}
+									}
+									vbox = {
+										layoutpolicy_horizontal = expanding
+										layoutpolicy_vertical = shrinking
+										margin_right = 4
+										overlappingitembox = {
+											margin_right = 14
+											datamodel = "[DiplomaticView.GetTargetCountry.MakeScope.GetList('embargoed_list')]"
+											visible = "[Not(IsDataModelEmpty(DiplomaticView.GetTargetCountry.MakeScope.GetList('embargoed_list')))]"
+											layoutpolicy_horizontal = expanding
+											layoutpolicy_vertical = fixed
+											size = { 0 36 }
+											spacing = 2
+											margin_left = 38
+											icon = {
+												texture = "gfx/interface/icons/tradegoods/global_embargo_commerce_modifier.dds"
+												tooltip = "embargoed_gui_tt"
+												position = { 0 -1 }
+												size = { 34 34 }
+											}
+											item = {
+
+												country_flag = {
+													datacontext = "[Scope]"
+													tooltip = "[Scope.GetCountry.GetName]"
+
+													blockoverride "flag"
+													{
+														texture = "[Scope.GetCountry.AccessCoatOfArms.GetTexture('(int32)56','(int32)56')]"
+														frame = "[Scope.GetCountry.AccessCoatOfArms.GetFrame('(int32)56','(int32)56')]"
+														framesize = { 56 56 }
+													}
+
+													blockoverride "size"
+													{
+														size = { 30 30 }
+													}
+
+													blockoverride "click"
+													{
+														onclick = "[OpenDiplomacy(Scope.GetCountry)]"
+													}
+
+													blockoverride "hover_leave"
+													{
+														onmousehierarchyleave = "[DiplomaticView.ResetHighlight]"
+													}
+												}
+											}
+										}
+									}
+									vbox = {
 										name = "expander"
 										layoutpolicy_vertical = growing
 									}
@@ -1405,6 +1505,117 @@ base_window = {
 									}
 								}
 					        }
+
+					        vbox = {
+					        	visible = "[Not(IsDataModelEmpty(DiplomaticView.GetActions))]"
+					        	spacing = 4
+					        	margin_top = 0
+					        	margin_bottom = 6
+					        	margin_right = 4
+					        	alpha = 1
+					        	layoutpolicy_horizontal = expanding
+
+					        	category_drop = {
+					        		name = "open_button_dip2"
+					        		layoutpolicy_horizontal = expanding
+					        		size = { 0 32 }
+					        		blockoverride "Text_alignment"
+					        		{
+					        			parentanchor = left|vcenter
+					        			align = left
+					        			position = { 16 -2 }
+					        			max_width = 310
+					        		}
+					        		blockoverride "Text"
+					        		{
+					        			text = "Trade Actions"
+					        		}
+					        		blockoverride "On_click" { onclick = "[GetVariableSystem.Toggle( 'open_button_dip2')]" }
+					        		blockoverride "Down" { visible = no }
+					        		blockoverride "Right" { visible = yes }
+					        		blockoverride "RightArrowVisible" { visible = yes }
+					        		visible = "[Not(GetVariableSystem.Exists( 'open_button_dip2') )]"
+					        	}
+
+					        	category_drop = {
+					        		name = "close_button_dip2"
+					        		layoutpolicy_horizontal = expanding
+					        		size = { 0 32 }
+					        		blockoverride "Text_alignment"
+					        		{
+					        			parentanchor = left|vcenter
+					        			align = left
+					        			position = { 16 -2 }
+					        			max_width = 310
+					        		}
+					        		blockoverride "Text" { text = "Trade Actions" }
+					        		blockoverride "On_click" { onclick = "[GetVariableSystem.Toggle( 'open_button_dip2')]" }
+					        		blockoverride "Down" { visible = yes }
+					        		blockoverride "Right" { visible = no }
+					        		blockoverride "RightArrowVisible" { visible = no }
+
+					        		visible = "[GetVariableSystem.Exists( 'open_button_dip2')]"
+					        	}
+					        }
+
+					        vbox = {
+					        	using = diplomatic_actions_v2
+					        	layoutpolicy_horizontal = expanding
+					        	layoutpolicy_vertical = shrinking
+					        	visible = "[GetVariableSystem.Exists('open_button_dip2')]"
+					        	spacing = 4
+					        	margin_bottom = -7
+					        	margin_top = -3					        
+
+					        	margin_widget = {
+					        		size = { 0 28 }
+					        		layoutpolicy_horizontal = expanding
+					        		margin_right = 6
+					        		margin_left = 6
+					        		margin_top = -10
+
+
+					        		text_button_square = {
+					        			size = { 100% 28 }
+					        			layoutpolicy_horizontal = expanding
+					        			datacontext = "[GetScriptedGui('dip_embargo')]"
+					        			enabled = "[ScriptedGui.IsValid(GuiScope.SetRoot( Player.MakeScope ).AddScope('target', DiplomaticView.GetTargetCountry.MakeScope ).End)]"
+					        			visible = "[And(Not(DiplomaticView.GetTargetCountry.IsBarbarian), Not(EqualTo_int32( DiplomaticView.GetTargetCountry.GetId, Player.GetId )))]"
+					        			blockoverride "On_click" {
+					        				onclick = "[ScriptedGui.Execute(GuiScope.SetRoot( Player.MakeScope ).AddScope('target', DiplomaticView.GetTargetCountry.MakeScope ).End)]"
+					        			}
+					        			blockoverride "Center_text"
+					        			{
+					        				text = "Embargo"
+					        			}
+					        		}
+					        	}
+
+					        	margin_widget = {
+					        		size = { 0 28 }
+					        		layoutpolicy_horizontal = expanding
+					        		margin_right = 6
+					        		margin_left = 6
+					        		margin_top = -10
+
+
+					        		text_button_square = {
+					        			size = { 100% 28 }
+					        			layoutpolicy_horizontal = expanding
+					        			datacontext = "[GetScriptedGui('dip_lift_embargo')]"
+					        			enabled = "[ScriptedGui.IsValid(GuiScope.SetRoot( Player.MakeScope ).AddScope('target', DiplomaticView.GetTargetCountry.MakeScope ).End)]"
+					        			visible = "[And(Not(DiplomaticView.GetTargetCountry.IsBarbarian), Not(EqualTo_int32( DiplomaticView.GetTargetCountry.GetId, Player.GetId )))]"
+					        			blockoverride "On_click" {
+					        				onclick = "[ScriptedGui.Execute(GuiScope.SetRoot( Player.MakeScope ).AddScope('target', DiplomaticView.GetTargetCountry.MakeScope ).End)]"
+					        			}
+					        			blockoverride "Center_text"
+					        			{
+					        				text = "Lift Embargo"
+					        			}
+					        		}
+					        	}					        	
+					        }
+
 					    vbox ={
 				        item = {	## subject interactions
 				        	datacontext = "[GetScriptedGui('dip_subject')]"

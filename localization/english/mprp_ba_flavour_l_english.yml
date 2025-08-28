@@ -38,12 +38,12 @@
 
 
 
-  greek_union_ba.1.t: "1"
-  greek_union_ba.2.t: "2"
-  greek_union_ba.3.t: "3"
+  greek_union_ba.1.t: "Greek Union Between us and [SCOPE.sC('sender').GetName]"
+  greek_union_ba.2.t: "Greek Union Accepted"
+  greek_union_ba.3.t: "Greek Union Proclaimed"
   greek_union_ba.4.t: "4"
 
-  greek_union_ba.1.desc: "1 d"
+  greek_union_ba.1.desc: "Shall we accept and unite our nation with these other Greeks?"
   greek_union_ba.2.desc: "2 d "
   greek_union_ba.3.desc: "3 d "
   greek_union_ba.4.desc: " 4 d"

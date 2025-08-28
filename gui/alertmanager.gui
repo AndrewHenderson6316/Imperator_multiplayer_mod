@@ -989,6 +989,32 @@ widget = {
 				texture = "gfx/interface/icons/shared_icons/invention.dds"
 			}
 		}
+		###########################
+		#Unspent civ points
+		###########################
+		alert = {
+			datacontext = "[GetScriptedGui('ba_unspent_civ_points')]"
+			visible = "[And(ScriptedGui.IsShown(GuiScope.SetRoot(AlertManager.GetPlayer.MakeScope).End), AlertManager.ShowAlert('ba_unspent_civ_points'))]"
+			tooltip = "ALERT_UNSPENT_CIVILIZATION_POINTS"
+			blockoverride "Color"
+			{
+				frame = 8
+			}
+			using = green_alert
+			blockoverride "On_click"
+			{
+				onclick = "[OpenGameView('technology')]"
+				onclick = "[GetVariableSystem.Set( 'civilization_tech', 'yes' )]"
+				onclick = "[GetVariableSystem.Set( 'tech_tabs', 'none' )]"
+				onrightclick = "[AlertManager.ToggleShowAlert('invention_afford')]"
+			}
+			
+			blockoverride "Icon"
+			{
+				texture = "gfx/interface/icons/shared_icons/civilization.dds"
+			}
+		}
+		
 
 		###########################
 		#Can Call Omen

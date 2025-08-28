@@ -41,6 +41,7 @@
                 modifier = "opinion_embargo"
                 target = scope:target
             }
+            save_scope_as = sender
         }
 
         scope:target = {
@@ -56,7 +57,11 @@
 
             save_scope_as = embargo_actor
 
-            trigger_event = { id = embargo.1 }
+            trigger_event = {
+                id = embargo.1
+                scope:actor = root
+                scope:target = scope:target
+            }
         }
     }
 }
@@ -98,6 +103,7 @@ dip_lift_embargo = {
                 modifier = "opinion_embargo"
                 target = scope:target
             }
+            save_scope_as = sender
         }
 
         scope:target = {
@@ -113,7 +119,11 @@ dip_lift_embargo = {
 
             save_scope_as = embargo_actor
 
-            trigger_event = { id = embargo.2 }
+            trigger_event = {
+                id = embargo.2
+                scope:actor = root
+                scope:target = scope:target
+            }
         }
     }
 }

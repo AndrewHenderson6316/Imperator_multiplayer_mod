@@ -1,0 +1,10 @@
+﻿l_english:
+
+ #Tooltips
+ 
+ embargo.1.t:0 "Embargoed!"
+ embargo.1.desc:0 "Our trade with (@[SCOPE.sC('embargo_actor').GetFlag]!) [SCOPE.sC('embargo_actor').GetName] has been blocked!"
+ embargo.1.a:0 "Bah! the quality of their copper was subpar anyways.."
+ embargo.2.t:0 "Embargo Lifted!"
+ embargo.2.desc:0 "Trade with (@[SCOPE.sC('embargo_actor').GetFlag]!) [SCOPE.sC('embargo_actor').GetName] has resumed!"
+ embargo.2.a:0 "It seems as though they cannot resist my precious copper, rightfully so!"

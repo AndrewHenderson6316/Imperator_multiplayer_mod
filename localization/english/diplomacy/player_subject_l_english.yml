@@ -2,7 +2,7 @@
 
   make_player_subject:0 "Offer Subject"
   make_player_confirm:0 "Demand Player Subject"
-  demand_player_subject:0 "Demand That [Player.MakeScope.Var('send_to').GetName] Becomes A Subject?"
+  demand_player_subject:0 "Demand That [SCOPE.sC('send_to').GetName] Becomes A Subject?"
 
   player_subject_events_1.t:0 "[sender.GetName] Demands our Submission!"
   player_subject_events_1.desc:0 "[SCOPE.sC('sender').GetName] has demanded that we swear fealty to them."

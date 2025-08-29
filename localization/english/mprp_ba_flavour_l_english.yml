@@ -35,8 +35,14 @@
   RULER_TERM_DESCRIPTION_MONARCHY_CORULER:0 "The August Reign of [GovernmentView.GetPlayer.GetRuler.GetPraenomen] and [GovernmentView.GetPlayer.GetCoRuler.GetPraenomen]"
   ONE_WILUSA_NAME:0 "Kingdom of Wilusa"
 
+  is_player: "I Am A Player"
+  is_player_desc: "Click this or ELSE"
 
-
+  military_parade_attack: "Hold a Military parade"
+  military_parade_defend: "Hold a Military parade"
+  military_parade_attack_desc: "Hold a Military parade for our troops"
+  military_parade_defend_desc: "Hold a Military parade for our troops"
+  commander_won_great_battle: "Win a Great Battle against our Enemies"
 
   greek_union_ba.1.t: "Greek Union Between us and [SCOPE.sC('sender').GetName]"
   greek_union_ba.2.t: "Greek Union Accepted"
@@ -47,3 +53,6 @@
   greek_union_ba.2.desc: "2 d "
   greek_union_ba.3.desc: "3 d "
   greek_union_ba.4.desc: " 4 d"
+
+  great_port: "Great port"
+  great_port_desc: "This is an Epic Port"

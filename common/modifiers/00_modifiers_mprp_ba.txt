@@ -7,3 +7,11 @@ debug_mod = {
 global_money_mod = {
 	global_tax_income = 100
 }
+great_port_pmod = {
+	local_migration_attraction = 0.1
+	local_migration_speed = 0.1
+	local_state_trade_routes = 3
+}
+military_parade_cmod = {
+	monthly_military_experience = 0.1
+}

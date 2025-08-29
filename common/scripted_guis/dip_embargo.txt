@@ -1,0 +1,129 @@
+﻿dip_embargo = {
+    scope = country
+
+    confirm_title = "embargo"
+    confirm_text = "embargo_confirm"
+
+    saved_scopes = {
+        target
+    }
+
+    ai_is_valid = {
+        always = no
+    }
+
+    is_valid = {
+        in_diplomatic_range = scope:target
+
+        NOT = { scope:target = root }
+
+        root = {
+            trigger_if = {
+                limit = { has_variable_list = embargo_list }
+                NOT = {
+                    is_target_in_variable_list = {
+                        name = embargo_list
+                        target = scope:target
+                    }
+                }
+            }
+        }
+    }
+
+    effect = {
+        root = {
+            add_to_variable_list = {
+                name = embargo_list
+                target = scope:target
+            }
+
+            add_opinion = {
+                modifier = "opinion_embargo"
+                target = scope:target
+            }
+            save_scope_as = sender
+        }
+
+        scope:target = {
+            add_to_variable_list = {
+                name = embargoed_list
+                target = root
+            }
+
+            add_opinion = {
+                modifier = "opinion_embargoed"
+                target = root
+            }
+
+            save_scope_as = embargo_actor
+
+            trigger_event = {
+                id = embargo.1
+                scope:actor = root
+                scope:target = scope:target
+            }
+        }
+    }
+}
+
+dip_lift_embargo = {
+    scope = country
+
+    confirm_title = "lift_embargo"
+    confirm_text = "lift_embargo_confirm"
+
+    saved_scopes = {
+        target
+    }
+
+    ai_is_valid = {
+        always = no
+    }
+
+    is_valid = {
+        NOT = { scope:target = root }
+
+        root = {
+            has_variable_list = embargo_list
+            is_target_in_variable_list = {
+                name = embargo_list
+                target = scope:target
+            }
+        }
+    }
+
+    effect = {
+        root = {
+            remove_list_variable = {
+                name = embargo_list
+                target = scope:target
+            }
+
+            remove_opinion = {
+                modifier = "opinion_embargo"
+                target = scope:target
+            }
+            save_scope_as = sender
+        }
+
+        scope:target = {
+            remove_list_variable = {
+                name = embargoed_list
+                target = root
+            }
+
+            remove_opinion = {
+                modifier = "opinion_embargoed"
+                target = root
+            }
+
+            save_scope_as = embargo_actor
+
+            trigger_event = {
+                id = embargo.2
+                scope:actor = root
+                scope:target = scope:target
+            }
+        }
+    }
+}

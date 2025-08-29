@@ -1,0 +1,91 @@
+﻿country_decisions = {
+	become_trade_state_monarchy = {
+		potential = {
+			num_of_cities >= 1
+			government = despotic_monarchy
+		}
+		allow = {
+			stability >= 40
+			num_of_cities >= 40
+			country_population >= 350
+			OR = {
+				has_country_modifier = bureaucracy_3
+				has_country_modifier = bureaucracy_4
+			}
+		}
+		effect = {
+			add_stability = -10
+			change_government = trade_state_monarchy
+			switch_government_type_event_clearup_effect = yes
+			add_2_free_province_investments = yes
+		}
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				war = yes
+			}
+		}
+	}
+	become_religious_state_monarchy = {
+		potential = {
+			num_of_cities >= 1
+			government = despotic_monarchy
+		}
+		allow = {
+			stability >= 40
+			num_of_cities >= 40
+			country_population >= 350
+
+			OR = {
+				has_country_modifier = bureaucracy_3
+				has_country_modifier = bureaucracy_4
+			}
+		}
+		effect = {
+			add_stability = -10
+			change_government = religious_state_monarchy
+			switch_government_type_event_clearup_effect = yes
+			add_2_free_province_investments = yes
+		}
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				war = yes
+			}
+		}
+	}
+	become_martial_state_monarchy = {
+		potential = {
+			num_of_cities >= 1
+			government = despotic_monarchy
+		}
+		allow = {
+			stability >= 40
+			num_of_cities >= 40
+			country_population >= 350
+			
+			OR = {
+				has_country_modifier = bureaucracy_3
+				has_country_modifier = bureaucracy_4
+			}
+		}
+		effect = {
+			add_stability = -10
+			change_government = martial_state_monarchy
+			switch_government_type_event_clearup_effect = yes
+			add_2_free_province_investments = yes
+		}
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				war = yes
+			}
+		}
+	}
+}

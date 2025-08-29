@@ -1,10 +1,10 @@
 ﻿l_english:
- dip_subject_independence:0 "Peacefull Independence"
- demand_independence:0 "Demand Independence"
- demand_independence_text:0 "This Will secure our Independence from our overlord at this time of Weakness\nThis Removes us from their war and makes us Independent"
- demand_independence_tt:0 "This Will secure our Independence from our overlord at this time of Weakness\nThey must be losing a war at least -20 \nThis Removes us from their war and makes us Independent"
+ dip_subject_independence:0 "Demand Independence"
+ demand_independence:0 "Demanding our Independence"
+ demand_independence_text:0 "This secures our independence from our overlord peacefully. We will leave their wars behind and become a free nation."
+ demand_independence_tt:0 "#T Demand Independence#! \nThis action will grant us independence without the declaration of war. \n\nOption only available if our overlord is in an active war, and has #R -25%#! Warscore."
 
- dip_subject_independence_war:0 "Independence War"
- demand_independence_war:0 "Demand Independence War"
- demand_independence_war_text:0 "This Will Star a War for our Independence from our overlord at this time of Weakness\nThis removes us from their Wars and Declares war on our Overlord "
- demand_independence_war_tt:0 "This Will Star a War for our Independence from our overlord at this time of Weakness\nThis removes us from their Wars and Declares war on our Overlord "
+ dip_subject_independence_war:0 "Declare Independence"
+ demand_independence_war:0 "Declaring a War of Independence"
+ demand_independence_war_text:0 "This will begin a war for our Independence. We will no longer fight in our overlord's conflicts. Instead, we rise against them,"
+ demand_independence_war_tt:0 "#T Declare Independence#! \nWe immediately declare war on our overlord, this will automatically remove us from all current wars."

@@ -1547,10 +1547,10 @@ base_window = {
 					        			blockoverride "On_click" {
 					        				onclick = "[ScriptedGui.Execute(GuiScope.SetRoot( Player.MakeScope ).AddScope('target', DiplomaticView.GetTargetCountry.MakeScope ).End)]"
 					        			}
-					        			blockoverride "Center_text"
-					        			{
-					        				text = "Embargo"
-					        			}
+							        blockoverride "Center_text" {
+							            text = "dip_embargo_activate"
+							        }
+							        tooltip = "embargo_activate_tt"
 					        		}
 					        	}
 
@@ -1573,8 +1573,9 @@ base_window = {
 					        			}
 					        			blockoverride "Center_text"
 					        			{
-					        				text = "Lift Embargo"
+					        				text = "dip_embargo_deactivate"
 					        			}
+					        			tooltip = "embargo_deactivate_tt"
 					        		}
 					        	}					        	
 					        }

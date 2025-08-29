@@ -1,8 +1,8 @@
 ﻿dip_embargo = {
     scope = country
 
-    confirm_title = "embargo"
-    confirm_text = "embargo_confirm"
+    confirm_title = "embargo_activate"
+    confirm_text = "embargo_activate_text"
 
     saved_scopes = {
         target
@@ -69,8 +69,8 @@
 dip_lift_embargo = {
     scope = country
 
-    confirm_title = "lift_embargo"
-    confirm_text = "lift_embargo_confirm"
+    confirm_title = "embargo_deactivate"
+    confirm_text = "embargo_deactivate_text"
 
     saved_scopes = {
         target

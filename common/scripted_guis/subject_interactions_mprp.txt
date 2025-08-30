@@ -23,7 +23,7 @@
 			any_current_war = {
 				war_score = {
 					target = scope:target
-					value < -20
+					value < -25
 				}	
 			}
 		}

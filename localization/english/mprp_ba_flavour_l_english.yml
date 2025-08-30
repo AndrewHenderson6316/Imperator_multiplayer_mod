@@ -5,6 +5,8 @@
   epiros_heritage_desc: "The Molossians of Epirus, descendants of Neoptolemus, son of Achilles, are fierce mountain warriors. Guided by Dodona’s sacred oracle, they thrive in rugged highlands, blending divine guidance and martial skill. Isolated yet resilient, their tribes master highland combat, forging a proud legacy rooted in heroism and the mountains of Epirus."
   thrakia_heritage: "Thrakian Heritage"
   thrakia_heritage_desc: "Thrakian"
+  thessaly_heritage: "Thessalonian Heritage"
+  thessaly_heritage_desc: "In the broad plains beneath Mount Olympus and Pelion, Thessaly is a land of fertile fields and rivers, inhabited my numerous monsters and men, such as the Lapiths, a legendary tribe known to have fought centaurs."
 
   #WRONG_RELIGION_HAPPINESS:0 "Wrong Religion happiness %f"
   WRONG_RELIGION_HAPPINESS:2 "\nNot State Religion: $VALUE|+0%$"

@@ -1,0 +1,139 @@
+﻿country_decisions = {
+
+	form_one_thessaly = { 
+		
+		potential = { 
+			num_of_cities >= 1 
+			NOT = {
+				tag = 1TH
+			}
+			NOR = { 
+				is_tier_2_formable_trigger = yes
+				is_endgame_tag_trigger = yes 
+			}
+			capital_scope = {
+				OR = {
+					is_in_region = thessaly_region
+				}
+				NOR = {
+					province_id = 1042
+					province_id = 1043
+					province_id = 1044
+					province_id = 1045
+					province_id = 1046
+					province_id = 1800
+					province_id = 1802
+					province_id = 1801
+					province_id = 1797
+					province_id = 1798
+				}
+			}
+			# primary_culture = helladic not needed imho
+		}
+		
+		highlight = { 
+			scope:province = { 
+				OR = {
+					AND = {
+						is_in_region = thessaly_region
+						#exists = owner
+					}
+				}
+				NOR = {
+					owner = root
+					province_id = 1042
+					province_id = 1043
+					province_id = 1044
+					province_id = 1045
+					province_id = 1046
+					province_id = 1800
+					province_id = 1802
+					province_id = 1801
+					province_id = 1797
+					province_id = 1798
+				}
+			}
+		}
+		
+		allow = { 
+			custom_tooltip = {
+				text = formable_new_nation_exists
+				NOT = {
+					any_country = {
+						tag = 1TH
+					}
+				}
+			}
+			can_form_nation_trigger = yes 
+			hidden:region:thessaly_region = {
+				custom_tooltip = {
+					text = own_highlighted_provinces_thessaly
+					any_region_province = {
+						NOR = {
+							province_id = 1042
+							province_id = 1043
+							province_id = 1044
+							province_id = 1045
+							province_id = 1046
+							province_id = 1800
+							province_id = 1802
+							province_id = 1802
+							province_id = 1797
+							province_id = 1798
+						}
+						exists = owner
+						count >= 50
+						owner = root
+					}
+				}
+			}
+		}
+
+		effect = {
+			custom_tooltip = "tier_2_formable_tooltip"
+			change_country_name = "ONE_THESSALY_NAME"
+			add_2_free_province_investments = yes
+			capital_scope = {
+				if = {
+					limit = {
+						root = {
+							is_tribal = yes
+						}
+					}
+					capital_formable_tribal_effect = yes
+				}
+				else = {
+					capital_formable_small_effect = yes
+				}
+				formable_capital_modifier_normal_effect = yes
+			}
+			hidden_effect = {
+				change_country_adjective = "ONE_THESSALY_ADJECTIVE"
+				change_country_tag = 1TH
+				change_country_color = thessaly_orange
+				change_country_flag = ONE_THESSALY_FLAG
+				set_country_heritage = thessaly_heritage
+				region:thessaly_region = {
+					random_region_province = {
+						limit = {
+							NOT = {
+								exists = owner
+							}
+							any_neighbor_province = {
+								owner = root
+							}
+						}
+						while = {
+							count = 3
+							set_owned_by = root
+						}
+					}
+				}
+			}
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+} 

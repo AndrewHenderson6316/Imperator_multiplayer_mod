@@ -1,5 +1,5 @@
 ﻿country_decisions = {
-	Tier_2_generic = { 
+	tier_2_generic = { 
 		
 		potential = {
 			num_of_cities >= 1
@@ -13,7 +13,6 @@
 		}
 		allow = { 
 			num_of_cities >= 40
-			country_population >= 250
 			custom_tooltip = {
 				text = "HAS_BUREAUCRACY_2_TT"
 				or = {
@@ -50,7 +49,7 @@
 			base = 1
 		}
 	}
-	Tier_3_genaric = {
+	tier_3_generic = {
 
 		potential = {
 			num_of_cities >= 1
@@ -63,7 +62,7 @@
 		}
 
 		allow = {
-			country_population >= 500
+			country_population >= 350
 			custom_tooltip = {
 				text = "HAS_BUREAUCRACY_4_TT"
 				has_country_modifier = bureaucracy_4

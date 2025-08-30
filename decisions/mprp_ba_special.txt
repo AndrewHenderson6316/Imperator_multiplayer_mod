@@ -35,14 +35,14 @@
 
 	        set_variable = fortified_capital_mprp_ba_var
 
-	        }
+	        
 	    }
 
 	    ai_will_do = {
 	        base = 1
 	    }
 	}
-country_decisions = {
+
     great_harbour_mprp_ba_decision = {
         potential = {
             invention = state_trade_inv_2
@@ -90,4 +90,4 @@ country_decisions = {
 	        base = 1
 	    }
 	}
-	
+}

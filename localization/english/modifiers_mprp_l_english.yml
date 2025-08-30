@@ -1,3 +1,7 @@
 ﻿l_english:
  MODIFIER_STATE_FORT_LIMIT:1 "Fort Infrastructure Capacity"
  PORT_ASSAULT_MODIFIIER: "Port Assaulted"
+
+ fortified_capital_mprp_ba:0 "Fortified Capital"
+ construct_great_port_mprp_ba:0 "Great Harbour"
+ 

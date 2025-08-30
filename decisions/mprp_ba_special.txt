@@ -1,0 +1,93 @@
+﻿country_decisions = {
+
+	fortify_capital_mprp_ba_decision = {
+
+	    potential = {
+	        invention = global_defensive_inv_5
+	        NOT = {
+	            has_variable = fortified_capital_mprp_ba_var
+	        }
+	        NOT = {
+	            capital_scope = {
+	                has_province_modifier = fortified_capital_mprp_ba
+	            }
+	        }
+	    }
+
+	    allow = {
+	        invention = global_defensive_inv_5
+	        treasury >= 500
+	        capital_scope.state = { 
+	            trade_good_surplus = { target = brick value >= 3 }
+	            trade_good_surplus = { target = grain value >= 2 }
+	        }
+	    }
+
+	    effect = {
+	        capital_scope = {
+	            add_permanent_province_modifier = {
+	                name = fortified_capital_mprp_ba
+	                duration = -1
+	            }
+	        }
+
+	        add_treasury = -500
+
+	        set_variable = fortified_capital_mprp_ba_var
+
+	        }
+	    }
+
+	    ai_will_do = {
+	        base = 1
+	    }
+	}
+country_decisions = {
+    great_harbour_mprp_ba_decision = {
+        potential = {
+            invention = state_trade_inv_2
+            NOT = { has_variable = constructed_great_harbour_mprp_ba_var }
+            NOT = {
+                any_owned_province = { has_province_modifier = great_harbour_mprp_ba }
+            }
+        }
+
+        allow = {
+            invention = state_trade_inv_2
+            treasury >= 500
+
+            capital_scope.state = { 
+                trade_good_surplus = { target = stone value >= 3 }
+                trade_good_surplus = { target = wood  value >= 2 }
+            }
+
+            any_owned_province = {
+                controller = ROOT
+                has_city_status = yes
+                num_of_foundry_building >= 1
+                num_of_library_building >= 1
+                num_of_port_building    >= 3
+            }
+        }
+
+        effect = {
+            add_treasury = -500
+            random_owned_province = {
+                limit = {
+                    controller = ROOT
+                    has_city_status = yes
+                    num_of_foundry_building >= 1
+                    num_of_library_building >= 1
+                    num_of_port_building    >= 3
+                }
+                add_permanent_province_modifier = { name = great_harbour_mprp_ba }
+            }
+
+            set_variable = constructed_great_harbour_mprp_ba_var
+        }
+
+	    ai_will_do = {
+	        base = 1
+	    }
+	}
+	

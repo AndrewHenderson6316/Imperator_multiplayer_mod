@@ -54,5 +54,8 @@
   greek_union_ba.3.desc: "3 d "
   greek_union_ba.4.desc: " 4 d"
 
-  great_port: "Great port"
-  great_port_desc: "This is an Epic Port"
+  fortify_capital_mprp_ba_decision: "Fortify the Capital"
+  fortify_capital_mprp_ba_decision_desc: "With surplus grain and bricks brought into the capital, the people store provisions and raise strong walls, turning the city into a fortress"
+
+  great_harbour_mprp_ba_decision: "Contruct Great Harbour"
+  great_harbour_mprp_ba_decision_desc: "#Y Once the conditions are met, this decision will select the territory and grant it the Great Harbour Bonus. \nThe currently highlighted territory is not necessarily the one that will receive the modifier, it will be automatically applied to the territory that meets all the required prerequisites.#!"

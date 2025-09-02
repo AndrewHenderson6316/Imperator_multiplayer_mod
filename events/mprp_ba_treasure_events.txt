@@ -1,0 +1,83 @@
+﻿namespace = treasure_mprp_ba
+
+treasure_mprp_ba.1 = {
+    type = country_event
+    title = treasure_mprp_ba.1.t
+    desc = treasure_mprp_ba.1.desc
+    picture = greek_home
+    
+    left_portrait = current_ruler
+
+    trigger = {
+    
+    }
+
+    immediate = {
+
+    }
+
+    option = {      
+        name = treasure_mprp_ba.1.a
+		#trigger = {
+		#	NOR = { 
+		#		has_variable = dorian_item_1_variable 
+		#		exists = treasure:dorian_item_1
+		#	}
+		#}
+		create_country_treasure = { 
+			key = dorian_treasure_1
+			icon = "treasure_armor"
+			modifier = {
+				#price_found_metropolis_cost_modifier = -0.1
+				#commerce_value = 100
+				#local_manpower_modifier = 0.05
+				#local_unrest = 0.5
+				local_cohort_start_experience = 5
+			}
+		}
+		#set_variable = dorian_item_1_variable
+		#capital_scope = {
+		#	state = {
+		#		add_state_modifier = {
+		#			name = commerce_test
+
+		#		}		
+		#	}
+		#}
+		
+		#add_country_modifier = {
+		#	name = tribesmen_city_test
+
+		#}
+    }
+    option = {      
+        name = treasure_mprp_ba.1.b
+    }
+}
+
+treasure_mprp_ba.2 = {
+    type = country_event
+    title = treasure_mprp_ba.2.t
+    desc = treasure_mprp_ba.2.desc
+    picture = aqueducts
+    
+    left_portrait = current_ruler
+
+    trigger = {
+    
+    }
+
+    immediate = {
+
+    }
+
+    option = {      
+        name = treasure_mprp_ba.2.a
+        unlock_invention = happiness_for_wrong_group_modifier_inv_3
+        
+    }
+    option = {      
+        name = treasure_mprp_ba.2.b
+    }
+}
+

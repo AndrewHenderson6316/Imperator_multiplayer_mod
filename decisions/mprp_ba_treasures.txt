@@ -1,0 +1,24 @@
+﻿country_decisions = {
+
+	treasure_test = {
+
+	    potential = {
+			debug_only = yes
+			is_ai = no 
+	    }
+	
+	    allow = {
+	    	
+	    }
+	
+	    effect = {
+			trigger_event ={
+				id = treasure_mprp_ba.1
+			}
+	    }
+	
+	    ai_will_do = {
+	        base = 0
+	    }
+	}
+}

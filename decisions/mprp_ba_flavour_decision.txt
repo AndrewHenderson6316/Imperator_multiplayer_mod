@@ -374,7 +374,7 @@
 	    }
 	
 	    effect = {
-	    	every_character = {
+	    	every_commander = {
 	    		limit = {
 		    		has_variable = great_battle_won_flag
 	    		}
@@ -435,6 +435,14 @@
 	    }
 	
 	    effect = {
+	    	every_commander = {
+	    		limit = {
+		    		has_variable = great_battle_won_flag
+	    		}
+	    		add_popularity = 10
+	    		add_prominence = 10
+	    		add_charisma = 1
+	    	}
 			add_country_modifier = {
 				name = military_parade_cmod
 				duration = 7200

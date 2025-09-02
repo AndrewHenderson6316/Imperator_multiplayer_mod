@@ -28,7 +28,7 @@
   CANCEL_player_union_state_NOT_IN_TRUCE: "Does Not have Truce"
   CANCEL_player_union_state_FLAVOR: "This is the end of our Great Union"
 
-
+  military_parade_cmod:0 "Military Parade"
 
   diarchy:0 "Diarchy"
   diarchy_ruler:0 "CoRuler"
@@ -67,3 +67,9 @@
 
   tier_3_generic: "Consolidate Power"
   tier_3_generic_desc: "With our neighbors brought under our rule, we stand as a power to be reckoned with. We have carved out our place among them and laid the first stones of something greater. \n\n#Y This formable does not replace or override base game formables. Players may pursue both the new and vanilla formables. It is also there for those without access to a unique formable, or for players who wish to create their own.#!"
+
+  treasuer_mprp_ba.1: ""
+  treasuer_mprp_ba.1.desc: ""
+  treasuer_mprp_ba.1.t: ""
+  treasuer_mprp_ba.1.a: ""
+  treasuer_mprp_ba.1.b: ""

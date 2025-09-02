@@ -9357,364 +9357,364 @@ window = {
 	        }
 	}
 
-	#base_window = {
-	#	movable = yes
-	#	state = {
-	#		name = reset_territories
-	#		position = { 800 -15 }
-	#	}
-	#	position = { 800 -15 }
-	#	visible = "[GetVariableSystem.Exists('show_territories')]"
+	base_window = {
+		movable = yes
+		state = {
+			name = reset_territories
+			position = { 800 -15 }
+		}
+		position = { 800 -15 }
+		visible = "[GetVariableSystem.Exists('show_territories')]"
 
-	#	margin_widget = {
-	#		size = { 100% 100% }
-	#		margin = { 0 0 }
-	#		#margin_top = 35
-	#		icon = {
-	#			size = { 100% 100% }
-	#			using = flat_background_white
-	#			using = border_medium_torn_alpha
-	#		}
-	#	}
+		margin_widget = {
+			size = { 100% 100% }
+			margin = { 0 0 }
+			#margin_top = 35
+			icon = {
+				size = { 100% 100% }
+				using = flat_background_white
+				using = border_medium_torn_alpha
+			}
+		}
 
-	#	container = { # city list
-	#		name = "provinces_in_state"
-	#		minimumsize = { 493 -1 }
-	#		allow_outside = no
-	#		alwaystransparent = no
-	#		resizeparent = yes
+		container = { # city list
+			name = "provinces_in_state"
+			minimumsize = { 493 -1 }
+			allow_outside = no
+			alwaystransparent = no
+			resizeparent = yes
 
-	#		flowcontainer = {
-	#			direction = vertical
-	#			position = { 0 12 }
-	#			margin_bottom = 13
+			flowcontainer = {
+				direction = vertical
+				position = { 0 12 }
+				margin_bottom = 13
 
-	#			flowcontainer = {
-	#				margin_bottom = 8
-	#				spacing = 5
+				flowcontainer = {
+					margin_bottom = 8
+					spacing = 5
 
-	#				widget = {
-	#					size = { 38 20 }
-	#				}
+					widget = {
+						size = { 38 20 }
+					}
 
-	#				widget = {
-	#					size = { 70 20 }
+					widget = {
+						size = { 70 20 }
 
-	#					icon = {
-	#						parentanchor = vcenter
-	#						position = { 10 -3 }
-	#						texture = "gfx/interface/icons/shared_icons/pop_type.dds"
-	#						size = { 25 25 }
-	#					}
-	#				}
+						icon = {
+							parentanchor = vcenter
+							position = { 10 -3 }
+							texture = "gfx/interface/icons/shared_icons/pop_type.dds"
+							size = { 25 25 }
+						}
+					}
 
-	#				widget = {
-	#					size = { 55 20 }
+					widget = {
+						size = { 55 20 }
 
-	#					icon = {
-	#						parentanchor = vcenter
-	#						position = { 6 0 }
-	#						texture = "gfx/interface/icons/shared_icons/building_slot.dds"
-	#						size = { 25 25 }
-	#					}
-	#				}
+						icon = {
+							parentanchor = vcenter
+							position = { 6 0 }
+							texture = "gfx/interface/icons/shared_icons/building_slot.dds"
+							size = { 25 25 }
+						}
+					}
 
-	#				button = {
-	#					size = { 35 20 }
-	#					onclick = "[GetVariableSystem.Toggle('slaves_needed')]"
+					button = {
+						size = { 35 20 }
+						onclick = "[GetVariableSystem.Toggle('slaves_needed')]"
 
-	#					button_round_inverted = {
-	#						size = { 30 30 }
-	#						parentanchor = vcenter
-	#						position = { 0 -1 }
+						button_round_inverted = {
+							size = { 30 30 }
+							parentanchor = vcenter
+							position = { 0 -1 }
 
-	#						blockoverride "On_click" {
-	#							onclick = "[GetVariableSystem.Toggle('slaves_needed')]"
-	#						}
+							blockoverride "On_click" {
+								onclick = "[GetVariableSystem.Toggle('slaves_needed')]"
+							}
 
-	#						blockoverride "Icon" {
-	#							using = icon_pop_slaves
-	#						}
-	#						tooltip = "show_slave_surplus"
-	#					}
-	#				}
+							blockoverride "Icon" {
+								using = icon_pop_slaves
+							}
+							tooltip = "show_slave_surplus"
+						}
+					}
 
-	#				# widget = {
-	#				# 	size = { 40 20 }
-	#				#
-	#				# 	icon = {
-	#				# 		parentanchor = vcenter
-	#				# 		position = { 0 0 }
-	#				# 		using = icon_pop_slaves
-	#				# 		scale = 0.5
-	#				# 	}
-	#				# }
-	#			}
+					# widget = {
+					# 	size = { 40 20 }
+					#
+					# 	icon = {
+					# 		parentanchor = vcenter
+					# 		position = { 0 0 }
+					# 		using = icon_pop_slaves
+					# 		scale = 0.5
+					# 	}
+					# }
+				}
 
-	#			scrollarea = {
-	#				minimumsize = { 481 -1 }
-	#				maximumsize = { 0 396 }
-	#				scrollbarpolicy_horizontal = always_off
-	#				using = VerticalScrollAreaCutOff
+				scrollarea = {
+					minimumsize = { 481 -1 }
+					maximumsize = { 0 396 }
+					scrollbarpolicy_horizontal = always_off
+					using = VerticalScrollAreaCutOff
 
-	#				scrollbar_vertical = {
-	#					using = VerticalScrollBar
-	#				}
+					scrollbar_vertical = {
+						using = VerticalScrollBar
+					}
 
-	#				scrollwidget = {
-	#					fixedgridbox = {
-	#						resizeparent = yes
-	#						addrow = 28
-	#						addcolumn = 480
+					scrollwidget = {
+						fixedgridbox = {
+							resizeparent = yes
+							addrow = 28
+							addcolumn = 480
 
-	#						datamodel = "[ProvinceWindow.GetProvinceList]"
+							datamodel = "[ProvinceWindow.GetProvinceList]"
 
-	#						item = {
-	#							widget = {
-	#								size = { 480 32 }
+							item = {
+								widget = {
+									size = { 480 32 }
 
-	#								list_button = {
-	#									position = { 10 1 }
-	#									size = { 100% 30 }
-	#									onclick = "[SelectProvinceItem.OnClick]"
-	#									enabled = "[SelectProvinceItem.IsPlayerProvince]"
+									list_button = {
+										position = { 10 1 }
+										size = { 100% 30 }
+										onclick = "[SelectProvinceItem.OnClick]"
+										enabled = "[SelectProvinceItem.IsPlayerProvince]"
 
-	#									onmousehierarchyenter = "[SetHighlightProvince(SelectProvinceItem.GetProvince.GetId)]"
-	#									onmousehierarchyleave = "[ClearHighlightColors]"
-	#									onclick = "[PdxGuiTriggerAllAnimations('trigger_move_pop')]"
+										onmousehierarchyenter = "[SetHighlightProvince(SelectProvinceItem.GetProvince.GetId)]"
+										onmousehierarchyleave = "[ClearHighlightColors]"
+										onclick = "[PdxGuiTriggerAllAnimations('trigger_move_pop')]"
 
-	#									alpha = 0.5
-	#								}
+										alpha = 0.5
+									}
 
-	#								button = {
-	#									position = { 0 0 }
-	#									onclick = "[SelectProvinceItem.OnClick]"
-	#									size = { 100% 32 }
-	#									onmousehierarchyenter = "[SetHighlightProvince(SelectProvinceItem.GetProvince.GetId)]"
-	#									onmousehierarchyleave = "[ClearHighlightColors]"
-	#									onclick = "[PdxGuiTriggerAllAnimations('trigger_move_pop')]"
-	#								}
+									button = {
+										position = { 0 0 }
+										onclick = "[SelectProvinceItem.OnClick]"
+										size = { 100% 32 }
+										onmousehierarchyenter = "[SetHighlightProvince(SelectProvinceItem.GetProvince.GetId)]"
+										onmousehierarchyleave = "[ClearHighlightColors]"
+										onclick = "[PdxGuiTriggerAllAnimations('trigger_move_pop')]"
+									}
 
-	#								flowcontainer = {
-	#									position = { 10 1 }
-	#									ignoreinvisible = yes
+									flowcontainer = {
+										position = { 10 1 }
+										ignoreinvisible = yes
 
-	#									country_flag = {
-	#										datacontext = "[SelectProvinceItem.GetProvince.GetOwner]"
-	#										tooltip = "COUNTRY_SHORTHAND_INFO"
+										country_flag = {
+											datacontext = "[SelectProvinceItem.GetProvince.GetOwner]"
+											tooltip = "COUNTRY_SHORTHAND_INFO"
 
-	#										blockoverride "flag"
-	#										{
-	#											texture = "[SelectProvinceItem.GetProvince.GetOwner.AccessCoatOfArms.GetTexture('(int32)56','(int32)56')]"
-	#											frame = "[SelectProvinceItem.GetProvince.GetOwner.AccessCoatOfArms.GetFrame('(int32)56','(int32)56')]"
-	#											framesize = { 56 56 }
-	#										}
+											blockoverride "flag"
+											{
+												texture = "[SelectProvinceItem.GetProvince.GetOwner.AccessCoatOfArms.GetTexture('(int32)56','(int32)56')]"
+												frame = "[SelectProvinceItem.GetProvince.GetOwner.AccessCoatOfArms.GetFrame('(int32)56','(int32)56')]"
+												framesize = { 56 56 }
+											}
 
-	#										blockoverride "size"
-	#										{
-	#											size = { 28 28 }
-	#										}
+											blockoverride "size"
+											{
+												size = { 28 28 }
+											}
 
-	#										blockoverride "click"
-	#										{
-	#											#onclick = "[OpenDiplomacy(SelectProvinceItem.GetProvince.GetOwner)]"
-	#										}
+											blockoverride "click"
+											{
+												#onclick = "[OpenDiplomacy(SelectProvinceItem.GetProvince.GetOwner)]"
+											}
 
-	#										blockoverride "hover" {
-	#										}
-	#									}
+											blockoverride "hover" {
+											}
+										}
 
-	#									spacing = 5
+										spacing = 5
 
-	#									widget = {
-	#										size = { 70 30 }
+										widget = {
+											size = { 70 30 }
 
-	#										flowcontainer = {
-	#											tooltip = "[SelectProvinceItem.GetProvince.GetPopulationCapacityInfo]"
-	#											tag = {
-	#												text = "[SelectProvinceItem.GetProvince.GetPopulation('total')]"
-	#												minimumsize = { 20 30 }
-	#												alpha = "[TransparentIfZero(SelectProvinceItem.GetProvince.GetPopulation('total'))]"
-	#											}
+											flowcontainer = {
+												tooltip = "[SelectProvinceItem.GetProvince.GetPopulationCapacityInfo]"
+												tag = {
+													text = "[SelectProvinceItem.GetProvince.GetPopulation('total')]"
+													minimumsize = { 20 30 }
+													alpha = "[TransparentIfZero(SelectProvinceItem.GetProvince.GetPopulation('total'))]"
+												}
 
-	#											tag = {
-	#												text = "/[SelectProvinceItem.GetProvince.GetPopulationCapacityValue]"
-	#												minimumsize = { 15 30 }
-	#												alpha = 0.7
-	#											}
-	#										}
-	#									}
-	#									widget = {
-	#										size = { 55 30 }
+												tag = {
+													text = "/[SelectProvinceItem.GetProvince.GetPopulationCapacityValue]"
+													minimumsize = { 15 30 }
+													alpha = 0.7
+												}
+											}
+										}
+										widget = {
+											size = { 55 30 }
 
-	#										flowcontainer = {
-	#											ignoreinvisible = yes
-	#											tooltip = "[SelectProvinceItem.GetProvince.GetBuildingLevelInformation]"
-	#											tag = {
-	#												text = "[SelectProvinceItem.GetProvince.GetTotalAmountOfBuildingLevels]"
-	#												minimumsize = { 15 30 }
-	#												visible = "[GreaterThanOrEqualTo_int32(SelectProvinceItem.GetProvince.GetTotalAmountOfBuildingLevels, SelectProvinceItem.GetProvince.GetAllowedAmountOfBuildingLevels)]"
-	#											}
+											flowcontainer = {
+												ignoreinvisible = yes
+												tooltip = "[SelectProvinceItem.GetProvince.GetBuildingLevelInformation]"
+												tag = {
+													text = "[SelectProvinceItem.GetProvince.GetTotalAmountOfBuildingLevels]"
+													minimumsize = { 15 30 }
+													visible = "[GreaterThanOrEqualTo_int32(SelectProvinceItem.GetProvince.GetTotalAmountOfBuildingLevels, SelectProvinceItem.GetProvince.GetAllowedAmountOfBuildingLevels)]"
+												}
 
-	#											tag = {
-	#												text = "#y [SelectProvinceItem.GetProvince.GetTotalAmountOfBuildingLevels]"
-	#												minimumsize = { 15 30 }
-	#												visible = "[LessThan_int32(SelectProvinceItem.GetProvince.GetTotalAmountOfBuildingLevels, SelectProvinceItem.GetProvince.GetAllowedAmountOfBuildingLevels)]"
-	#											}
-	#											tag = {
-	#												text = "/[SelectProvinceItem.GetProvince.GetAllowedAmountOfBuildingLevels]"
-	#												minimumsize = { 20 30 }
-	#											}
-	#										}
-	#									}
-
-
-	#									widget = {
-	#										size = { 50 30 }
-	#										visible = "[Not(GetVariableSystem.Exists('slaves_needed'))]"
-
-	#										tag = {
-	#											alpha = "[TransparentIfFalse(SelectProvinceItem.GetProvince.HasPopulation('slaves'))]"
-	#											minimumsize = { 20 30 }
-	#											text = "[SelectProvinceItem.GetProvince.GetPopulation('slaves')]"
-	#											align = right|nobaseline
-	#											tooltip = "[SelectProvinceItem.GetProvince.GetPopulationTooltip('slaves')]"
-	#										}
-	#									}
-
-	#									widget = {
-	#										size = { 75 30 }
-	#										visible = "[GetVariableSystem.Exists('slaves_needed')]"
-
-	#										flowcontainer = {
-	#											ignoreinvisible = yes
-	#											tag = {
-	#												alpha = "[TransparentIfFalse(SelectProvinceItem.GetProvince.HasPopulation('slaves'))]"
-	#												minimumsize = { 20 30 }
-	#												text = "[SelectProvinceItem.GetProvince.GetPopulation('slaves')]"
-	#												align = right|nobaseline
-	#											}
-	#											# tag = {
-	#											# 	datacontext = "[GetScriptedGui('farmland_terrain')]"
-	#											# 	visible = "[ScriptedGui.IsShown(GuiScope.SetRoot(SelectProvinceItem.GetProvince.MakeScope).End)]"
-	#											# 	alpha = 0.7
-	#											# 	text = "/[Add_CFixedPoint( GuiScope.SetRoot( SelectProvinceItem.GetProvince.MakeScope ).ScriptValue('slaves_needed'), '(CFixedPoint)-2')|0]"
-	#											# }
-
-	#											tag = {
-	#												#datacontext = "[GetScriptedGui('farmland_terrain')]"
-	#												#visible = "[Not(ScriptedGui.IsShown(GuiScope.SetRoot(SelectProvinceItem.GetProvince.MakeScope).End))]"
-	#												alpha = 0.7
-	#												text = "/[GuiScope.SetRoot( SelectProvinceItem.GetProvince.MakeScope ).ScriptValue('slaves_needed')|0]"
-	#											}
-
-	#										}
-	#									}
-
-	#									widget = {
-	#										tooltip = "[SelectProvinceItem.GetProvince.GetTradeGoods.GetTooltip]"
-	#										size = { 50 30 }
-
-	#										tag = {
-	#											text = "[SelectProvinceItem.GetProvince.GetNumGoodsProduced]"
-	#											widgetanchor = right
-	#										}
-
-	#										icon = {
-	#											position = { 5 0 }
-	#											size = { 27 27 }
-	#											texture = "[GetTradeGoodsIcon(SelectProvinceItem.GetProvince.GetTradeGoods)]"
-	#										}
-	#									}
-	#									tag = {
-	#										text = "[SelectProvinceItem.GetProvince.GetNameWithNoTooltip]"
-	#										maximumsize = { 100 -1 }
-	#									}
-	#								}
-
-	#								flowcontainer = {
-	#									parentanchor = right|vcenter
-	#									ignoreinvisible = yes
-
-	#									icon = {
-	#										visible = "[SelectProvinceItem.GetProvince.IsHolySite]"
-	#										texture = "[GetHolySiteRankIcon( SelectProvinceItem.GetProvince.GetRank )]"
-	#										size = { 25 25 }
-	#										tooltip = "holy_site"
-	#									}
-	#									icon = {
-	#										visible = "[SelectProvinceItem.GetProvince.IsStateCapital]"
-	#										texture = "gfx/interface/icons/shared_icons/state_capital.dds"
-	#										tooltip = "[ProvinceWindow.GetProvince.GetStateCapitalTooltip]"
-	#										size = { 25 25 }
-	#									}
-	#									icon = {
-	#										parentanchor = vcenter
-	#										size = { 20 20 }
-	#										texture = "[GetProvinceRankIcon( SelectProvinceItem.GetProvince.GetRank )]"
-	#										visible = "[SelectProvinceItem.GetProvince.HasCityStatus]"
-	#										tooltip = "[SelectProvinceItem.GetProvince.GetRank.GetName]"
-	#									}
-	#								}
-	#							}
-	#						}
-	#					}
-	#				}
-
-	#				widget = {
-	#					size = { 0 15 }
-	#				}
-	#			}
-	#		}
-	#	}
-
-	#	# button_round = {
-	#	# 	size = { 30 30 }
-	#	# 	position = { 15 5 }
-	#	#
-	#	# 	blockoverride "On_click" {
-	#	# 		onclick = "[GetVariableSystem.Toggle('slaves_needed')]"
-	#	# 	}
-	#	#
-	#	# 	blockoverride "Icon" {
-	#	# 		texture = "gfx/interface/icons/modifiers/local_goods_from_slaves.dds"
-	#	# 	}
-	#	# 	tooltip = "show_slave_surplus"
-	#	# }
+												tag = {
+													text = "#y [SelectProvinceItem.GetProvince.GetTotalAmountOfBuildingLevels]"
+													minimumsize = { 15 30 }
+													visible = "[LessThan_int32(SelectProvinceItem.GetProvince.GetTotalAmountOfBuildingLevels, SelectProvinceItem.GetProvince.GetAllowedAmountOfBuildingLevels)]"
+												}
+												tag = {
+													text = "/[SelectProvinceItem.GetProvince.GetAllowedAmountOfBuildingLevels]"
+													minimumsize = { 20 30 }
+												}
+											}
+										}
 
 
-	#	flowcontainer = {
-	#		parentanchor = right
-	#		position = { -10 5 }
-	#		spacing = 3
+										widget = {
+											size = { 50 30 }
+											visible = "[Not(GetVariableSystem.Exists('slaves_needed'))]"
 
-	#		button_round_inverted = {
-	#			size = { 30 30 }
+											tag = {
+												alpha = "[TransparentIfFalse(SelectProvinceItem.GetProvince.HasPopulation('slaves'))]"
+												minimumsize = { 20 30 }
+												text = "[SelectProvinceItem.GetProvince.GetPopulation('slaves')]"
+												align = right|nobaseline
+												tooltip = "[SelectProvinceItem.GetProvince.GetPopulationTooltip('slaves')]"
+											}
+										}
 
-	#			blockoverride "Icon" {
-	#				texture = "gfx/icons/reset.dds"
-	#			}
-	#			blockoverride "On_click" {
-	#				size = { 22 22 }
-	#				onclick = "[PdxGuiTriggerAllAnimations('reset_territories')]"
-	#			}
-	#			tooltip = "reset_position"
-	#		}
+										widget = {
+											size = { 75 30 }
+											visible = "[GetVariableSystem.Exists('slaves_needed')]"
 
-	#		button_round_inverted = {
-	#			size = { 30 30 }
+											flowcontainer = {
+												ignoreinvisible = yes
+												tag = {
+													alpha = "[TransparentIfFalse(SelectProvinceItem.GetProvince.HasPopulation('slaves'))]"
+													minimumsize = { 20 30 }
+													text = "[SelectProvinceItem.GetProvince.GetPopulation('slaves')]"
+													align = right|nobaseline
+												}
+												# tag = {
+												# 	datacontext = "[GetScriptedGui('farmland_terrain')]"
+												# 	visible = "[ScriptedGui.IsShown(GuiScope.SetRoot(SelectProvinceItem.GetProvince.MakeScope).End)]"
+												# 	alpha = 0.7
+												# 	text = "/[Add_CFixedPoint( GuiScope.SetRoot( SelectProvinceItem.GetProvince.MakeScope ).ScriptValue('slaves_needed'), '(CFixedPoint)-2')|0]"
+												# }
 
-	#			blockoverride "Icon" {
-	#				texture = "gfx/icons/close.dds"
-	#			}
-	#			blockoverride "On_click" {
-	#				shortcut = "close_window"
-	#				position = { 1 1 }
-	#				size = { 26 26 }
-	#				onclick = "[GetVariableSystem.Toggle('show_territories')]"
-	#				tooltip = "CLOSE"
-	#			}
-	#		}
-	#	}
-	#}
+												tag = {
+													#datacontext = "[GetScriptedGui('farmland_terrain')]"
+													#visible = "[Not(ScriptedGui.IsShown(GuiScope.SetRoot(SelectProvinceItem.GetProvince.MakeScope).End))]"
+													alpha = 0.7
+													text = "/[GuiScope.SetRoot( SelectProvinceItem.GetProvince.MakeScope ).ScriptValue('slaves_needed')|0]"
+												}
+
+											}
+										}
+
+										widget = {
+											tooltip = "[SelectProvinceItem.GetProvince.GetTradeGoods.GetTooltip]"
+											size = { 50 30 }
+
+											tag = {
+												text = "[SelectProvinceItem.GetProvince.GetNumGoodsProduced]"
+												widgetanchor = right
+											}
+
+											icon = {
+												position = { 5 0 }
+												size = { 27 27 }
+												texture = "[GetTradeGoodsIcon(SelectProvinceItem.GetProvince.GetTradeGoods)]"
+											}
+										}
+										tag = {
+											text = "[SelectProvinceItem.GetProvince.GetNameWithNoTooltip]"
+											maximumsize = { 100 -1 }
+										}
+									}
+
+									flowcontainer = {
+										parentanchor = right|vcenter
+										ignoreinvisible = yes
+
+										icon = {
+											visible = "[SelectProvinceItem.GetProvince.IsHolySite]"
+											texture = "[GetHolySiteRankIcon( SelectProvinceItem.GetProvince.GetRank )]"
+											size = { 25 25 }
+											tooltip = "holy_site"
+										}
+										icon = {
+											visible = "[SelectProvinceItem.GetProvince.IsStateCapital]"
+											texture = "gfx/interface/icons/shared_icons/state_capital.dds"
+											tooltip = "[ProvinceWindow.GetProvince.GetStateCapitalTooltip]"
+											size = { 25 25 }
+										}
+										icon = {
+											parentanchor = vcenter
+											size = { 20 20 }
+											texture = "[GetProvinceRankIcon( SelectProvinceItem.GetProvince.GetRank )]"
+											visible = "[SelectProvinceItem.GetProvince.HasCityStatus]"
+											tooltip = "[SelectProvinceItem.GetProvince.GetRank.GetName]"
+										}
+									}
+								}
+							}
+						}
+					}
+
+					widget = {
+						size = { 0 15 }
+					}
+				}
+			}
+		}
+
+		# button_round = {
+		# 	size = { 30 30 }
+		# 	position = { 15 5 }
+		#
+		# 	blockoverride "On_click" {
+		# 		onclick = "[GetVariableSystem.Toggle('slaves_needed')]"
+		# 	}
+		#
+		# 	blockoverride "Icon" {
+		# 		texture = "gfx/interface/icons/modifiers/local_goods_from_slaves.dds"
+		# 	}
+		# 	tooltip = "show_slave_surplus"
+		# }
+
+
+		flowcontainer = {
+			parentanchor = right
+			position = { -10 5 }
+			spacing = 3
+
+			button_round_inverted = {
+				size = { 30 30 }
+
+				blockoverride "Icon" {
+					texture = "gfx/icons/reset.dds"
+				}
+				blockoverride "On_click" {
+					size = { 22 22 }
+					onclick = "[PdxGuiTriggerAllAnimations('reset_territories')]"
+				}
+				tooltip = "reset_position"
+			}
+
+			button_round_inverted = {
+				size = { 30 30 }
+
+				blockoverride "Icon" {
+					texture = "gfx/icons/close.dds"
+				}
+				blockoverride "On_click" {
+					shortcut = "close_window"
+					position = { 1 1 }
+					size = { 26 26 }
+					onclick = "[GetVariableSystem.Toggle('show_territories')]"
+					tooltip = "CLOSE"
+				}
+			}
+		}
+	}
 }

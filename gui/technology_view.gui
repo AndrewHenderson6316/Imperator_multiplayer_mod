@@ -775,6 +775,8 @@ base_window = {
 						button = {
 							size = { 100% 100% }
 							onclick = "[GetVariableSystem.Set( 'tech_tabs', TechOfficeItem.GetTable.GetUiKey )]"
+							onclick = "[GetVariableSystem.Set( 'civilization_tech', 'no' )]"
+
 
 							tab_button_vertical = {
 								parentanchor = hcenter

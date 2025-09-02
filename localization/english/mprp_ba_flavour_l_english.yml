@@ -1,0 +1,69 @@
+﻿l_english:
+  wandering_dorian_heritage:0 "Heritage of Wandering Dorians"
+  wandering_dorian_heritage_desc:0 "The Dorians, descendants of the heroic Heracles, are steadfast warriors of land and sea. From Epirote hills to the Pelleponese they forged disciplined armies and enduring Civilisations. Guided by ancestral legacy, their tribes blend strength, cunning, and tradition, leaving an indelible mark on Greece’s history and the paths of conquest."
+  epiros_heritage: "Epirote Heritage"
+  epiros_heritage_desc: "The Molossians of Epirus, descendants of Neoptolemus, son of Achilles, are fierce mountain warriors. Guided by Dodona’s sacred oracle, they thrive in rugged highlands, blending divine guidance and martial skill. Isolated yet resilient, their tribes master highland combat, forging a proud legacy rooted in heroism and the mountains of Epirus."
+  thrakia_heritage: "Thrakian Heritage"
+  thrakia_heritage_desc: "Thrakian"
+  thessaly_heritage: "Thessalonian Heritage"
+  thessaly_heritage_desc: "In the broad plains beneath Mount Olympus and Pelion, Thessaly is a land of fertile fields and rivers, inhabited my numerous monsters and men, such as the Lapiths, a legendary tribe known to have fought centaurs."
+
+  #WRONG_RELIGION_HAPPINESS:0 "Wrong Religion happiness %f"
+  WRONG_RELIGION_HAPPINESS:2 "\nNot State Religion: $VALUE|+0%$"
+
+  n_hellenic_union_decision: "Form a Pan-Hellenic union"
+  n_hellenic_union_decision_desc:0 "This Will ask our closest ally of#Y Pelagasian#! culture to unite our nations under a#Y Diarchic#! Co-rulership\nWe may be able to Stand side by side and Unite the land of Hellas together"
+  p_hellenic_union_decision: "Form a Pan-Hellenic union"
+  p_hellenic_union_decision_desc:0 "This will ask our closest ally of#Y Hellenic#! culture to unite our nations under a #Y Diarchic#! Co-rulership\nWe may be able to Stand side by side and Unite the land of Hellas together"
+  Tier_3_genaric: "Decalre Ourselves a Grand Nation"
+  Tier_3_genaric_desc: "We are strong and powerful"
+
+  GREEK_UNIFICATION_MOD: "Greek Unification Modifier"
+
+  player_union_state: "Co Ruling States"
+  AM_player_union_state: "Co Ruling States"
+  LEAD_player_union_state: "Co Ruling States"
+  CANCEL_player_union_stateTITLE: "Cancel Union"
+  CANCEL_player_union_state_TOOLTIP_HEADER: "End our Cultural Union "
+  CANCEL_player_union_state_NOT_IN_TRUCE: "Does Not have Truce"
+  CANCEL_player_union_state_FLAVOR: "This is the end of our Great Union"
+
+
+
+  diarchy:0 "Diarchy"
+  diarchy_ruler:0 "CoRuler"
+  diarchy_consort:0 "CoRuler"
+  diarchy_desc:0 "Diarchy of ."
+  RULER_TERM_DESCRIPTION_MONARCHY_CORULER:0 "The August Reign of [GovernmentView.GetPlayer.GetRuler.GetPraenomen] and [GovernmentView.GetPlayer.GetCoRuler.GetPraenomen]"
+  ONE_WILUSA_NAME:0 "Kingdom of Wilusa"
+
+  is_player: "I Am A Player"
+  is_player_desc: "Click this or ELSE"
+
+  military_parade_attack: "Hold a Military parade"
+  military_parade_defend: "Hold a Military parade"
+  military_parade_attack_desc: "Hold a Military parade for our troops"
+  military_parade_defend_desc: "Hold a Military parade for our troops"
+  commander_won_great_battle: "Win a Great Battle against our Enemies"
+
+  greek_union_ba.1.t: "Greek Union Between us and [SCOPE.sC('sender').GetName]"
+  greek_union_ba.2.t: "Greek Union Accepted"
+  greek_union_ba.3.t: "Greek Union Proclaimed"
+  greek_union_ba.4.t: "4"
+
+  greek_union_ba.1.desc: "Shall we accept and unite our nation with these other Greeks?"
+  greek_union_ba.2.desc: "2 d "
+  greek_union_ba.3.desc: "3 d "
+  greek_union_ba.4.desc: " 4 d"
+
+  fortify_capital_mprp_ba_decision: "Fortify the Capital"
+  fortify_capital_mprp_ba_decision_desc: "With surplus grain and bricks brought into the capital, the people store provisions and raise strong walls, turning the city into a fortress"
+
+  great_harbour_mprp_ba_decision: "Contruct Great Harbour"
+  great_harbour_mprp_ba_decision_desc: "#Y Once the conditions are met, this decision will select the territory and grant it the Great Harbour Bonus. \nThe currently highlighted territory is not necessarily the one that will receive the modifier, it will be automatically applied to the territory that meets all the required prerequisites.#!"
+
+  tier_2_generic: "Emergent Power"
+  tier_2_generic_desc: "Through conquest and unification, our people have risen from local rulers to kings of a broader realm. With neighboring lands now under one banner, we have forged a state strong enough to command respect and challenge rivals beyond our borders. \n\n#Y This formable does not replace or override base game formables. Players may pursue both the new and vanilla formables. It is also there for those without access to a unique formable, or for players who wish to create their own.#!"
+
+  tier_3_generic: "Consolidate Power"
+  tier_3_generic_desc: "With our neighbors brought under our rule, we stand as a power to be reckoned with. We have carved out our place among them and laid the first stones of something greater. \n\n#Y This formable does not replace or override base game formables. Players may pursue both the new and vanilla formables. It is also there for those without access to a unique formable, or for players who wish to create their own.#!"

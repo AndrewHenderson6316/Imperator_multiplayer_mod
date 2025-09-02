@@ -1,0 +1,1675 @@
+﻿wandering_dorian_heritage = {
+	modifier = {
+		global_migration_speed_modifier = 0.15
+		discipline = 0.05
+		country_civilization_value = -0.10
+	}
+	trigger = {
+		tag = OSN
+	}
+}
+eleventh_dynasty_heritage = {
+	modifier = {
+		build_cost = -0.1
+		fabricate_claim_speed = 1
+		heavy_cavalry_discipline = 0.05
+
+		diplomatic_reputation = -2
+	}
+	
+	trigger = {
+		tag = WAS
+	}
+}
+tenth_dynasty_heritage = {
+	modifier = {
+		monthly_legitimacy = 0.03
+		omen_power = 0.1
+
+		character_loyalty = -4
+	}
+	
+	trigger = {
+		tag = HNN
+	}
+}
+egyptian_connections = {
+	modifier = {
+		monthly_legitimacy = 0.02
+		research_points_modifier = 0.08
+
+		happiness_for_same_religion_modifier = -0.02
+	}
+	trigger = {
+		tag = GUB
+	}
+}
+nubian_heritage = {
+	modifier = {
+		archers_discipline = 0.1
+		global_tribesmen_output = 0.1
+
+		global_citizen_happyness = -0.03
+	}
+	trigger = {
+		country_culture_group = nehesu
+		NOR = { 
+			tag = KRM 
+			capital_scope = {
+				terrain = oasis
+			}
+		}
+	}
+}
+ankhtifi_heritage = {
+	modifier = {
+		global_freemen_happyness = 0.1
+		global_monthly_food_modifier = 0.05
+
+		character_loyalty = -4
+	}
+	trigger = {
+		tag = BDT
+	}
+}
+
+old_seat_of_power_heritage = {
+	modifier = {
+		build_cost = -0.1
+		monthly_legitimacy = 0.05
+
+		global_freemen_happyness = -0.03
+	}
+	trigger = {
+		tag = MFR
+	}
+}
+
+mittani_heritage = {
+	modifier = {
+		chariots_discipline = 0.15
+		war_exhaustion = -0.01
+
+		civil_war_threshold = -0.05
+	}
+	trigger = {
+		tag = 1MI
+	}
+}
+
+menelaion_heritage = {
+	modifier = {
+		happiness_for_same_religion_modifier = 0.05
+		discipline = 0.05
+
+		monthly_political_influence_modifier = -0.05
+	}
+	trigger = {
+		tag = SPA
+	}
+}
+
+martial_dynasty_heritage = {
+	modifier = {
+		discipline = 0.05
+		war_exhaustion = -0.01
+
+		general_loyalty = -5
+	}
+	trigger = {
+		always = no #Only given to newly proclaimed dynasties
+	}
+}
+
+autocratic_dynasty_heritage = {
+	modifier = {
+		price_imprison_cost_modifier = -0.5
+		price_state_investment_military_cost_modifier = -0.25
+
+		character_loyalty = -4
+	}
+	trigger = {
+		always = no #Only given to newly proclaimed dynasties
+	}
+}
+
+meritocratic_dynasty_heritage = {
+	modifier = {
+		global_commerce_modifier = 0.1
+		research_points_modifier = 0.05
+		
+		monthly_legitimacy = -0.02
+	}
+	trigger = {
+		always = no #Only given to newly proclaimed dynasties
+	}
+}
+
+aristocratic_dynasty_heritage = {
+	modifier = {
+		character_loyalty = 4
+		monthly_legitimacy = 0.02
+		
+		global_manpower_modifier = -0.1
+	}
+	trigger = {
+		always = no #Only given to newly proclaimed dynasties
+	}
+}
+
+autocratic_dynasty_heritage = {
+	modifier = {
+		price_imprison_cost_modifier = -0.5
+		price_state_investment_military_cost_modifier = -0.25
+
+		character_loyalty = -4
+	}
+	trigger = {
+		always = no #Only given to newly proclaimed dynasties
+	}
+}
+
+priestly_dynasty_heritage = {
+	modifier = {
+		happiness_for_same_religion_modifier = 0.1
+		price_state_investment_religious_cost_modifier = -0.5
+		
+		global_tax_modifier = -0.1
+	}
+	trigger = {
+		always = no #Only given to newly proclaimed dynasties
+	}
+}
+
+solar_dynasty_heritage = {
+	modifier = {
+		monthly_political_influence_modifier = 0.1
+		happiness_for_same_religion_modifier = -0.10
+		omen_power = 0.1
+	}
+	trigger = {
+		always = no #Only given to newly proclaimed dynasties
+	}
+}
+
+wadjet_dynasty_heritage = {
+	modifier = {
+		land_morale = 0.10
+		monthly_political_influence_modifier = 0.1
+
+		happiness_for_same_religion_modifier = -0.10
+	}
+	trigger = {
+		always = no #Only given to newly proclaimed dynasties
+	}
+}
+
+ptah_dynasty_heritage = {
+	modifier = {
+		country_civilization_value = 10
+		price_state_investment_civic_cost_modifier = -0.2
+
+		happiness_for_same_religion_modifier = -0.10
+	}
+	trigger = {
+		always = no #Only given to newly proclaimed dynasties
+	}
+}
+
+sobek_dynasty_heritage = {
+	modifier = {
+		global_population_growth = 0.02
+		land_morale = 0.10
+
+		happiness_for_same_religion_modifier = -0.10
+	}
+	trigger = {
+		always = no #Only given to newly proclaimed dynasties
+	}
+}
+
+anubis_dynasty_heritage = {
+	modifier = {
+		monthly_legitimacy = 0.04
+		character_loyalty = 4
+
+		happiness_for_same_religion_modifier = -0.10
+	}
+	trigger = {
+		always = no #Only given to newly proclaimed dynasties
+	}
+}
+
+thoth_dynasty_heritage = {
+	modifier = {
+		research_points_modifier = 0.10
+		global_pop_assimilation_speed_modifier = 0.10
+
+		happiness_for_same_religion_modifier = -0.10
+	}
+	trigger = {
+		always = no #Only given to newly proclaimed dynasties
+	}
+}
+
+osiris_dynasty_heritage = {
+	modifier = {
+		monthly_legitimacy = 0.04
+		character_loyalty = 4
+
+		happiness_for_same_religion_modifier = -0.10
+	}
+	trigger = {
+		always = no #Only given to newly proclaimed dynasties
+	}
+}
+
+hathor_dynasty_heritage = {
+	modifier = {
+		land_morale = 0.10
+		character_loyalty = 2.5
+
+		happiness_for_same_religion_modifier = -0.10
+	}
+	trigger = {
+		always = no #Only given to newly proclaimed dynasties
+	}
+}
+
+amun_dynasty_heritage = {
+	modifier = {
+		monthly_political_influence_modifier = 0.1
+		happiness_for_same_religion_modifier = -0.10
+		omen_power = 0.1
+	}
+	trigger = {
+		always = no #Only given to newly proclaimed dynasties
+	}
+}
+
+horus_dynasty_heritage = {
+	modifier = {
+		land_morale = 0.05
+		civil_war_threshold = 0.05
+
+		happiness_for_same_religion_modifier = -0.10
+	}
+	trigger = {
+		always = no #Only given to newly proclaimed dynasties
+	}
+}
+
+generic_divine_dynasty_heritage = {
+	modifier = {
+		omen_power = 0.1
+		happiness_for_same_religion_modifier = 0.04
+
+		happiness_for_wrong_culture_modifier = -0.06
+	}
+	trigger = {
+		always = no #Only given to newly proclaimed dynasties
+	}
+}
+tyrian_heritage = {
+	modifier = {
+		price_found_city_cost_modifier = -0.1
+		global_commerce_modifier = 0.20
+		
+		global_manpower_modifier = -0.15
+	}
+	trigger = {
+		tag = TYR
+	}
+}
+
+telchines_heritage = {
+	modifier = {
+		global_export_commerce_modifier = 0.1
+		research_points_modifier = 0.05
+
+		happiness_for_wrong_culture_modifier = -0.1
+	}
+	
+	trigger = {
+		primary_culture = telchines
+	}
+}
+
+jerichian_heritage = {
+	modifier = {
+		price_state_investment_civic_cost_modifier = -0.10
+		build_cost = -0.10
+		
+		global_defensive = -0.05
+	}
+	trigger = {
+		tag = JER
+	}
+}
+
+petran_heritage = {
+	modifier = {
+		global_capital_trade_routes = 2
+		army_weight_modifier = -0.10
+		
+		build_cost = 0.05
+	}
+	trigger = {
+		tag = ETR
+	}
+}
+
+trojan_heritage = { # Troy/Wilion/Ilion
+	modifier = {
+		#good
+		global_defensive = 0.1
+		diplomatic_relations = 2
+		
+		#bad
+		fort_maintenance_cost = 0.1
+	}
+	
+	trigger = {
+		tag = TRO 
+	}
+}
+miletus_heritage = { # Millawanda/Miletus
+	modifier = {
+		#good
+		global_commerce_modifier = 0.1
+		trireme_discipline = 0.10
+		
+		#bad
+		manpower_recovery_speed = -0.05 
+	}
+	
+	trigger = {
+		tag = MIL
+	}
+}
+ephesus_heritage = { # Apasa/Ephesus
+	modifier = {
+		#good
+		happiness_for_wrong_culture_group_modifier = 0.12
+		agressive_expansion_impact = -0.15
+		
+		#bad
+		global_pop_assimilation_speed_modifier = -0.1
+		
+	}
+	
+	trigger = {
+		tag = APA
+	}
+}
+hili_heritage = { # 
+	modifier = {
+		#good
+		workshop_building_cost = -0.35
+		slave_mine_building_cost = -0.35
+		global_population_capacity_modifier = 0.1
+		#bad
+		global_defensive = -0.15
+	}
+	
+	trigger = {
+		tag = HIL
+	}
+}
+nineveh_heritage = { #Nineveh tied to later brutal assyria
+	modifier = {
+		#good
+		enslavement_efficiency = 0.05
+		siege_ability = 0.15
+		#bad
+		diplomatic_reputation = -3
+	}
+	
+	trigger = {
+		tag = NNV
+	}
+}
+ashur_heritage = { # city of ashur tied to earlier trade focused assyria
+	modifier = {
+		#good
+		diplomatic_range_modifier = 2
+		global_import_commerce_modifier = 1 #0.5 sneaky buff bcs import value xd
+		#bad
+		global_tax_modifier = -0.1
+	}
+	
+	trigger = {
+		tag = ASR
+	}
+}
+ruin_of_akkad_heritage = {
+	modifier = {
+		#good
+		global_tribesmen_output = 0.35
+		land_morale_modifier = 0.1
+		#bad
+		diplomatic_reputation = -4
+	}
+
+	trigger = {
+		tag = GTM
+	}
+}
+gilgamesh_heritage = {
+	modifier = {
+		#good
+		fort_maintenance_cost = -0.1 #great wall of uruk
+		global_building_slot = 1 #
+		#bad
+		omen_power = -0.1 #Bad boy against bull
+
+	}
+	trigger = {
+		tag = URK
+	}
+}
+gudea_of_lagash_heritage = {
+	modifier = { #Maintained independance during gutian dynasty
+		#good
+		omen_power = 0.25
+		monthly_political_influence_modifier = 0.15
+		#bad
+		army_maintenance_cost = 0.15
+	}
+	trigger = {
+		tag = LGS
+	}
+}
+ur_heritage = {
+	modifier = {
+		#good
+		research_points_modifier =  0.15
+		global_population_capacity_modifier = 0.15
+		#bad
+		global_monthly_food_modifier = -0.1 #overpopulation
+	}
+	trigger = {
+		tag = URR
+	}
+}
+mari_heritage = {
+	modifier = {
+		#good
+		global_state_trade_routes = 1
+		army_movement_speed = 0.1
+		#bad
+		global_tax_modifier = -0.1
+	}
+	trigger = {
+		tag = MRI
+	}
+}
+tadmor_heritage = {
+	modifier = {
+		#good
+		army_weight_modifier = -0.2
+		global_capital_trade_routes = 3
+		#bad
+		global_monthly_state_loyalty = -0.03
+	}
+	trigger = {
+		tag = TMR
+	}
+}
+lemnos_heritage = { # poliochne/lemnos
+	modifier = {
+		#good
+		happiness_for_same_culture_modifier = 0.03
+		country_civilization_value = 5
+		
+		#bad
+		global_defensive = -0.1
+		
+	}
+	
+	trigger = {
+		tag = POI
+	}
+}
+amorgos_heritage = { # amorgos in the cyclades
+	modifier = {
+		#good
+		price_found_city_cost_modifier = -0.1
+		global_goods_from_slaves = -1
+		
+		#bad
+		governor_loyalty = -5
+		
+	}
+	
+	trigger = {
+		tag = AMO
+	}
+}
+tiryns_heritage = { # tiryns
+	modifier = {
+		#good
+		global_defensive = 0.2
+		monthly_political_influence_modifier = 0.05
+		
+		#bad
+		fortress_building_cost = 0.4
+		
+	}
+	
+	trigger = {
+		tag = TIR
+	}
+}
+kythera_heritage = { # kythera
+	modifier = {
+		#good
+		global_commerce_modifier = 0.1
+		enslavement_efficiency = 0.04
+		
+		#bad
+		army_maintenance_cost = 0.1
+		
+	}
+	
+	trigger = {
+		tag = KYT
+	}
+}
+lerna_heritage = { # lerna
+	modifier = {
+		#good
+		global_monthly_civilization = 0.02
+		civic_tech_investment = 0.2
+		
+		#bad
+		global_monthly_food_modifier = -0.05
+		
+	}
+	
+	trigger = {
+		tag = LER
+	}
+}
+tegea_heritage = { # tegea
+	modifier = {
+		#good
+		diplomatic_relations = 1
+		global_capital_trade_routes = 2
+		
+		#bad
+		navy_maintenance_cost = 0.1
+		
+	}
+	
+	trigger = {
+		tag = TEG
+	}
+}
+manika_heritage = { # khalkis
+	modifier = {
+		#good
+		global_commerce_modifier = 0.1
+		global_population_growth = 0.04
+		
+		#bad
+		country_civilization_value = -5
+		
+	}
+	
+	trigger = {
+		tag = KHA
+	}
+}
+thera_heritage = { # akrotiri
+	modifier = {
+		#good
+		global_capital_trade_routes = 4
+		research_points_modifier = 0.1
+		
+		#bad
+		stability_monthly_decay = 0.01
+		
+	}
+	
+	trigger = {
+		tag = THR
+	}
+}
+athens_heritage = { # athens
+	modifier = {
+		#good
+		happiness_for_same_culture_modifier = 0.08
+		global_citizen_happyness = 0.08
+		
+		#bad
+		fabricate_claim_cost_modifier = 0.25
+		
+	}
+	
+	trigger = {
+		tag = ATH
+	}
+}
+
+orchomenos_heritage = { # beotia
+	modifier = {
+		#good
+		price_state_investment_military_cost_modifier = -0.10
+		oratory_tech_investment = 0.2
+		
+		#bad
+		tribute_income_modifier = -0.15
+		
+	}
+	
+	trigger = {
+		tag = ORH
+	}
+}
+land_of_the_gatekeeper_heritage = { #Shusharra
+	modifier = {
+		#good
+		global_commerce_modifier = 0.1
+		global_defensive = 0.1
+		#bad
+		global_pop_promotion_speed = -0.1
+	}
+	trigger = {
+		tag = SSR
+	}
+}
+susan_heritage = {
+	modifier = {
+		#good
+		country_civilization_value = 3
+		research_points_modifier = 0.1
+		#bad
+		global_pop_assimilation_speed_modifier = -0.1
+	}
+	trigger = {
+		tag = SUS
+	}
+}
+anshan_heritage = {
+	modifier = {
+		#good
+		diplomatic_range_modifier = 2
+		global_citizen_output = 0.1
+		#bad
+		global_manpower_modifier = -0.05
+	}
+	trigger = {
+		tag = NSH
+	}
+}
+kish_heritage = {
+	modifier = {
+		#good
+		monthly_political_influence_modifier = 0.05
+		diplomatic_reputation = 3
+		#bad
+		stability_monthly_change = -0.015
+	}
+	trigger = {
+		tag = KSH
+	}
+}
+arrapha_heritage = {
+	modifier = {
+		#good
+		happiness_for_wrong_culture_group_modifier = 0.1
+		global_capital_trade_routes = 2
+		#bad
+		global_pop_assimilation_speed_modifier = -0.1
+	}
+	trigger = {
+		tag = RPH
+	}
+}
+urbilum_heritage = {
+	modifier = {
+		#good
+		global_defensive = 0.1
+		army_weight_modifier = -0.15
+		#bad
+		global_goods_from_slaves = 1
+	}
+	trigger = {
+		tag = BLM
+	}
+}
+simurrum_heritage = {
+	modifier = {
+		#good
+		army_movement_speed = 0.1
+		archers_discipline = 0.05
+		#bad
+		happiness_for_wrong_culture_modifier = -0.05
+	}
+	trigger = {
+		tag = SRM
+	}
+}
+urkesh_heritage = {
+	modifier = {
+		#good
+		chariots_discipline = 0.1
+		global_freemen_output = 0.1
+		#bad
+		global_citizen_happyness = -0.05
+	}
+	trigger = {
+		tag = USH
+	}
+}
+isin_heritage = {
+	modifier = {
+		#good
+		happiness_for_same_culture_modifier = 0.05
+		happiness_for_wrong_culture_modifier = 0.05
+		#bad
+		governor_loyalty = -10
+	}
+	trigger = {
+		tag = SNN
+	}
+}
+harran_heritage = {
+	modifier = {
+		#good
+		global_commerce_modifier = 0.05
+		global_citizen_city_desired_pop_ratio = 0.04
+		#bad
+		global_pop_assimilation_speed_modifier = -0.1
+	}
+	trigger = {
+		tag = HRR
+	}
+}
+ugarit_heritage = {
+	modifier = {
+        #good
+    	diplomatic_range_modifier = 0.5
+        research_points_modifier = 0.2
+
+        #bad
+        improve_relation_impact = -0.2
+    }
+    trigger = {
+		tag = UGA
+	}
+}
+tuttul_heritage = {
+	modifier = {
+		#good 
+		global_pop_conversion_speed_modifier = 0.3
+		omen_power = 0.1
+
+		#bad
+		fort_maintenance_cost = 0.4
+
+	}
+
+	trigger = {
+		tag = TTL
+	}
+}
+akkad_heritage = {
+	modifier = {
+		#good
+		manpower_recovery_speed = 0.15
+		next_ruler_legitimacy = 15
+
+		#bad
+		happiness_for_wrong_culture_group_modifier = -0.06
+	}
+
+	trigger = {
+		always = no #Given on formable or created Akkad
+	}
+}
+umma_heritage = {
+	modifier = {
+		#good
+		monthly_legitimacy = 0.3
+		fort_maintenance_cost = -0.2
+
+		#bad
+		diplomatic_reputation = -2
+
+	}
+
+	trigger = {
+		tag = MMA
+	}
+}
+sippar_heritage = {
+	modifier = {
+		#good
+		build_cost = -0.1
+		global_commerce_modifier = 0.1
+
+		#bad
+		stability_monthly_decay = 0.01
+	}
+	trigger = {
+		tag = SPR
+	}
+}
+babylon_heritage = {
+	modifier = {
+		#good
+		global_commerce_modifier = 0.1
+		omen_power = 0.2
+
+		#bad
+		discipline = -0.05
+	}
+	trigger = {
+		tag = BBL
+	}
+}
+kerma_heritage = {
+	modifier = {
+		#good
+		global_monthly_food_modifier = 0.3
+       	build_cost = -0.15
+
+		#bad
+		max_war_exhaustion = 10
+ 
+	}
+
+    trigger = {
+		tag = KRM
+	}
+}
+iuny_heritage = {
+	modifier = {
+		#good
+		global_pop_conversion_speed_modifier = 0.2
+		happiness_for_same_religion_modifier = 0.04
+
+		#bad
+		monthly_military_experience_modifier = -0.05
+	}
+
+	trigger = {
+		tag = IUN
+	}
+}
+hutwaret_heritage = {
+	modifier = {
+		#good
+		fort_maintenance_cost = -0.25
+		global_defensive = 0.3
+ 
+		#bad
+		happiness_for_wrong_culture_modifier = -0.2
+
+	}
+
+	trigger = {
+		tag = HWT
+	}
+}
+abdju_heritage = {
+	modifier = {
+		#good
+		build_cost = -0.1
+		diplomatic_reputation = 3
+
+		#bad
+		global_population_growth = -0.03
+	}
+	trigger = {
+		tag = AIA
+	}
+}
+qadesh_heritage = {
+	modifier = {
+		#good
+		fort_maintenance_cost = -0.25
+		mercenary_land_maintenance_cost = -0.3
+
+		#bad
+		global_monthly_civilization = -0.03
+	}
+	trigger = {
+		tag = QDH
+	}
+}
+gaza_heritage = {
+	modifier = {
+		#good
+		global_population_growth = 0.04
+		hostile_attrition = 1
+		#bad
+		global_citizen_output = -0.05
+	}
+	trigger = {
+		tag = GZA
+	}
+}
+sidon_heritage = {
+	modifier = {
+		#good
+		global_commerce_modifier = 0.1
+		navy_maintenance_cost = -0.15
+
+		#bad
+		discipline = -0.05
+
+	}
+	trigger = {
+		tag = SDN
+	}
+}
+
+kur_heritage = {
+	modifier = {
+		#good
+		omen_power = 0.15
+		global_pop_conversion_speed_modifier = 0.1
+		#bad
+		happiness_for_wrong_culture_modifier = -0.1
+	}
+	trigger = {
+		tag = KUR
+	}
+}
+
+timna_heritage = { #Timna Copper - oldest copper mine in the world apparantly
+	modifier = {
+		#goods
+		global_monthly_civilization = 0.03
+		discipline = 0.05
+		#bad
+		global_population_capacity_modifier = -0.05
+	}
+	trigger = {
+		tag = ETH
+	}
+}
+
+urshu_heritage = {
+	modifier = {
+		#good
+		build_cost = -0.1
+		global_nobles_happyness = 0.06
+		#bad
+		build_time = 0.05
+	}
+	trigger = {
+		tag = SKZ
+	}
+}
+
+knossos_heritage = {
+	modifier = {
+		#good
+		ship_repair_at_sea = 0.02
+		global_state_trade_routes = 1 #Otherwise Crete is way more powerful than Knossos
+		#bad
+		global_defensive = -0.05
+	}
+	trigger = {
+		tag = KNO
+	}
+}
+
+alasiya_heritage = {
+	modifier = {
+		#good
+		global_export_commerce_modifier = 0.05
+		land_morale_modifier = 0.05
+		#bad
+		global_manpower_modifier = -0.05
+	}
+	trigger = {
+		tag = ALY
+	}
+}
+
+gasur_heritage = {
+	modifier = {
+		#good
+		price_found_city_cost_modifier = -0.1
+		army_movement_speed = 0.1
+		#bad
+		global_defensive = -0.15
+	}
+	trigger = {
+		tag = GSR
+	}
+}
+
+eblaite_heritage = {
+	modifier = {
+		#good
+		country_civilization_value = 3
+		land_morale_modifier = 0.05
+		#bad
+		agressive_expansion_impact = 0.15
+	}
+	trigger = {
+		tag = EBL
+	}
+}
+
+halab_heritage = {
+	modifier = {
+		#good
+		country_civilization_value = 3
+		manpower_recovery_speed = 0.05
+		#bad
+		discipline = -0.03
+	}
+	trigger = {
+		tag = HAB
+	}
+}
+
+damas_heritage = {
+	modifier = {
+		#good
+		global_population_growth = 0.05
+		global_monthly_civilization = 0.03
+		#bad
+		global_defensive = -0.15
+	}
+	trigger = {
+		tag = DAM
+	}
+}
+
+qatna_heritage = {
+	modifier = {
+		#good
+		diplomatic_reputation = 2
+		agressive_expansion_impact = -0.05
+		#bad
+		build_cost = 0.1
+	}
+	trigger = {
+		tag = QTN
+	}
+}
+
+megiddo_heritage = {
+	modifier = {
+		#good
+		diplomatic_reputation = 2
+		loyalty_to_overlord = -30
+		#bad 
+		agressive_expansion_impact = 0.05
+	}
+	trigger = {
+		tag = MGD
+	}
+}
+
+korinthos_heritage = {
+	modifier = {
+		#good
+		garrison_size = 0.1 #defending the isthmus
+		global_tax_modifier = 0.1 #toll thorugh the isthmus
+		#bad
+		global_population_capacity_modifier = -0.05 #less available land
+	}
+	trigger = {
+		tag = KOR
+	}
+}
+
+hit_heritage = {
+	modifier = {
+		#good
+		global_export_commerce_modifier = 0.1 # Bitumen trade
+		global_population_capacity_modifier = 0.05 #fertile
+		#bad
+		hostile_attrition = -1 #often invaded; I am tired of giving global_defensive ...
+	}
+	trigger = {
+		tag = HIT
+	}
+}
+
+djedet_heritage = {
+	modifier = {
+		#good
+		global_population_growth = 0.08
+		country_civilization_value = 2
+		#bad
+		discipline = -0.03
+	}
+	trigger = {
+		tag = DDT
+	}
+}
+
+gebtu_heritage = {
+	modifier = {
+		#good
+		global_commerce_modifier = 0.1
+		happiness_for_same_religion_modifier = 0.05
+		#bad
+		enslavement_efficiency = -0.05
+	}
+	trigger = {
+		tag = KAI
+	}
+}
+
+iunet_heritage = {
+	modifier = {
+		#good
+		country_civilization_value = 3
+		omen_power = 0.1
+		#bad
+		land_morale_recovery = -0.05
+	}
+	trigger = {
+		tag = BIO
+	}
+}
+
+qis_heritage = {
+	modifier = {
+		#good
+		global_pop_assimilation_speed_modifier = 0.1
+		global_defensive = 0.1
+		#bad
+		monthly_political_influence_modifier = -0.1
+	}
+	trigger = {
+		tag = SHU
+	}
+}
+
+tjebu_heritage = {
+	modifier = {
+		#good
+		governor_loyalty = 5
+		build_cost = -0.1
+		#bad
+		monthly_governor_wage = 0.25
+	}
+	trigger = {
+		tag = HUL
+	}
+}
+
+khmun_heritage = {
+	modifier = {
+		#good
+		global_tax_modifier = 0.15
+		monthly_political_influence_modifier = 0.05
+		#bad
+		global_pop_promotion_speed = -0.2
+	}
+	trigger = {
+		tag = TNA
+	}
+}
+
+khasut_heritage = {
+	modifier = {
+		#good
+		marsh_combat_bonus = 0.1
+		flood_plain_combat_bonus = 0.1
+		#bad
+		desert_combat_bonus = -0.1
+	}
+	trigger = {
+		tag = PRM
+	}
+}
+
+wadjet_heritage = { # country is called Zau
+	modifier = {
+		#good
+		land_morale_modifier = 0.1
+		global_monthly_state_loyalty = 0.05
+		#bad
+		research_points_modifier = -0.15
+	}
+	trigger = {
+		tag = PGA
+	}
+}
+
+tarhunt_heritage = { #
+	modifier = {
+		#good
+		discipline = 0.05
+		cohort_reinforcement_speed = 0.05
+		#bad
+		global_commerce_modifier = -0.1
+	}
+	trigger = {
+		tag = TSA
+	}
+}
+
+parha_heritage = { #
+	modifier = {
+		#good
+		price_found_city_cost_modifier = -0.15
+		global_population_capacity_modifier = 0.1
+		#bad
+		army_movement_speed = -0.1
+	}
+	trigger = {
+		tag = PRH
+	}
+}
+
+kaunos_heritage = { # Khbide
+	modifier = {
+		#good
+		global_population_growth = 0.04
+		global_pop_assimilation_speed_modifier = 0.05
+		#bad
+		land_morale_modifier = -0.05
+	}
+	trigger = {
+		tag = AZE
+	}
+}
+
+caltilar_heritage = { # modern turkish name
+	modifier = {
+		#good
+		global_freemen_output = 0.03
+		global_population_capacity_modifier = 0.05
+		#bad
+		naval_morale_modifier = -0.1
+	}
+	trigger = {
+		tag = SIY
+	}
+}
+
+iasos_heritage = { 
+	modifier = {
+		#good
+		happiness_for_same_culture_modifier = 0.05
+		global_population_growth = 0.05
+		#bad
+		global_pop_assimilation_speed_modifier = -0.1
+	}
+	trigger = {
+		tag = MUT
+	}
+}
+
+sidetan_heritage = { #Side/Asita
+	modifier = {
+		#good
+		global_citizen_desired_pop_ratio = 0.05
+		global_unrest = -0.5
+		#bad
+		global_pop_assimilation_speed_modifier = -0.05
+	}
+	trigger = {
+		tag = ASI
+	}
+}
+
+tlawan_heritage = { # Tlos/Dalawa
+	modifier = {
+		#good
+		build_cost = -0.1
+		global_commerce_modifier = 0.1
+		#bad
+		global_population_growth = -0.03
+	}
+	trigger = {
+		tag = TAL
+	}
+}
+
+wiyanawandan_heritage = { # Oinoanda in the base game (later time frame obv too)
+	modifier = {
+		#good
+		happiness_for_same_religion_modifier = 0.03
+		price_found_city_cost_modifier = -0.1
+		#bad
+		monthly_political_influence_modifier = -0.05
+	}
+	trigger = {
+		tag = WIY
+	}
+}
+
+pataran_heritage = {
+	modifier = {
+		#good
+		omen_power = 0.1
+		global_freemen_output = 0.05
+		#bad
+		global_population_capacity_modifier = -0.1
+	}
+	trigger = {
+		tag = PTR
+	}
+}
+
+karkemish_heritage = {
+	modifier = {
+		#good
+		agressive_expansion_monthly_change = -0.03
+		global_commerce_modifier = 0.1
+		#bad
+		garrison_size = -0.15
+	}
+	trigger = {
+		tag = KMS
+	}
+}
+
+utima_heritage = {
+	modifier = {
+		#good
+		global_defensive = 0.15
+		global_commerce_modifier = 0.1
+		#bad
+		monthly_wage_modifier = 0.1
+	}
+	trigger = {
+		tag = UTI
+	}
+}
+
+iyalanda_heritage = {
+	modifier = {
+		#good
+		hills_combat_bonus = 0.15
+		global_population_capacity_modifier = 0.1
+		#bad
+		chariots_offensive = -0.1
+	}
+	trigger = {
+		tag = IYA
+	}
+}
+
+atriya_heritage = {
+	modifier = {
+		#good
+		monthly_political_influence_modifier = 0.1
+		happiness_for_same_culture_modifier = 0.03
+		#bad
+		land_morale_modifier = -0.05
+	}
+	trigger = {
+		tag = AYA
+	}
+}
+
+zumarri_heritage = {
+	modifier = {
+		#good
+		global_population_growth = 0.05
+		global_freemen_happyness = 0.06
+		#bad
+		siege_ability = -0.1
+	}
+	trigger = {
+		tag = ZUM
+	}
+}
+
+lamian_heritage = {
+	modifier = {
+		#good
+		global_defensive = 0.1
+		monthly_political_influence_modifier = 0.1
+		#bad
+		army_maintenance_cost = 0.1
+	}
+	trigger = {
+		tag = LAM
+	}
+}
+
+tarsa_heritage = {
+	modifier = {
+		#good
+		global_monthly_civilization = 0.04
+		global_goods_from_slaves = -2
+		#bad
+		manpower_recovery_speed = -0.05
+	}
+	trigger = {
+		tag = TRS
+	}
+}
+
+adaniya_heritage = {
+	modifier = {
+		#good
+		stability_monthly_change = 0.02
+		country_civilization_value = 3
+		#bad
+		global_pop_conversion_speed_modifier = -0.1
+	}
+	trigger = {
+		tag = ADN
+	}
+}
+
+lawazantiya_heritage = {
+	modifier = {
+		#good
+		omen_power = 0.1
+		global_pop_conversion_speed_modifier = 0.1
+		#bad
+		happiness_for_wrong_culture_group_modifier = -0.05
+	}
+	trigger = {
+		tag = LWZ
+	}
+}
+
+ascalon_heritage = {
+	modifier = {
+		#good
+		global_population_capacity_modifier = 0.05
+		navy_maintenance_cost = -0.1
+		#bad
+		global_freemen_output = -0.03
+	}
+	trigger = {
+		tag = ALN
+	}
+}
+
+jaffa_heritage = {
+	modifier = {
+		#good
+		navy_maintenance_cost = -0.1
+		army_movement_speed = 0.1
+		#bad
+		global_freemen_happyness = -0.06
+	}
+	trigger = {
+		tag = YPO
+	}
+}
+
+dor_heritage = {
+	modifier = {
+		#good
+		navy_maintenance_cost = -0.1
+		global_defensive = 0.1
+		#bad
+		global_population_capacity_modifier = -0.05
+	}
+	trigger = {
+		tag = DOR
+	}
+}
+
+acre_heritage = {
+	modifier = {
+		#good
+		price_found_city_cost_modifier = -0.15
+		global_freemen_output = 0.03
+		#bad
+		global_population_growth = -0.03
+	}
+	trigger = {
+		tag = ACR
+	}
+}
+
+alalakh_heritage = {
+	modifier = {
+		#good
+		price_found_city_cost_modifier = -0.15
+		build_cost = -0.1
+		#bad
+		global_monthly_state_loyalty = -0.03
+	}
+	trigger = {
+		tag = ALK
+	}
+}
+
+beirut_heritage = {
+	modifier = {
+		#good
+		country_civilization_value = 3
+		global_population_growth = 0.06
+		#bad
+		agressive_expansion_impact = 0.15
+	}
+	trigger = {
+		tag = BEI
+	}
+}
+
+arwad_heritage = {
+	modifier = {
+		#good
+		global_defensive = 0.15
+		ship_repair_at_sea = 0.02
+		#bad
+		happiness_for_wrong_culture_modifier = -0.08
+	}
+	trigger = {
+		tag = RWD
+	}
+}
+
+samos_heritage = {
+	modifier = {
+		#good
+		build_cost = -0.15
+		diplomatic_relations = 1
+		#bad
+		monthly_political_influence_modifier = -0.05
+	}
+	trigger = {
+		tag = SAO
+	}
+}
+
+pylos_heritage = {
+	modifier = {
+		#good
+		monthly_political_influence_modifier = 0.05
+		country_civilization_value = 3
+		#bad
+		happiness_for_wrong_culture_group_modifier = -0.05
+	}
+	trigger = {
+		tag = PYL
+	}
+}
+
+zakynthos_heritage = {
+	modifier = {
+		#good
+		global_capital_trade_routes = 2
+		happiness_for_same_religion_modifier = 0.05
+		#bad
+		global_manpower_modifier = -0.05
+	}
+	trigger = {
+		tag = ZAY
+	}
+}
+
+nagar_heritage = {
+	modifier = {
+		#good
+		agressive_expansion_impact = -0.1
+		diplomatic_reputation = 2
+		#bad
+		global_pop_promotion_speed_modifier = -0.1
+	}
+	trigger = {
+		tag = NGR
+	}
+}
+
+emar_heritage = {
+	modifier = {
+		#good
+		global_commerce_modifier = 0.1
+		global_citizen_output = 0.05
+		#bad
+		monthly_political_influence_modifier = -0.1
+	}
+	trigger = {
+		tag = EMA
+	}
+}
+
+shekhna_heritage = {
+	modifier = {
+		#good
+		global_population_growth = 0.05
+		global_monthly_food_modifier = 0.15
+		#bad
+		monthly_political_influence_modifier = -0.1
+	}
+	trigger = {
+		tag = SKN
+	}
+}
+
+met_irt_heritage = {
+	modifier = {
+		#good
+		global_commerce_modifier = 0.1
+		global_goods_from_slaves = -2
+		#bad
+		global_monthly_food_modifier = -0.1
+	}
+	trigger = {
+		tag = MTT # Met-Irt
+	}
+}
+
+# wallarimma_heritage = { #mentioned, but not enough infos for now
+# 	modifier = {
+# 		
+# 	}
+# 	trigger = {
+# 		tag = WAL
+# 	}
+# }
+
+# waliwanda_heritage = { #mentioned, not enough infos for now
+# 	modifier = {
+# 		
+# 	}
+# 	trigger = {
+# 		tag = WAI
+# 	}
+# }

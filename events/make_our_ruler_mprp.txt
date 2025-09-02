@@ -20,6 +20,7 @@ make_our_ruler.2 = { #MAKE RULER proposed
 		name = "make_our_ruler.2.a"
 		scope:recipient = {
 			move_country = scope:target.employer
+			set_home_country = scope:target.employer
 
 		}
 		scope:target.employer = {
@@ -29,11 +30,7 @@ make_our_ruler.2 = { #MAKE RULER proposed
 		scope:actor = {
 			trigger_event = { id = make_our_ruler.5 }
 		}
-
-
-
 		ai_chance = { factor = 0 }
-		
 	}
 	
 	option = {

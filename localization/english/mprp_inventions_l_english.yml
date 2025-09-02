@@ -1,0 +1,4 @@
+﻿l_english:
+
+ fortified_capital_decision:0 "#E This invention unlocks a #T Decision#! called #T Fortify the Capital#!.#! #Y [SCOPE.GetRootScope.GetCountry.GetCapital.GetName]#! #E will recieve a#! #E bonus!#!"
+ constructed_great_harbour_decision:0 "#E This invention unlocks a #T Decision#! called #T Construct Great Harbour#!#!"

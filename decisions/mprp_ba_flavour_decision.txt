@@ -203,7 +203,7 @@
 			any_allied_country = {
 				opinion = {
 					target = root  
-					value > 0
+					value > 50
 				}
 			} 
 			
@@ -214,15 +214,10 @@
 			is_monarchy = yes
 			religion = hellenic_religion
 			any_allied_country = {
-				OR = {
-					country_culture_group = illyro_hellenic
-					country_culture_group = southern_hellenic
-					country_culture_group = northern_hellenic
-				}
 				is_monarchy = yes
 				opinion = {
 					target = root  
-					value > 100
+					value > 150
 				}
 			}
 			custom_tooltip = {
@@ -240,11 +235,7 @@
 			ordered_allied_country = {
 				#order_by = opinion
 				limit = {
-					OR = {
-						country_culture_group = illyro_hellenic
-						country_culture_group = southern_hellenic
-						country_culture_group = northern_hellenic
-					}
+					religion = hellenic_religion
 				}
 				save_scope_as = ally_country
 			}
@@ -258,7 +249,7 @@
 		}
 		
 		ai_will_do = {
-			base = 1
+			base = 0
 		}
 	}
 
@@ -280,7 +271,7 @@
 			any_allied_country = {
 				opinion = {
 					target = root  
-					value > 0
+					value > 50
 				}
 			} 
 			is_subject = no
@@ -290,13 +281,13 @@
 			is_monarchy = yes	
 			religion = hellenic_religion
 			any_allied_country = {
-				country_culture_group = pelasgian
+				#country_culture_group = pelasgian
 				religion = hellenic_religion
 			
 				is_monarchy = yes
 				opinion = {
 					target = root  
-					value > 100
+					value > 150
 				}			
 			}
 			custom_tooltip = {
@@ -330,7 +321,7 @@
 		}
 
 		ai_will_do = {
-			base = 1
+			base = 0
 		}
 	}
 	military_parade_attack = {
@@ -390,7 +381,7 @@
 	    }
 	
 	    ai_will_do = {
-	        base = 1
+	        base = 0
 	    }
 	}
 

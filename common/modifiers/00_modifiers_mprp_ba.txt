@@ -36,3 +36,10 @@ tribesmen_city_test = {
 commerce_test = {
 	commerce_value = 1
 }
+offmap_no_revolt_cmod = {
+	civil_war_threshold = 100
+	global_monthly_state_loyalty = 2
+	global_pop_assimilation_speed = 1
+	global_pop_assimilation_speed_modifier = 0.3
+	happiness_for_wrong_culture_group_modifier = 0.10
+}

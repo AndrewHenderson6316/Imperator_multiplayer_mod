@@ -25,14 +25,15 @@ treasure_mprp_ba.1 = {
 		#	}
 		#}
 		create_country_treasure = { 
-			key = dorian_treasure_1
+			key = zakynthos_treasure_1
 			icon = "treasure_armor"
 			modifier = {
 				#price_found_metropolis_cost_modifier = -0.1
 				#commerce_value = 100
 				#local_manpower_modifier = 0.05
 				#local_unrest = 0.5
-				local_cohort_start_experience = 5
+				local_freemen_output = 0.1
+				#local_cohort_start_experience = 5
 			}
 		}
 		#set_variable = dorian_item_1_variable
@@ -78,6 +79,76 @@ treasure_mprp_ba.2 = {
     }
     option = {      
         name = treasure_mprp_ba.2.b
+        add_country_modifier = {
+        	name = offmap_no_revolt_cmod
+        	days = -1
+        }
+    }
+    option = {
+
+    }
+}
+treasure_mprp_ba.3 = {
+    type = country_event
+    title = treasure_mprp_ba.2.t
+    desc = treasure_mprp_ba.2.desc
+    picture = aqueducts
+    
+    left_portrait = current_ruler
+
+    trigger = {
+    
+    }
+
+    immediate = {
+
+    }
+
+    option = {      
+        name = treasure_mprp_ba.2.a
+       	every_country ={
+       		limit = {
+       			is_ai = yes
+       			is_subject = no 
+       			not = {	has_variable = player_country_var}
+       			#or = {
+       			#	tag = HNN
+       			#	tag = MRI
+       			#}
+
+       		}
+       		save_scope_as = ai_nation
+       		every_country = {
+       			limit = {
+       				has_variable = player_country_var
+       			}
+       			save_scope_as = target
+       			scope:ai_nation ={
+		            add_to_variable_list = {
+		                name = embargo_list
+		                target = scope:target
+		            }
+       			}
+
+		        scope:target = {
+		            add_to_variable_list = {
+		                name = embargoed_list
+		                target = scope:ai_nation
+		            }
+                    add_opinion = {
+			            modifier = "opinion_embargoed"
+			            target = scope:ai_nation
+			        }
+            		save_scope_as = embargo_actor
+
+	        	}
+       		}
+       	}
+        
+    }
+    option = {      
+        name = treasure_mprp_ba.2.b
+    
     }
 }
 

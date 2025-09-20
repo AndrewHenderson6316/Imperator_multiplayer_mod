@@ -43,7 +43,7 @@ player_union_state = {
 	#subject_pays = 
 	
 	joins_overlord_in_war = yes
-	allowed_to_declare_war_against_others = yes
+	allowed_to_declare_war_against_others = no
 	can_build = yes
 	
 	protected_when_attacked = yes
@@ -52,7 +52,7 @@ player_union_state = {
 	costs_diplomatic_slot = no
 	subject_can_cancel = no
 	
-	has_limited_diplomacy = no
+	has_limited_diplomacy = yes
 	only_trade_with_overlord =  no
 	
 

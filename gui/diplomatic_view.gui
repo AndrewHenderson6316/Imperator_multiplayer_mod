@@ -695,7 +695,22 @@ base_window = {
 								}
 							}
 						}
+						
+						margin_widget = {
+							visible = "[DiplomaticView.GetTargetCountry.GetCoRuler.IsValid]"
+							allow_outside = yes
+							position = { -4 -2 }
 
+							cpt_button = {
+								size = { 82 126 }
+								block "Context"
+								{
+									datacontext = "[DiplomaticView.GetTargetCountry.GetCoRuler]"
+									visible = "[Not(DiplomaticView.GetTargetCountry.IsBarbarian)]"
+								}
+								blockoverride "ShowIcons" { visible = no }
+							}
+						}
 					}
 				}
 

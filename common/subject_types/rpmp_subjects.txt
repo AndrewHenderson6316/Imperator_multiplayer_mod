@@ -42,7 +42,9 @@
 player_union_state = {
 	#subject_pays = 
 	
-	joins_overlord_in_war = yes 
+	joins_overlord_in_war = yes
+	allowed_to_declare_war_against_others = yes
+	can_build = yes
 	
 	protected_when_attacked = yes
 	has_overlords_ruler = yes
@@ -50,15 +52,16 @@ player_union_state = {
 	costs_diplomatic_slot = no
 	subject_can_cancel = no
 	
-	has_limited_diplomacy = yes
+	has_limited_diplomacy = no
 	only_trade_with_overlord =  no
 	
 
 	overlord_modifier = {
-		
+		ruler_popularity_gain = 0.04
 	}
 	subject_modifier = {
-		loyalty_to_overlord = 20
+		loyalty_to_overlord = 25
+		ruler_popularity_gain = 0.04
 	}
 	
 	allow = {

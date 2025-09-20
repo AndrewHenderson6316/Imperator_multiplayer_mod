@@ -20,9 +20,9 @@
 
   GREEK_UNIFICATION_MOD: "Greek Unification Modifier"
 
-  player_union_state: "Co Ruling States"
-  AM_player_union_state: "Co Ruling States"
-  LEAD_player_union_state: "Co Ruling States"
+  player_union_state: "Dual Monarchy"
+  AM_player_union_state: "#T $LIST$#!\nDual Monarchy with $LIST$."
+  LEAD_player_union_state: "#T $LIST$#!\nDual Monarchy with $LIST$."
   CANCEL_player_union_stateTITLE: "Cancel Union"
   CANCEL_player_union_state_TOOLTIP_HEADER: "End our Cultural Union "
   CANCEL_player_union_state_NOT_IN_TRUCE: "Does Not have Truce"
@@ -31,8 +31,8 @@
   military_parade_cmod:0 "Military Parade"
 
   diarchy:0 "Diarchy"
-  diarchy_ruler:0 "CoRuler"
-  diarchy_consort:0 "CoRuler"
+  diarchy_ruler:0 "Dual King"
+  diarchy_consort:0 "Dual King"
   diarchy_desc:0 "Diarchy of ."
   RULER_TERM_DESCRIPTION_MONARCHY_CORULER:0 "The August Reign of [GovernmentView.GetPlayer.GetRuler.GetPraenomen] and [GovernmentView.GetPlayer.GetCoRuler.GetPraenomen]"
   ONE_WILUSA_NAME:0 "Kingdom of Wilusa"

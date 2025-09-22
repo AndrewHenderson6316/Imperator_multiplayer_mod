@@ -168,6 +168,23 @@
 								text = "Colony"
 							}
 						}
+						text_button_square_highlighted = { # DIARCHY
+							size = { 80% 0 }
+							#layoutpolicy_horizontal = expanding
+
+							datacontext = "[GetScriptedGui('player_union')]"
+							enabled = "[ScriptedGui.IsValid(GuiScope.SetRoot( Player.MakeScope ).End)]"
+							blockoverride "On_click"
+							{
+								onclick = "[ScriptedGui.Execute(GuiScope.SetRoot( Player.MakeScope ).End)]"
+								enabled = "[ScriptedGui.IsValid(GuiScope.SetRoot( Player.MakeScope ).End)]"
+								onclick = "[ExecuteConsoleCommand('gui.ClearWidgets player_subjects_window')]"
+								onclick = "[GetVariableSystem.Clear('player_subjects_open')]"
+							}
+							blockoverride "Center_text" {
+								text = "Diarchy"
+							}
+						}
 					}
 				}
 			}

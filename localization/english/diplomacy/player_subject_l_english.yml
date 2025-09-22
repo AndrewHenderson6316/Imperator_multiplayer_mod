@@ -10,6 +10,9 @@
   player_subject_events_1:0 " Ask [SCOPE.sC('target').GetName] To Be Our Subject \n Only For Other Players"
   player_subject_events_1.b:0 "#R We will remain independent!#!"
 
+  player_subject_events_8.t:0 "Diarchy Title"
+  player_subject_events_8.desc:0 "Diarchy Description"
+
   player_client_state:0 "Client State"
   AM_player_client_state:0 "#T $LIST$#!\nClient State of $LIST$."
   LEAD_player_client_state:0 "#T $LIST$#!\nClient State"
@@ -81,7 +84,20 @@
   CANCEL_player_subject_colony_TOOLTIP_HEADER:0 "Cancel Colony Status"
   CANCEL_player_subject_colony_FLAVOR:0 "Canceling our relationship with our Tributary will make them independent and stop their payments to us, but we will no longer need to protect them. We will also lose our bonus to commerce."
 
+  diarchic_union.1.t:0 "diarchy 1"
+  diarchic_union.1.desc:0 "diarchy 1"
 
+
+  diarchic_union.2.t:0 "diarchy 2"
+  diarchic_union.1.desc:0 "diarchy 2"
+
+
+  diarchic_union.3.t:0 "diarchy 3"
+  diarchic_union.1.desc:0 "diarchy 3"
+
+
+  diarchic_union.4.t:0 "diarchy 4"
+  diarchic_union.1.desc:0 "diarchy 4"
 
 
   player_subject_title:0 "Subject Selection"

@@ -278,3 +278,39 @@ player_colony = {
 		}
 	}
 }
+player_union = {
+	scope = country
+	confirm_title = "player_union"
+	confirm_text = "make_player_confirm" 
+	saved_scopes = {
+		target
+	}
+
+	is_shown = {
+		always = yes
+	}
+
+	ai_is_valid = {
+		always = no 
+	}
+	is_valid = {
+		is_monarchy = yes #TODO Add more limits?
+		var:send_to = {
+			is_monarchy = yes
+			opinion = {
+				target = ROOT
+				value > 150
+			}
+		}	
+	}
+
+	effect = {
+		save_scope_as = sender
+		var:send_to = {
+			save_scope_as = ally_country
+			trigger_event = {
+				id = diarchic_union.1
+			}
+		}
+	}
+}

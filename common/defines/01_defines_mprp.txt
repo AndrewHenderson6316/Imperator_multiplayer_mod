@@ -1,4 +1,4 @@
-﻿NDiplomacy = {
+NDiplomacy = {
 	#AUTO_TIME_OUT_MONTHS	= 2
 
 	#PEACE_AUTO_ENFORCE_BASE_DAYS = 365
@@ -38,9 +38,7 @@
 	#ANNEX_MIN_YEARS_WITH_TRIBUTE = 10
 	
 	#MONTHS_BEFORE_TOTAL_OCCUPATION = 60			# Before this many months have passed in the war, you cannot gain 100% warscore by just occupying the warleader
-	
-	
-	
+
 	#DEFAULT_WARGOAL_TICKINGWARSCORE_BONUS = 1		# Amount of warscore per month since attacker/defender started getting the bonus for completing war goal
 	#WARGOAL_MAX_BONUS = 25
 	#DEFAULT_WARGOAL_BATTLESCORE_BONUS = 5		# Battle score bonus from winning battles

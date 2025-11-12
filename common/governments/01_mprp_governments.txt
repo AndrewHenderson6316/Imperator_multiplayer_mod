@@ -12,7 +12,6 @@
 		global_pop_assimilation_speed_modifier = 0.10
 	}
 	base = {
-		assault_ability = -0.4
 		country_civilization_value = 20
 		global_citizen_city_desired_pop_ratio = 0.10
 	}
@@ -22,7 +21,7 @@
 
 	has_co_ruler = yes
 
-	color = hsv { 0.2  0.5  0.2 }
+	color = hsv { 0.2  0.6  0.2 }
 }
 
 imperium_diarchy = {
@@ -42,7 +41,6 @@ imperium_diarchy = {
 	}
 	base = {
 		country_civilization_value = 25
-		assault_ability = -0.4
 		global_citizen_city_desired_pop_ratio = 0.10
 	}
 
@@ -53,7 +51,7 @@ imperium_diarchy = {
 	has_co_ruler = yes
 
 
-	color = hsv { 0.2  0.6  0.1 }
+	color = hsv { 0.2  0.7  0.1 }
 }
 
 diarchic_cult = {
@@ -73,7 +71,6 @@ diarchic_cult = {
 	}
 	base = {
 		country_civilization_value = 25
-		assault_ability = -0.4
 		global_citizen_city_desired_pop_ratio = 0.10
 	}
 
@@ -83,5 +80,5 @@ diarchic_cult = {
 	election_delay = 0
 	has_co_ruler = yes
 
-	color = hsv { 0.3  0.7  0.2 }
+	color = hsv { 0.3  0.7  0.1 }
 }

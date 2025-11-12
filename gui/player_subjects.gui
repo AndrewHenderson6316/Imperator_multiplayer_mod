@@ -65,6 +65,7 @@
 							}
 							blockoverride "Center_text" {
 								text = "Client State"
+								tooltip = "CLOSE"
 							}
 						}
 						text_button_square_highlighted = {	#Feudatory

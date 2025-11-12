@@ -110,7 +110,7 @@ install_foreign_ruler = {
 	
 	character_actor_trigger = {
 		is_ruler = no
-		age > 16 
+		age >= 16 
 	}
 	
 	effect = {

@@ -24,6 +24,7 @@
 			scope:target = root
 			religion = scope:target.religion
 		}
+		political_influence >= 50
 	}
 
 	effect = {

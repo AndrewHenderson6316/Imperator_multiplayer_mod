@@ -4,3 +4,8 @@
 	local_output_modifier = -0.1
 	local_unrest = 1
 }
+DIARCHY_CMOD = {
+	happiness_for_same_culture_modifier = 0.06
+	happiness_for_wrong_culture_group_modifier = -0.06
+	diplomatic_reputation = -5
+}

@@ -24,9 +24,11 @@
 			scope:target = root
 			religion = scope:target.religion
 		}
+		political_influence >= 50
 	}
 
 	effect = {
+		add_political_influence = -50
 		#debug_log = "demanded conversion"
 		clear_variable_list = convert_to 
 

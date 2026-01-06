@@ -1,0 +1,84 @@
+﻿diarchy = {
+	military_ideas = 1
+	civic_ideas = 1
+	oratory_ideas = 1
+	religious_ideas = 1
+	revolt = no
+	type = monarchy
+
+	bonus = {
+		global_freemen_output = output_large_svalue
+		character_loyalty = 2
+		global_pop_assimilation_speed_modifier = 0.10
+	}
+	base = {
+		country_civilization_value = 20
+		global_citizen_city_desired_pop_ratio = 0.10
+	}
+
+	election_delay = 0
+	use_regnal_numbers = yes
+
+	has_co_ruler = yes
+
+	color = hsv { 0.2  0.6  0.2 }
+}
+
+imperium_diarchy = {
+	military_ideas = 1
+	civic_ideas = 1
+	oratory_ideas = 1
+	religious_ideas = 1
+	revolt = no
+	type = monarchy
+
+	bonus = {
+		global_freemen_output = output_huge_svalue
+		global_slaves_output = output_huge_svalue
+		war_score_cost = -0.1
+		global_pop_assimilation_speed_modifier = 0.15
+
+	}
+	base = {
+		country_civilization_value = 25
+		global_citizen_city_desired_pop_ratio = 0.10
+	}
+
+	use_regnal_numbers = yes
+
+
+	election_delay = 0
+	has_co_ruler = yes
+
+
+	color = hsv { 0.2  0.7  0.1 }
+}
+
+diarchic_cult = {
+	military_ideas = 1
+	civic_ideas = 1
+	oratory_ideas = 1
+	religious_ideas = 1
+	type = monarchy
+	revolt = no
+
+	bonus = {
+		global_slaves_output = output_huge_svalue
+		global_freemen_output = output_huge_svalue
+		omen_power = 0.15
+		global_pop_assimilation_speed_modifier = 0.15
+
+	}
+	base = {
+		country_civilization_value = 25
+		global_citizen_city_desired_pop_ratio = 0.10
+	}
+
+	use_regnal_numbers = yes
+
+
+	election_delay = 0
+	has_co_ruler = yes
+
+	color = hsv { 0.3  0.7  0.1 }
+}

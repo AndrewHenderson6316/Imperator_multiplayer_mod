@@ -25,7 +25,7 @@ player_subject_events.1 = {
                 release_subject = root
                 make_subject = {
                     target = root
-                    type = player_client_state
+                    type = client_state
                 }
             }
         }    
@@ -60,7 +60,7 @@ player_subject_events.2 = {
                 release_subject = root
                 make_subject = {
                     target = root
-                    type = player_feudatory
+                    type = feudatory
                 }
             }
         }    
@@ -95,7 +95,7 @@ player_subject_events.3 = {
                 release_subject = root
                 make_subject = {
                     target = root
-                    type = player_tributary
+                    type = tributary
                 }
             }
         }    
@@ -165,7 +165,7 @@ player_subject_events.5 = {
                 release_subject = root
                 make_subject = {
                     target = root
-                    type = player_vassal_tribe
+                    type = vassal_tribe
                 }
             }
         }    
@@ -242,6 +242,28 @@ player_subject_events.7 = {
                 }
             }
         }    
+    }
+
+    option = {      
+        name = player_subject_events_1.b
+        ai_chance = { factor = 1 }
+    }
+}
+
+player_subject_events.8 = {
+    type = country_event
+    title = player_subject_events_8.t
+    desc = player_subject_events_8.desc
+    right_portrait = current_ruler
+    left_portrait = scope:sender.current_ruler
+    picture = diadochi_coronation
+    immediate = {
+    }
+
+    option = {      
+        ai_chance = { factor = 0 }
+        name = player_subject_events_1.a
+          
     }
 
     option = {      

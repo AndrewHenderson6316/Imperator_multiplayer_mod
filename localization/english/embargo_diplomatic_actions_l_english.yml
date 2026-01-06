@@ -1,0 +1,20 @@
+﻿l_english:
+
+ #Tooltips
+ 
+ embargo.1.t:0 "Embargoed!"
+ embargo.1.desc:0 "Our trade with (@[SCOPE.sC('embargo_actor').GetFlag]!) [SCOPE.sC('embargo_actor').GetName] has been blocked!"
+ embargo.1.a:0 "Bah! the quality of their copper was subpar anyways.."
+ embargo.2.t:0 "Embargo Lifted!"
+ embargo.2.desc:0 "Trade with (@[SCOPE.sC('embargo_actor').GetFlag]!) [SCOPE.sC('embargo_actor').GetName] has resumed!"
+ embargo.2.a:0 "It seems as though they cannot resist my precious copper, rightfully so!"
+
+ dip_embargo_activate:0 "Embargo"
+ embargo_activate:0 "Restrict Trade Between Nations"
+ embargo_activate_text:0 "\n #E New trade routes between our nations will become restricted until further notice.#! \n\n#R Please Read!#! \nDue to limits of the game, any goods you were trading prior to imposing an embargo have to be manually cancelled in the #V Trade Overview#!, use the #E Embargo Toggle#! to find these. \n"
+ embargo_activate_tt:0 "#T Impose Embargo#! \nWe will impose an embargo on this nation, denying them access to our trade goods, as well as preventing our merchants from buying theirs."
+
+ dip_embargo_deactivate:0 "Lift Embargo"
+ embargo_deactivate:0 "Lift the Restrictions"
+ embargo_deactivate_text:0 "\n #E Previous trade routes will now be restored, allowing both our merchants to once again trade goods. \n"
+ embargo_deactivate_tt:0 "#T Lift Embargo#! \nWe will lift the embargo on this nation, giving them access to our trade goods, and allowing our merchants to resume opening trade routes."

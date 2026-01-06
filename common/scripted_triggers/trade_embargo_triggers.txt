@@ -1,0 +1,48 @@
+﻿trade_embargo_trigger = {
+	trigger_if = {
+		limit = {
+			OR = {
+				has_variable_list = embargo_list
+				has_variable_list = embargoed_list
+			}
+		}
+
+		trade_player_embargoed_by_trigger = no
+		trade_player_embargo_target_trigger = no
+	}		
+	trigger_else = {
+		always = yes
+	}
+}
+
+trade_player_embargoed_by_trigger = {
+	trigger_if = {
+		limit = {
+			has_variable_list = embargo_list
+		}
+	
+		is_target_in_variable_list = {
+			name = embargo_list
+			target = scope:player
+		}
+	}
+	trigger_else = {
+		always = no
+	}
+}
+
+trade_player_embargo_target_trigger = {
+	trigger_if = {
+		limit = {
+			has_variable_list = embargoed_list
+		}
+
+		is_target_in_variable_list = {
+			name = embargoed_list
+			target = scope:player
+		}
+	}
+	trigger_else = {
+		always = no
+	}
+}

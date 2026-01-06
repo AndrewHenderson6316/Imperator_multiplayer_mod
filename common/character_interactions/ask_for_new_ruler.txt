@@ -97,10 +97,10 @@ install_foreign_ruler = {
 	
 	allowed_trigger = {
 		hidden:scope:actor = {
-			is_republic = no
+			#is_republic = no
 		}
 		hidden:scope:target.employer = {
-			is_republic = no
+			#is_republic = no
 			has_variable = RulerChangeAllowed	
 		}
 		scope:target = {
@@ -110,7 +110,7 @@ install_foreign_ruler = {
 	
 	character_actor_trigger = {
 		is_ruler = no
-		age > 16 
+		age >= 16 
 	}
 	
 	effect = {
@@ -148,10 +148,10 @@ install_claiment = {
 	
 	allowed_trigger = {
 		hidden:scope:actor = {
-			is_republic = no
+			#is_republic = no
 		}
 		hidden:scope:target.employer = {
-			is_republic = no
+			#is_republic = no
 		}
 		scope:target = {
 			is_ruler = yes
